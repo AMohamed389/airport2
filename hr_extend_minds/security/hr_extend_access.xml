@@ -1,0 +1,190 @@
+<?xml version="1.0" ?>
+<odoo>
+
+    <record id="employee_penalty_group_system_1" model="ir.model.access">
+        <field name="active" eval="True"/>
+        <field name="group_id" ref="base.group_system"/>
+        <field name="model_id" ref="model_employee_penalty"/>
+        <field name="name">Employee Penalty group_system</field>
+        <field name="perm_create" eval="True"/>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_unlink" eval="True"/>
+        <field name="perm_write" eval="True"/>
+    </record>
+
+    <record id="employee_penalty_group_user_1" model="ir.model.access">
+        <field name="active" eval="True"/>
+        <field name="group_id" ref="base.group_user"/>
+        <field name="model_id" ref="model_employee_penalty"/>
+        <field name="name">Employee Penalty group_user</field>
+        <field name="perm_create" eval="True"/>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_unlink" eval="False"/>
+        <field name="perm_write" eval="True"/>
+    </record>
+
+    <!--<record id="studio_customization.employee_penalty_tag_0e38d171-587d-42d2-b0d7-ac8bbdd4e8a7" model="ir.model.access"
+            context="{'studio': True}">
+        <field name="active" eval="True"/>
+        <field name="group_id" ref="base.group_user"/>
+        <field name="model_id" ref="studio_customization.employee_penalty_tag_7eaf096f-6c4d-4654-a096-71afd4678de9"/>
+        <field name="name">Employee Penalty Tags group_user</field>
+        <field name="perm_create" eval="True"/>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_unlink" eval="False"/>
+        <field name="perm_write" eval="True"/>
+    </record>-->
+
+    <!--<record id="studio_customization.employee_penalty_tag_e80378bb-f548-471c-ad0b-c881e663110f" model="ir.model.access"
+            context="{'studio': True}">
+        <field name="active" eval="True"/>
+        <field name="group_id" ref="base.group_system"/>
+        <field name="model_id" ref="studio_customization.employee_penalty_tag_7eaf096f-6c4d-4654-a096-71afd4678de9"/>
+        <field name="name">Employee Penalty Tags group_system</field>
+        <field name="perm_create" eval="True"/>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_unlink" eval="True"/>
+        <field name="perm_write" eval="True"/>
+    </record>-->
+
+    <record id="employee_training_group_user_1" model="ir.model.access"
+            context="{'studio': True}">
+        <field name="active" eval="True"/>
+        <field name="group_id" ref="base.group_user"/>
+        <field name="model_id" ref="model_employee_training"/>
+        <field name="name">Employee Training group_user</field>
+        <field name="perm_create" eval="True"/>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_unlink" eval="False"/>
+        <field name="perm_write" eval="True"/>
+    </record>
+
+    <record id="employee_training_group_system_1" model="ir.model.access">
+        <field name="active" eval="True"/>
+        <field name="group_id" ref="base.group_system"/>
+        <field name="model_id" ref="model_employee_training"/>
+        <field name="name">Employee Training group_system</field>
+        <field name="perm_create" eval="True"/>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_unlink" eval="True"/>
+        <field name="perm_write" eval="True"/>
+    </record>
+
+    <!--<record id="studio_customization.employee_training_ta_6c665686-f324-4fa2-beaf-e0f9ac77f7c8" model="ir.model.access"
+            context="{'studio': True}">
+        <field name="active" eval="True"/>
+        <field name="group_id" ref="base.group_system"/>
+        <field name="model_id" ref="studio_customization.employee_training_ta_a66e8bd6-4978-4041-a9a8-eb36fabaf5b8"/>
+        <field name="name">Employee Training Tags group_system</field>
+        <field name="perm_create" eval="True"/>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_unlink" eval="True"/>
+        <field name="perm_write" eval="True"/>
+    </record>-->
+
+    <!--<record id="studio_customization.employee_training_ta_e1d5b960-c776-44c3-be89-bfb962cb8173" model="ir.model.access"
+            context="{'studio': True}">
+        <field name="active" eval="True"/>
+        <field name="group_id" ref="base.group_user"/>
+        <field name="model_id" ref="studio_customization.employee_training_ta_a66e8bd6-4978-4041-a9a8-eb36fabaf5b8"/>
+        <field name="name">Employee Training Tags group_user</field>
+        <field name="perm_create" eval="True"/>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_unlink" eval="False"/>
+        <field name="perm_write" eval="True"/>
+    </record>-->
+
+    <record id="penalty_types_group_system_1" model="ir.model.access"
+            context="{'studio': True}">
+        <field name="active" eval="True"/>
+        <field name="group_id" ref="base.group_system"/>
+        <field name="model_id" ref="model_penalty_type"/>
+        <field name="name">Penalty Types group_system</field>
+        <field name="perm_create" eval="True"/>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_unlink" eval="True"/>
+        <field name="perm_write" eval="True"/>
+    </record>
+
+    <record id="penalty_types_group_user_1" model="ir.model.access">
+        <field name="active" eval="True"/>
+        <field name="group_id" ref="base.group_user"/>
+        <field name="model_id" ref="model_penalty_type"/>
+        <field name="name">Penalty Types group_user</field>
+        <field name="perm_create" eval="True"/>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_unlink" eval="False"/>
+        <field name="perm_write" eval="True"/>
+    </record>
+
+    <!--<record id="studio_customization.penalty_types_tags_g_2e9a2f1d-8076-4074-b601-cf977b0aa37b" model="ir.model.access"
+            context="{'studio': True}">
+        <field name="active" eval="True"/>
+        <field name="group_id" ref="base.group_user"/>
+        <field name="model_id" ref="studio_customization.penalty_types_tags_a1ded9f5-c37d-487b-b89c-df6074f78775"/>
+        <field name="name">Penalty Types Tags group_user</field>
+        <field name="perm_create" eval="True"/>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_unlink" eval="False"/>
+        <field name="perm_write" eval="True"/>
+    </record>-->
+
+    <!--<record id="studio_customization.penalty_types_tags_g_e877d540-3613-4d83-9b1f-f38794fe2133" model="ir.model.access"
+            context="{'studio': True}">
+        <field name="active" eval="True"/>
+        <field name="group_id" ref="base.group_system"/>
+        <field name="model_id" ref="studio_customization.penalty_types_tags_a1ded9f5-c37d-487b-b89c-df6074f78775"/>
+        <field name="name">Penalty Types Tags group_system</field>
+        <field name="perm_create" eval="True"/>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_unlink" eval="True"/>
+        <field name="perm_write" eval="True"/>
+    </record>-->
+
+    <record id="training_catalogue_group_user_1" model="ir.model.access">
+        <field name="active" eval="True"/>
+        <field name="group_id" ref="base.group_user"/>
+        <field name="model_id" ref="model_training_catalogue"/>
+        <field name="name">Training Catalogue group_user</field>
+        <field name="perm_create" eval="True"/>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_unlink" eval="False"/>
+        <field name="perm_write" eval="True"/>
+    </record>
+
+    <record id="training_catalogue_group_system_1" model="ir.model.access">
+        <field name="active" eval="True"/>
+        <field name="group_id" ref="base.group_system"/>
+        <field name="model_id" ref="model_training_catalogue"/>
+        <field name="name">Training Catalogue group_system</field>
+        <field name="perm_create" eval="True"/>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_unlink" eval="True"/>
+        <field name="perm_write" eval="True"/>
+    </record>
+
+    <!--<record id="studio_customization.training_catalogue_t_77c9a661-fc9d-42cf-9b9e-a1bc52c92acf" model="ir.model.access"
+            context="{'studio': True}">
+        <field name="active" eval="True"/>
+        <field name="group_id" ref="base.group_user"/>
+        <field name="model_id" ref="studio_customization.training_catalogue_t_dcd9b1b2-73d0-4977-8b48-b0ba3cc29b32"/>
+        <field name="name">Training Catalogue Tags group_user</field>
+        <field name="perm_create" eval="True"/>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_unlink" eval="False"/>
+        <field name="perm_write" eval="True"/>
+    </record>-->
+
+    <!--<record id="studio_customization.training_catalogue_t_791ee62b-557c-498c-b56a-62b70116cd1c" model="ir.model.access"
+            context="{'studio': True}">
+        <field name="active" eval="True"/>
+        <field name="group_id" ref="base.group_system"/>
+        <field name="model_id" ref="studio_customization.training_catalogue_t_dcd9b1b2-73d0-4977-8b48-b0ba3cc29b32"/>
+        <field name="name">Training Catalogue Tags group_system</field>
+        <field name="perm_create" eval="True"/>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_unlink" eval="True"/>
+        <field name="perm_write" eval="True"/>
+    </record>-->
+
+</odoo>
