@@ -45,10 +45,12 @@ class hrdependants(models.Model):
     
     has_disability_condition = fields.Boolean(string='Has Disability Condition', index=True, tracking=True)
 
+
+
     class hrextend(models.Model):
         _inherit = 'hr.employee'
 
-        employee_Dependants = fields.One2many('hr.Dependants', 'employee_id',
+        employee_dependants = fields.One2many('hr_dependants', 'employee_id',
                                                   string='Employee Dependants',
                                                   help="Employee Dependants", index=True, store=True,
                                                   track_visibility="always")
