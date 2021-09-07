@@ -19,15 +19,15 @@
         <!--   </dl> -->
         <!-- </template> -->
 
-        <record model="ir.ui.view" id="hr_dependents_view">
-            <field name="name">Employee Dependents</field>
+        <record model="ir.ui.view" id="hr_dependants_view">
+            <field name="name">Employee Dependants</field>
             <field name="model">hr.employee</field>
             <field name="inherit_id" ref="hr.view_employee_form"/>
             <field name="arch" type="xml">
                 <xpath expr="//page[@name='hr_settings']" position="after">
-                        <page name="Dependents" string="Dependents">
-                            <field name="employee_dependents" mode="tree" >
-                                 <tree string="Dependents" editable="top" >
+                        <page name="Dependants" string="Dependants">
+                            <field name="employee_dependants" mode="tree" >
+                                 <tree string="Dependants" editable="top" >
                                      <field name="name" />
                                      <field name="relationship" />
                                      <field name="birth_date" />

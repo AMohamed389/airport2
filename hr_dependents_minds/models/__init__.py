@@ -1,3 +1,3 @@
 # -*- coding: utf-8 -*-
 
-from . import hr_dependents
+from . import hr_dependants
