@@ -20,6 +20,14 @@
                     <field name="x_job_degree" optional="hide"/>
                     <field name="x_job_degree_date" optional="hide"/>
                     <field name="x_pension_date" optional="hide"/>
+                    <field name="x_education_certificate_level" optional="hide"/>
+                    <field name="x_identity_issuer" optional="hide"/>
+                    <field name="has_disability_condition" optional="hide"/>
+                    <field name="x_military_start_date" optional="hide"/>
+                    <field name="x_military_end_date" optional="hide"/>
+                    <field name="x_military_status" optional="hide"/>
+                    <field name="x_mother_name" optional="hide"/>
+
                 </xpath>
                 <xpath expr="//field[@name='work_phone']" position="attributes">
                     <attribute name="optional">hide</attribute>
@@ -53,11 +61,21 @@
                 </xpath>
                 <xpath expr="//field[@name='mobile_phone']" position="before">
                     <field name="id" invisible="1"/>
+                    <field name="has_disability_condition"/>
                     <field name="x_staff_id" string="Staff Id"/>
                 </xpath>
                 <xpath expr="//field[@name='gender']" position="after">
                     <field name="x_religion" string="Religion"/>
                     <field name="x_age" string="Age"/>
+                </xpath>
+                <xpath expr="//field[@name='country_id']" position="after">
+                    <field name="x_mother_name" string="Mother Name"/>
+                </xpath>
+                <xpath expr="//field[@name='certificate']" position="after">
+                    <field name="x_education_certificate_level" string="Education Certificate Date"/>
+                </xpath>
+                <xpath expr="//field[@name='identification_id']" position="after">
+                    <field name="x_identity_issuer" string="Identification Issuer"/>
                 </xpath>
                 <xpath expr="//form[1]/sheet[1]/notebook[1]" position="inside">
                     <page string="Job" name="job_page">
@@ -100,7 +118,29 @@
                         <field name="x_employee_penalty" context="{'default_x_employee_id': id}"/>
                     </page>
                     <page string="Training" name="training_page">
-                        <field name="x_employee_training" context="{'default_x_employee_id': id}"/>
+                        <field name="x_employee_training" context="{'default_x_employee_id': id}" />
+                            <!--<tree editable="bottom">
+                                <field name="x_employee_id"/>
+                                <field name="x_training"/>
+                                <field name="x_training_code"/>
+                                <field name="x_training_type"/>
+                                <field name="x_training_grade"/>
+                                <field name="x_start_date"/>
+                                <field name="x_end_date"/>
+                                <field name="x_status"/>
+                            </tree>
+                        </field>-->
+                    </page>
+                    <page string="Military" name="military_page">
+                        <group name="military_page_group_parent_left">
+                            <field name="x_military_status" string="Military Status"/>
+                            <field name="x_military_start_date" string="Military Information"/>
+                            <field name="x_military_end_date" string="Military Information"/>
+                        </group>
+                        <group name="military_page_group_parent_right"/>
+                    </page>
+                    <page string="Notes" name="notes_page">
+                        <field name="x_notes" />
                     </page>
                 </xpath>
             </data>
@@ -355,7 +395,7 @@
                 <field name="x_training"/>
                 <field name="x_training_type"/>
                 <field name="x_training_code"/>
-                <field name="x_training_grade"/>
+                <field name="x_training_grade" decoration-danger="x_training_grade == 'Fair'" decoration-info="x_training_grade == 'Very Good'" decoration-warning="x_training_grade == 'Good'" decoration-success="x_training_grade == 'Excellent'" widget="badge"/>
                 <field name="x_start_date"/>
                 <field name="x_end_date"/>
                 <field name="x_status"/>

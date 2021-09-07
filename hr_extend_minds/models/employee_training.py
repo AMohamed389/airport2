@@ -21,7 +21,9 @@ class employeetraining(models.Model):
     x_assign_date = fields.Date(string='Assign Date', index=True, tracking=True)
 
     x_employee_id = fields.Many2one('hr.employee', string="Employee", store=True,
-                                           tracking=True, index=True, default=lambda self: self._get_employee_id())
+                                           tracking=True, index=True
+                                       #, default=lambda self: self._get_employee_id()
+                                            )
 
     x_end_date = fields.Date(string='End Date', index=True, tracking=True)
 
@@ -47,7 +49,22 @@ class employeetraining(models.Model):
     x_start_date = fields.Date(string='Start Date', index=True, tracking=True)
 
 
-    def _get_employee_id(self):
-        _logger.info('Maged default_x_employee_id ! ' + str(self._context.get('default_x_employee_id')))
-        if self._context.get('default_x_employee_id'):
-            return int(self._context.get('default_x_employee_id'))
+    #def _get_employee_id(self):
+        #_logger.info('Maged _get_employee_id default_x_employee_id ! ' + str(self._context.get('default_x_employee_id')))
+        #if self._context.get('default_x_employee_id'):
+            #return int(self._context.get('default_x_employee_id'))
+
+    def default_get(self, fields):
+        res = super(employeetraining, self).default_get(fields)
+
+        try:
+            if self._context and self._context is not None and self._context.get('default_x_employee_id'):
+                _logger.info('Maged default_get default_x_employee_id ! ' + str(self._context.get('default_x_employee_id')))
+                res['x_employee_id'] = int(self._context.get('default_x_employee_id'))
+                return res
+        except:
+            pass
+
+        #res['x_notes'] = 'test'
+
+        return res

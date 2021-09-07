@@ -64,6 +64,22 @@ class hrextend(models.Model):
     x_employee_penalty = fields.One2many('employee.penalty', 'x_employee_id', string="Employee Penalty", store=True,
                                          index=True)
 
+    x_education_certificate_level = fields.Date(string='Education Certificate Date', index=True, tracking=True)
+
+    x_identity_issuer = fields.Char(string='Identity Issuer', index=True, tracking=True)
+
+    x_military_status = fields.Selection([('Postponed','Postponed'),('Completed','Completed'),('Exempted','Exempted')], string='Military Status', index=True, tracking=True)
+
+    x_mother_name = fields.Char(string='Mother Name', index=True, tracking=True)
+
+    x_notes = fields.Text(string="Notes", tracking=True, store=True)
+
+    x_military_start_date = fields.Date(string='Military Start Date', index=True, tracking=True)
+
+    x_military_end_date = fields.Date(string='Military End Date', index=True, tracking=True)
+
+    has_disability_condition = fields.Boolean(string='Has Disability Condition', index=True, tracking=True)
+
     def get_number_of_years(self):
         # _logger.info("Maged x_hiring_date !" + str(record.x_hiring_date))
         # _logger.info("Maged x_end_date !" + str(record.x_end_date))
