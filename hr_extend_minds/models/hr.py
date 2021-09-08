@@ -34,7 +34,9 @@ class hrextend(models.Model):
 
     x_job_degree = fields.Selection(
         [('Degree 1', 'Degree 1'), ('Degree 2', 'Degree 2'), ('Degree 3', 'Degree 3'),
-         ('General Manager', 'General Manager')],
+        ('Degree 4', 'Degree 4'), ('Degree 5', 'Degree 5'), ('Degree 6', 'Degree 6')
+        , ('High Degree', 'High Degree'),('General Manager', 'General Manager')
+        , ('Excellent Degree', 'Excellent Degree')],
         string="Job Degree", store=True,
         index=True, tracking=True)
 
@@ -78,7 +80,38 @@ class hrextend(models.Model):
 
     x_military_end_date = fields.Date(string='Military End Date', index=True, tracking=True)
 
-    has_disability_condition = fields.Boolean(string='Has Disability Condition', index=True, tracking=True)
+    x_has_disability_condition = fields.Boolean(string='Has Disability Condition', index=True, tracking=True)
+
+    x_is_delegated = fields.Boolean(string='Is Delegated', index=True, tracking=True)
+
+    x_delegated_from = fields.Char(string='Delegated From', index=True, tracking=True)
+
+    x_delegated_to = fields.Char(string='Delegated To', index=True, tracking=True)
+
+    x_is_loaned = fields.Boolean(string='Is Loaned', index=True, tracking=True)
+
+    x_loaned_from = fields.Char(string='Loaned From', index=True, tracking=True)
+
+    x_loaned_to = fields.Char(string='Loaned To', index=True, tracking=True)
+
+    x_department_name = fields.Char(related="department_id.name", index="True", string="Department Name", domain="[('x_type', '=', 'Department')]")
+
+    x_administration_name = fields.Char(related="department_id.parent_id.name", index="True", string="Administration Name", domain="[('x_type', '=', 'Administration')]")
+
+    x_public_administration_name = fields.Char(related="department_id.parent_id.parent_id.name", index="True", string="Public Administration Name", domain="[('x_type', '=', 'Public Administration')]")
+
+    x_sector_name = fields.Char(related="department_id.parent_id.parent_id.parent_id.name", index="True", string="Sector Name", domain="[('x_type', '=', 'Sector')]")
+
+    x_qualitative_group_name = fields.Char(related="job_id.x_qualitative_group_id.name", index=True)
+
+    x_oldest_hiring_date = fields.Date(string='Oldest Hiring Date', index=True, tracking=True)
+
+    x_disability_id = fields.Char(string="Disability Id Number", index=True, tracking=True)
+
+    x_supervision_job = fields.Many2one('hr.job',string="Supervision Job", index=True, tracking=True)
+
+    x_hr_education_certificate_id = fields.One2many('hr_education_certificate', 'x_employee_id', string="Education Certificates", store=True,
+                                          index=True)
 
     def get_number_of_years(self):
         # _logger.info("Maged x_hiring_date !" + str(record.x_hiring_date))
@@ -123,3 +156,9 @@ class hrextend(models.Model):
                 #_logger.info("Maged ex ! " + str(ex))
                 record.x_age = 0
                 return record.x_age
+
+    @api.constrains('identification_id')
+    def _check_id_number_14(self):
+        for rec in self:
+            if len(str(rec.identification_id)) != 14:
+                raise ValidationError("National Id number should be 14 digits !.")

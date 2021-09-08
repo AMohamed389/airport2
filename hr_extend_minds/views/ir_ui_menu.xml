@@ -141,4 +141,18 @@
     <field name="web_icon" eval="False"/>
   </record>
 
+
+  <record id="parent_menu_qualitative_group" model="ir.ui.menu">
+      <field name="action" eval="False" />
+      <field name="active" eval="True" />
+      <field name="groups_id" eval="[(6, 0, [])]" />
+      <field name="name">Qualitative Group</field>
+      <field name="parent_id" eval="False" />
+      <field name="sequence">100</field>
+      <field name="web_icon">fa fa-briefcase,#FFFFFF,#3cb371</field>
+  </record>
+
+
+  <menuitem id="parent_menu_qualitative_group_1"  name="Qualitative Group"  action="action_qualitative_group"  parent="parent_menu_qualitative_group" sequence="3000" />
+
 </odoo>

@@ -1,1 +1,10 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+access_qualitative_group_all,qualitative_group_all,model_qualitative_group,base.group_user,1,0,0,0
+access_qualitative_group_basic,qualitative_group_basic,model_qualitative_group,hr_extend_minds_group_employee,1,0,0,0
+access_qualitative_group_admin,qualitative_group_admin,model_qualitative_group,hr_extend_minds_group_admin,1,1,1,1
+
+
+access_hr_education_certificate_all,hr_education_certificate_all,model_hr_education_certificate,base.group_user,1,0,0,0
+access_hr_education_certificate_basic,hr_education_certificate_basic,model_hr_education_certificate,hr_extend_minds_group_employee,1,0,0,0
+access_hr_education_certificate_admin,hr_education_certificate_admin,model_hr_education_certificate,hr_extend_minds_group_admin,1,1,1,1

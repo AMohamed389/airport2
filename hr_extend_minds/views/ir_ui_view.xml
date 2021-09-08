@@ -1,5 +1,163 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+    
+    
+        <!-- hr_education_certificate-->
+        <record id="action_hr_education_certificate" model="ir.actions.act_window">
+          <field name="name">hr Education Certificate</field>
+          <field name="type">ir.actions.act_window</field>
+          <field name="res_model">hr_education_certificate</field>
+          <field name="view_mode">tree,form</field>
+    
+    
+        </record>
+    
+        <record id="view_hr_education_certificate_list" model="ir.ui.view">
+          <field name="name">view_hr_education_certificate_list</field>
+          <field name="model">hr_education_certificate</field>
+          <field name="arch" type="xml">
+            <tree editable="bottom" >
+              <field name="x_employee_id" readonly="1"/>
+              <field name="name"/>
+              <field name="x_university_name"/>
+              <field name="x_specialization"/>
+              <field name="x_certificate_date"/>
+              <field name="x_decision_number"/>
+              <field name="x_decision_date"/>
+    
+            </tree>
+          </field>
+        </record>
+        <record id="view_hr_education_certificate_form" model="ir.ui.view">
+          <field name="name">view_hr_education_certificate_form</field>
+          <field name="model">hr_education_certificate</field>
+    
+          <field name="arch" type="xml">
+            <form  >
+              <header>
+                <!--<button name="setactive" type="object" string="Activate" class="oe_highlight" states="PENDING,DEACTIVE" attrs="{}"/>
+                 
+       
+                 <field name="state" widget="statusbar" />-->
+              </header>
+    
+              <sheet>
+    
+                <div name="button_box" class="oe_button_box">
+                </div>
+                <div class="oe_title">
+                  <h1>
+                    <field name="name" placeholder="Name"/>
+                  </h1>
+                </div>
+    
+    
+                <group name="main_group">
+                  <group name="group_left">
+    
+                  </group>
+                  <group name="group_right">
+    
+                  </group>
+                </group>
+    
+    
+                <!-- <notebook name="main_notebook">
+                    <page name="page1" string="page name">
+                      
+                    </page>
+                  </notebook> -->
+    
+    
+              </sheet>
+              <!-- <div class="oe_chatter" name="mainchatterview">
+                <field name="message_follower_ids"/>
+                <field name="activity_ids"/>
+                <field name="message_ids"/>
+              </div> -->
+            </form>
+          </field>
+        </record>
+
+    <record id="hr_job_extend_1" model="ir.ui.view">
+        <field name="active" eval="True"/>
+        <field name="arch" type="xml">
+            <data>
+                <xpath expr="//field[@name='name']" position="after">
+                    <field name="x_qualitative_group_id"/>
+                </xpath>
+            </data>
+        </field>
+        <field name="field_parent" eval="False"/>
+        <field name="groups_id" eval="[(6, 0, [])]"/>
+        <field name="inherit_id" ref="hr.view_hr_job_tree"/>
+        <field name="key" eval="False"/>
+        <field name="mode">extension</field>
+        <field name="model">hr.job</field>
+        <field name="name">hr.job.tree customization</field>
+        <field name="priority">99</field>
+        <field name="type">tree</field>
+    </record>
+
+    <record id="hr_job_extend_2" model="ir.ui.view">
+        <field name="active" eval="True"/>
+        <field name="arch" type="xml">
+            <data>
+                <xpath expr="//div[2]" position="after">
+                    <field name="x_qualitative_group_id" />
+                </xpath>
+            </data>
+        </field>
+        <field name="field_parent" eval="False"/>
+        <field name="groups_id" eval="[(6, 0, [])]"/>
+        <field name="inherit_id" ref="hr.view_hr_job_form"/>
+        <field name="key" eval="False"/>
+        <field name="mode">extension</field>
+        <field name="model">hr.job</field>
+        <field name="name">hr.job.form customization</field>
+        <field name="priority">99</field>
+        <field name="type">form</field>
+    </record>
+
+    <record id="hr_department_extend_1" model="ir.ui.view">
+        <field name="active" eval="True"/>
+        <field name="arch" type="xml">
+            <data>
+                <xpath expr="//field[@name='parent_id']" position="after">
+                    <field name="x_type"/>
+                </xpath>
+            </data>
+        </field>
+        <field name="field_parent" eval="False"/>
+        <field name="groups_id" eval="[(6, 0, [])]"/>
+        <field name="inherit_id" ref="hr.view_department_tree"/>
+        <field name="key" eval="False"/>
+        <field name="mode">extension</field>
+        <field name="model">hr.department</field>
+        <field name="name">hr.department.tree customization</field>
+        <field name="priority">99</field>
+        <field name="type">tree</field>
+    </record>
+
+    <record id="hr_department_extend_2" model="ir.ui.view">
+        <field name="active" eval="True"/>
+        <field name="arch" type="xml">
+            <data>
+                <xpath expr="//field[@name='manager_id']" position="after">
+                    <field name="x_type" />
+                </xpath>
+            </data>
+        </field>
+        <field name="field_parent" eval="False"/>
+        <field name="groups_id" eval="[(6, 0, [])]"/>
+        <field name="inherit_id" ref="hr.view_department_form"/>
+        <field name="key" eval="False"/>
+        <field name="mode">extension</field>
+        <field name="model">hr.department</field>
+        <field name="name">hr.department.form customization</field>
+        <field name="priority">99</field>
+        <field name="type">form</field>
+    </record>
 
     <record id="hr_employee_extend_1" model="ir.ui.view">
         <field name="active" eval="True"/>
@@ -22,11 +180,15 @@
                     <field name="x_pension_date" optional="hide"/>
                     <field name="x_education_certificate_level" optional="hide"/>
                     <field name="x_identity_issuer" optional="hide"/>
-                    <field name="has_disability_condition" optional="hide"/>
+                    <field name="x_has_disability_condition" optional="hide"/>
                     <field name="x_military_start_date" optional="hide"/>
                     <field name="x_military_end_date" optional="hide"/>
                     <field name="x_military_status" optional="hide"/>
                     <field name="x_mother_name" optional="hide"/>
+                    <field name="x_department_name" optional="show"/>
+                    <field name="x_administration_name" optional="show"/>
+                    <field name="x_public_administration_name" optional="show"/>
+                    <field name="x_sector_name" optional="show"/>
 
                 </xpath>
                 <xpath expr="//field[@name='work_phone']" position="attributes">
@@ -55,14 +217,35 @@
         <field name="active" eval="True"/>
         <field name="arch" type="xml">
             <data>
+
+                <xpath expr="//field[@name='coach_id']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+
+                
+
+                <xpath expr="//field[@name='department_id']" position="after">
+                    <field name="x_sector_name" />
+                    <field name="x_public_administration_name" />
+                    <field name="x_administration_name" />
+                    <field name="x_department_name" />
+                </xpath>
+
+                <xpath expr="//field[@name='job_title']" position="attributes">
+                    <attribute name="readonly">1</attribute>
+                </xpath>
                 <xpath expr="//button[@name='124']" position="after">
                     <field widget="statusbar" options="{'clickable': '1'}" name="x_employee_status"
                            string="Employee Status"/>
                 </xpath>
                 <xpath expr="//field[@name='mobile_phone']" position="before">
                     <field name="id" invisible="1"/>
-                    <field name="has_disability_condition"/>
                     <field name="x_staff_id" string="Staff Id"/>
+                </xpath>
+                <xpath expr="//field[@name='address_home_id']" position="before">
+                    <field name="mobile_phone" position="move"/>
+                    <field name="work_phone" position="move"/>
+                    <field name="work_email" position="move"/>
                 </xpath>
                 <xpath expr="//field[@name='gender']" position="after">
                     <field name="x_religion" string="Religion"/>
@@ -84,19 +267,36 @@
                         </group>
                     </page>
                 </xpath>
+
                 <xpath expr="//group[@name='job_page_group_parent_left']" position="inside">
+                    <field name="x_qualitative_group_name" />
                     <xpath expr="//field[@name='job_id']" position="move"/>
                     <field name="x_job_degree" string="Job Degree"/>
                     <field name="x_job_degree_date" string="Job Degree Date"/>
+                    <field name="x_supervision_job" string="Supervision Job"/>
                 </xpath>
                 <xpath expr="//group[@name='job_page_group_parent']" position="inside">
                     <group name="job_page_group_parent_right">
                         <field name="x_hiring_date" string="Hiring Date"/>
                         <field name="x_receiving_work_date" string="Receiving Work Date"/>
                         <field name="x_end_of_service_date" string="End Of Service Date"/>
+                        <field name="x_oldest_hiring_date" string="Oldest Hiring Date"/>
                     </group>
                 </xpath>
+
+                <xpath expr="//group[@name='work_permit']" position="after">
+                    <group name="disability_group" string="Disability">
+                        <field name="x_has_disability_condition"/>
+                        <field name="x_disability_id" string="Disability Id Number"/>
+                    </group>
+                </xpath>
+
                 <xpath expr="//form[1]/sheet[1]/notebook[1]" position="inside">
+
+                    <page string="Education Certificates" name="hr_education_certificates_page">
+                        <field name="x_hr_education_certificate_id" context="{'default_x_employee_id': id}"/>
+                    </page>
+
                     <page string="Insurance" name="insurance_page">
                         <group name="insurance_page_group_parent">
                             <group name="insurance_page_group_parent_left">
@@ -132,17 +332,47 @@
                         </field>-->
                     </page>
                     <page string="Military" name="military_page">
-                        <group name="military_page_group_parent_left">
-                            <field name="x_military_status" string="Military Status"/>
-                            <field name="x_military_start_date" string="Military Information"/>
-                            <field name="x_military_end_date" string="Military Information"/>
+                        <group>
+                            <group name="military_page_group_parent_left">
+                                <field name="x_military_status" string="Military Status"/>
+                                <field name="x_military_start_date" string="Military Start Date"/>
+                                <field name="x_military_end_date" string="Military End Date"/>
+                            </group>
+                            <group name="military_page_group_parent_right">
+                            </group>
                         </group>
-                        <group name="military_page_group_parent_right"/>
+                    </page>
+                    <page string="Delegation" name="delegation_page">
+                        <group>
+                            <group name="delegation_page_group_parent_left">
+                                <field name="x_is_delegated" string="Is Delegated"/>
+                                <field name="x_delegated_from" string="Delegated From"/>
+                                <field name="x_delegated_to" string="Delegated To"/>
+                            </group>
+                            <group name="delegation_page_group_parent_right">
+                            </group>
+                        </group>
+                    </page>
+                    <page string="Loan" name="loan_page">
+                        <group>
+                            <group name="loan_page_group_parent_left">
+                                <field name="x_is_loaned" string="Is Loaned"/>
+                                <field name="x_loaned_from" string="Loaned From"/>
+                                <field name="x_loaned_to" string="Loaned To"/>
+                            </group>
+                            <group name="loan_page_group_parent_right">
+                            </group>
+                        </group>
                     </page>
                     <page string="Notes" name="notes_page">
-                        <field name="x_notes" />
+                        <field name="x_notes" placeholder="Type down your notes here..." />
                     </page>
                 </xpath>
+
+                <!-- <xpath expr="//field[@name='x_job_degree']" position="before">
+                    <field name="x_qualitative_group_name" />
+                </xpath> -->
+
             </data>
         </field>
         <field name="field_parent" eval="False"/>
@@ -197,7 +427,7 @@
                         <group name="penalty_types_parent_group_right"/>
                     </group>
                     <group>
-                        <field name="x_notes" placeholder="Type down your notes here..." nolabel="1"/>
+                        <field name="x_notes" placeholder="Type down your notes here..." />
                     </group>
                 </sheet>
                 <div class="oe_chatter" name="oe_chatter">
@@ -621,5 +851,76 @@
         <field name="domain">[('x_religion','=','Christian')]</field>
     </record>-->
 
+    
+        <!-- qualitative_group-->
+        <record id="action_qualitative_group" model="ir.actions.act_window">
+          <field name="name">Qualitative Group</field>
+          <field name="type">ir.actions.act_window</field>
+          <field name="res_model">qualitative_group</field>
+          <field name="view_mode">tree,form</field>
+    
+    
+        </record>
+    
+        <record id="view_qualitative_group_list" model="ir.ui.view">
+          <field name="name">view_qualitative_group_list</field>
+          <field name="model">qualitative_group</field>
+          <field name="arch" type="xml">
+            <tree editable="bottom" >
+              <field name="name"/>
+                <!-- <field name="x_job_position_id"/> -->
+            </tree>
+          </field>
+        </record>
+        <record id="view_qualitative_group_form" model="ir.ui.view">
+          <field name="name">view_qualitative_group_form</field>
+          <field name="model">qualitative_group</field>
+    
+          <field name="arch" type="xml">
+            <form  >
+              <header>
+                <!--<button name="setactive" type="object" string="Activate" class="oe_highlight" states="PENDING,DEACTIVE" attrs="{}"/>
+                 
+       
+                 <field name="state" widget="statusbar" />-->
+              </header>
+    
+              <sheet>
+    
+                <div name="button_box" class="oe_button_box">
+                </div>
+                <div class="oe_title">
+                  <h1>
+                    <field name="name" placeholder="Name"/>
+                  </h1>
+                </div>
+    
+    
+                <group name="main_group">
+                  <group name="group_left">
+    
+                  </group>
+                  <group name="group_right">
+    
+                  </group>
+                </group>
+    
+    
+                <!-- <notebook name="main_notebook">
+                    <page name="page1" string="page name">
+                      
+                    </page>
+                  </notebook> -->
+    
+    
+              </sheet>
+              <!-- <div class="oe_chatter" name="mainchatterview">
+                <field name="message_follower_ids"/>
+                <field name="activity_ids"/>
+                <field name="message_ids"/>
+              </div> -->
+            </form>
+          </field>
+        </record>
 
 </odoo>

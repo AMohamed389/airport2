@@ -7,10 +7,10 @@
     'data': [
 
     'views/ir_actions_act_window.xml',
-    'views/ir_ui_menu.xml',
-    'security/ir.model.access.csv',
     'views/ir_ui_view.xml',
+    'views/ir_ui_menu.xml',
     'security/hr_extend_access.xml',
+    'security/ir.model.access.csv',
     'report/report_employment_status.xml',
 
         ],
