@@ -17,6 +17,7 @@ class employeepenalty(models.Model):
     _name = 'employee.penalty'
     _inherit = ['mail.thread', 'mail.activity.mixin']
     _rec_name = 'x_employee_id'
+    _order = 'create_date DESC'
 
     x_employee_id = fields.Many2one('hr.employee', string="Employee", store=True,
                                      tracking=True, index=True)
@@ -26,9 +27,11 @@ class employeepenalty(models.Model):
     x_penalty_id = fields.Many2one('penalty.type', string="Penalty", store=True,
                                      tracking=True, index=True)
 
-    x_status = fields.Selection(
+    state = fields.Selection(
         [('New', 'New'), ('Submit', 'Submit'), ('Approved', 'Approved'), ('Cancelled', 'Cancelled')],
         string="Status", store=True, 
         index=True, tracking=True, default='New')
 
     x_penalty_date = fields.Date(string='Penalty Date', index=True, tracking=True)
+
+    active = fields.Boolean(string='Active',index=True,default=True,tracking=True)

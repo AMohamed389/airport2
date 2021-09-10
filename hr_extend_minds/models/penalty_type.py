@@ -17,9 +17,12 @@ class penaltytype(models.Model):
     _name = 'penalty.type'
     _inherit = ['mail.thread', 'mail.activity.mixin']
     _rec_name = 'x_name'
+    _order = 'create_date DESC'
 
     x_name = fields.Char(string='Name', store=True, index=True, tracking=True)
 
     x_code = fields.Char(string='Penalty Code', store=True, index=True, tracking=True)
 
     x_notes = fields.Text(string="Notes", tracking=True, store=True)
+
+    active = fields.Boolean(string='Active',index=True,default=True,tracking=True)

@@ -18,3 +18,5 @@ class hr_department(models.Model):
 
     x_type = fields.Selection([('Department','Department'),('Administration','Administration'),
     ('Public Administration','Public Administration'),('Sector','Sector')], string="Type", index=True, tracking=True)
+
+    active = fields.Boolean(string='Active',index=True,default=True,tracking=True)

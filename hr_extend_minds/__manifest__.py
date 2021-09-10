@@ -2,7 +2,7 @@
     'name': 'HR_EXTEND_MINDS',
     'description': 'HR_EXTEND_MINDS',
     'author': 'Minds Solutions',
-    'depends': ['base','hr'],
+    'depends': ['base','hr','documents'],
     'application': True,
     'data': [
 
@@ -12,6 +12,8 @@
     'security/hr_extend_access.xml',
     'security/ir.model.access.csv',
     'report/report_employment_status.xml',
+    'data/job_degree.xml',
+    'data/document_folder.xml',
 
         ],
     'installable':True,

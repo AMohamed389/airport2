@@ -8,3 +8,10 @@ from . import qualitative_group
 from . import hr_department
 from . import hr_job
 from . import hr_education_certificate
+
+from . import job_degree
+from . import job_history
+
+from . import hr_attachment
+from . import committee
+from . import committee_employee

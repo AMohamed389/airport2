@@ -149,10 +149,36 @@
       <field name="name">Qualitative Group</field>
       <field name="parent_id" eval="False" />
       <field name="sequence">100</field>
-      <field name="web_icon">fa fa-briefcase,#FFFFFF,#3cb371</field>
+      <field name="web_icon">fa fa-archive,#FFFFFF,#3cb371</field>
   </record>
 
 
   <menuitem id="parent_menu_qualitative_group_1"  name="Qualitative Group"  action="action_qualitative_group"  parent="parent_menu_qualitative_group" sequence="3000" />
+
+  <record id="parent_menu_job_degree" model="ir.ui.menu">
+    <field name="action" eval="False" />
+    <field name="active" eval="True" />
+    <field name="groups_id" eval="[(6, 0, [])]" />
+    <field name="name">Job Degree</field>
+    <field name="parent_id" eval="False" />
+    <field name="sequence">101</field>
+    <field name="web_icon">fa fa-sort-numeric-asc,#FFFFFF,#2d4a58</field>
+  </record>
+
+  <menuitem id="parent_menu_job_degree_1"  name="Job Degree"  action="action_job_degree"  parent="parent_menu_job_degree" sequence="3000" />
+
+
+  <record id="parent_menu_committee" model="ir.ui.menu">
+    <field name="action" eval="False" />
+    <field name="active" eval="True" />
+    <field name="groups_id" eval="[(6, 0, [])]" />
+    <field name="name">Comittee</field>
+    <field name="parent_id" eval="False" />
+    <field name="sequence">102</field>
+    <field name="web_icon">fa fa-users,#FFFFFF,#487e65</field>
+  </record>
+
+  <menuitem id="parent_menu_committee_1"  name="Comittees"  action="action_committee"  parent="parent_menu_committee" sequence="3000" />
+
 
 </odoo>

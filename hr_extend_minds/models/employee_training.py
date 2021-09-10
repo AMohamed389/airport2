@@ -17,6 +17,7 @@ class employeetraining(models.Model):
     _name = 'employee.training'
     _inherit = ['mail.thread', 'mail.activity.mixin']
     _rec_name = 'x_employee_id'
+    _order = 'create_date DESC'
 
     x_assign_date = fields.Date(string='Assign Date', index=True, tracking=True)
 
@@ -41,12 +42,14 @@ class employeetraining(models.Model):
 
     x_notes = fields.Text(string="Notes", tracking=True, store=True)
 
-    x_status = fields.Selection(
+    state = fields.Selection(
         [('New', 'New'), ('Submit', 'Submit'), ('Approved', 'Approved'), ('Cancelled', 'Cancelled')],
         string="Status", store=True, 
         index=True, tracking=True, default='New')
 
     x_start_date = fields.Date(string='Start Date', index=True, tracking=True)
+
+    active = fields.Boolean(string='Active',index=True,default=True,tracking=True)
 
 
     #def _get_employee_id(self):

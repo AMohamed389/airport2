@@ -17,6 +17,7 @@ class trainingcatalogue(models.Model):
     _name = 'training.catalogue'
     _inherit = ['mail.thread', 'mail.activity.mixin']
     _rec_name = 'x_name'
+    _order = 'create_date DESC'
 
     x_training_cost = fields.Monetary(string='Training Cost', index=True, tracking=True, store=True,
                                       currency_field='x_currency_id')
@@ -45,3 +46,5 @@ class trainingcatalogue(models.Model):
 
     x_currency_id = fields.Many2one('res.currency', string="Currency", store=True,
                                            tracking=True, index=True)
+
+    active = fields.Boolean(string='Active',index=True,default=True,tracking=True)

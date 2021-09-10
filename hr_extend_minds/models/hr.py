@@ -32,25 +32,27 @@ class hrextend(models.Model):
         string="Social Insurance Status", store=True,
         index=True, tracking=True)
 
-    x_job_degree = fields.Selection(
-        [('Degree 1', 'Degree 1'), ('Degree 2', 'Degree 2'), ('Degree 3', 'Degree 3'),
-        ('Degree 4', 'Degree 4'), ('Degree 5', 'Degree 5'), ('Degree 6', 'Degree 6')
-        , ('High Degree', 'High Degree'),('General Manager', 'General Manager')
-        , ('Excellent Degree', 'Excellent Degree')],
-        string="Job Degree", store=True,
-        index=True, tracking=True)
+    # x_job_degree = fields.Selection(
+    #     [('Degree 1', 'Degree 1'), ('Degree 2', 'Degree 2'), ('Degree 3', 'Degree 3'),
+    #     ('Degree 4', 'Degree 4'), ('Degree 5', 'Degree 5'), ('Degree 6', 'Degree 6')
+    #     , ('High Degree', 'High Degree'),('General Manager', 'General Manager')
+    #     , ('Excellent Degree', 'Excellent Degree')],
+    #     string="Job Degree", store=True,
+    #     index=True, tracking=True)
 
-    x_job_degree_date = fields.Date(string='Job Degree Date', index=True, tracking=True)
+    x_job_degree_id = fields.Many2one('job_degree',string="Degree", index=True, tracking=True)
+
+    x_job_degree_date = fields.Date(string='Degree Date', index=True, tracking=True)
 
     x_pension_date = fields.Date(string='Pension Date', index=True, tracking=True)
 
     x_receiving_work_date = fields.Date(string='Receiving Work Date', index=True, tracking=True)
 
-    x_employee_status = fields.Selection(
-        [('New', 'New'), ('Hired', 'Hired'), ('Interrupted From Work', 'Interrupted From Work'),
-         ('Disability', 'Disability'), ('Leave Without Payment', 'Leave Without Payment'),
-         ('Resigned', 'Resigned'), ('Pension', 'Pension'), ('Terminated', 'Terminated'), ('Death', 'Death')],
-        string="Employee Status", store=True, index=True, tracking=True, default='New')
+    # x_employee_status = fields.Selection(
+    #     [('New', 'New'), ('Hired', 'Hired'), ('Interrupted From Work', 'Interrupted From Work'),
+    #      ('Disability', 'Disability'), ('Leave Without Payment', 'Leave Without Payment'),
+    #      ('Resigned', 'Resigned'), ('Pension', 'Pension'), ('Terminated', 'Terminated'), ('Death', 'Death')],
+    #     string="Employee Status", store=True, index=True, tracking=True, default='New')
 
     x_hiring_date = fields.Date(string='Hiring Date', index=True, tracking=True)
 
@@ -94,15 +96,17 @@ class hrextend(models.Model):
 
     x_loaned_to = fields.Char(string='Loaned To', index=True, tracking=True)
 
-    x_department_name = fields.Char(related="department_id.name", index="True", string="Department Name", domain="[('x_type', '=', 'Department')]")
+    x_section_name = fields.Char(index=True, string="Section", compute="_get_section_name")
 
-    x_administration_name = fields.Char(related="department_id.parent_id.name", index="True", string="Administration Name", domain="[('x_type', '=', 'Administration')]")
+    x_administration_name = fields.Char(compute="_get_administration_name", index=True, string="Administration")
 
-    x_public_administration_name = fields.Char(related="department_id.parent_id.parent_id.name", index="True", string="Public Administration Name", domain="[('x_type', '=', 'Public Administration')]")
+    x_public_administration_name = fields.Char(compute="_get_public_administration_name", index=True, string="Public Administration")
 
-    x_sector_name = fields.Char(related="department_id.parent_id.parent_id.parent_id.name", index="True", string="Sector Name", domain="[('x_type', '=', 'Sector')]")
+    x_sector_name = fields.Char(compute="_get_sector_name", index=True, string="Sector")
 
-    x_qualitative_group_name = fields.Char(related="job_id.x_qualitative_group_id.name", index=True)
+    # x_qualitative_group_name = fields.Char(related="job_id.x_qualitative_group_id.name", index=True)
+
+    x_qualitative_group_id = fields.Many2one('qualitative_group',string="Qualitative Group", index=True, tracking=True)
 
     x_oldest_hiring_date = fields.Date(string='Oldest Hiring Date', index=True, tracking=True)
 
@@ -112,6 +116,86 @@ class hrextend(models.Model):
 
     x_hr_education_certificate_id = fields.One2many('hr_education_certificate', 'x_employee_id', string="Education Certificates", store=True,
                                           index=True)
+
+    x_job_history = fields.One2many('job_history', 'x_employee_id', string="Job History", store=True,
+                                          index=True)
+    
+
+    x_seniority_number = fields.Integer(string="Seniority Number", index=True, tracking=True)
+
+
+    def _get_section_name(self):
+        for _rec in self:
+
+            if _rec.department_id.x_type == "Department":
+                _rec.x_section_name = _rec.department_id.name
+
+            elif _rec.department_id.parent_id.x_type == "Department":
+                _rec.x_section_name = _rec.department_id.parent_id.name
+            
+            elif _rec.department_id.parent_id.parent_id.x_type == "Department":
+                _rec.x_section_name = _rec.department_id.parent_id.parent_id.name
+            
+            elif _rec.department_id.parent_id.parent_id.parent_id.x_type == "Department":
+                _rec.x_section_name = _rec.department_id.parent_id.parent_id.parent_id.name
+            
+            else:
+                _rec.x_section_name = None
+    
+    def _get_administration_name(self):
+        for _rec in self:
+
+            if _rec.department_id.x_type == "Administration":
+                _rec.x_administration_name = _rec.department_id.name
+
+            elif _rec.department_id.parent_id.x_type == "Administration":
+                _rec.x_administration_name = _rec.department_id.parent_id.name
+            
+            elif _rec.department_id.parent_id.parent_id.x_type == "Administration":
+                _rec.x_administration_name = _rec.department_id.parent_id.parent_id.name
+            
+            elif _rec.department_id.parent_id.parent_id.parent_id.x_type == "Administration":
+                _rec.x_administration_name = _rec.department_id.parent_id.parent_id.parent_id.name
+            
+            else:
+                _rec.x_administration_name = None
+    
+    def _get_public_administration_name(self):
+        for _rec in self:
+
+            if _rec.department_id.x_type == "Public Administration":
+                _rec.x_public_administration_name = _rec.department_id.name
+
+            elif _rec.department_id.parent_id.x_type == "Public Administration":
+                _rec.x_public_administration_name = _rec.department_id.parent_id.name
+            
+            elif _rec.department_id.parent_id.parent_id.x_type == "Public Administration":
+                _rec.x_public_administration_name = _rec.department_id.parent_id.parent_id.name
+            
+            elif _rec.department_id.parent_id.parent_id.parent_id.x_type == "Public Administration":
+                _rec.x_public_administration_name = _rec.department_id.parent_id.parent_id.parent_id.name
+            
+            else:
+                _rec.x_public_administration_name = None
+
+
+    def _get_sector_name(self):
+        for _rec in self:
+
+            if _rec.department_id.x_type == "Sector":
+                _rec.x_sector_name = _rec.department_id.name
+
+            elif _rec.department_id.parent_id.x_type == "Sector":
+                _rec.x_sector_name = _rec.department_id.parent_id.name
+            
+            elif _rec.department_id.parent_id.parent_id.x_type == "Sector":
+                _rec.x_sector_name = _rec.department_id.parent_id.parent_id.name
+            
+            elif _rec.department_id.parent_id.parent_id.parent_id.x_type == "Sector":
+                _rec.x_sector_name = _rec.department_id.parent_id.parent_id.parent_id.name
+            
+            else:
+                _rec.x_sector_name = None
 
     def get_number_of_years(self):
         # _logger.info("Maged x_hiring_date !" + str(record.x_hiring_date))
