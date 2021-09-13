@@ -60,7 +60,7 @@ class hrextend(models.Model):
 
     x_number_of_years = fields.Float(compute="get_number_of_years", string="Number Of Years", store=True)
 
-    x_age = fields.Integer(string="Age", compute="get_age_calc")
+    x_age = fields.Char(string="Age", compute="get_age_calc")
 
     x_employee_training = fields.One2many('employee.training', 'x_employee_id', string="Employee Training", store=True,
                                           index=True)
@@ -234,15 +234,15 @@ class hrextend(models.Model):
                     today = date.today()
                     offset = int(record.birthday.replace(year=today.year) > today)  # int(True) == 1, int(False) == 0
                     #_logger.info("Maged offset ! " + str(offset))
-                    record.x_age = date.today().year - record.birthday.year - offset
+                    record.x_age = str(date.today().year - record.birthday.year - offset)
                     #_logger.info("Maged record.x_age ! " + str(record.x_age))
                     return record.x_age
                 else:
-                    record.x_age = 0
+                    record.x_age = '0'
                     return record.x_age
             except Exception as ex:
                 #_logger.info("Maged ex ! " + str(ex))
-                record.x_age = 0
+                record.x_age = '0'
                 return record.x_age
 
     @api.constrains('identification_id')

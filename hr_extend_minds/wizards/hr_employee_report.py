@@ -1,7 +1,9 @@
 # -*- coding: utf-8 -*-
 
 from odoo import api, fields, models
+import logging
 
+_logger = logging.getLogger(__name__)
 
 class hr_employee_report(models.TransientModel):
     _name = 'hr_statement_document'
@@ -46,3 +48,8 @@ class hr_employee_report(models.TransientModel):
     is_phone = fields.Boolean(string="Phone")
     is_mobile_phone = fields.Boolean(string="Mobile Phone")
     is_work_phone = fields.Boolean(string="Work Phone")
+
+
+
+
+    
