@@ -17,4 +17,4 @@ from . import committee
 from . import committee_employee
 
 from . import hr_report
-from . import ir_actions_report
+#from . import ir_actions_report
