@@ -76,7 +76,7 @@
                                     <div class="row" t-if="o.is_phone and o.x_employee_id.phone">
                                         <div class="col">
                                             <br />
-                                            <span>رقم الهاتف : </span><span  t-field="o.x_employee_id.phone" dir="ltr"/>
+                                            <span>رقم الهاتف : </span><span  t-field="o.x_employee_id.phone" dir="rtl"/>
                                         </div>
                                     </div>
 
@@ -84,7 +84,7 @@
                                     <div class="row" t-if="o.is_work_phone and o.x_employee_id.work_phone">
                                         <div class="col">
                                             <br />
-                                            <span>رقم هاتف العمل : </span><span  t-field="o.x_employee_id.work_phone" dir="ltr"/>
+                                            <span>رقم هاتف العمل : </span><span  t-field="o.x_employee_id.work_phone" dir="rtl"/>
                                         </div>
                                     </div>
 
@@ -189,7 +189,7 @@
                                     <div class="row" t-if="o.is_id_issuer and o.x_employee_id.mobile_phone">
                                         <div class="col">
                                             <br />
-                                            <span>رقم المحمول : </span><span  t-field="o.x_employee_id.mobile_phone" dir="ltr"/>
+                                            <span>رقم المحمول : </span><span  t-field="o.x_employee_id.mobile_phone" dir="rtl"/>
                                         </div>
                                     </div>
 
