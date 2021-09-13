@@ -28,7 +28,11 @@
                 </h1>
             </div>
 
-
+            <group>
+                <group></group>
+                <group><field name="is_all_selected"/></group>
+            </group>
+            
             <group name="main_group">
                 <group name="group_left">
                 <field name="is_employee_name"/>

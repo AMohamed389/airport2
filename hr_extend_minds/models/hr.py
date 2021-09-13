@@ -128,6 +128,10 @@ class hrextend(models.Model):
                                           index=True)
 
 
+    x_document_folder_id = fields.Many2one('documents.folder', string="Document Folder", readonly=True, index=True, tracking=True, ondelete="cascade")
+
+    x_attachments = fields.One2many('documents.document', 'folder_id', string="Attachments", compute="_get_attachments", ondelete="cascade")
+
     def _get_section_name(self):
         for _rec in self:
 
@@ -250,3 +254,87 @@ class hrextend(models.Model):
         for rec in self:
             if len(str(rec.identification_id)) != 14:
                 raise ValidationError("National Id number should be 14 digits !.")
+
+
+
+    @api.model   
+    def create(self, vals):
+        _logger.info(str("hr_employee create vals : ") + str(vals))
+
+
+        
+        _doc_folder_rec = self.env['documents.folder'].search([('name','=','الموارد البشرية')], limit=1)
+        _logger.info(str("hr_employee create _doc_folder_rec : ") + str(_doc_folder_rec))
+
+        if not _doc_folder_rec:
+            _doc_folder_rec = self.env['documents.folder'].search([('name','=','HR')], limit=1)
+            _logger.info(str("hr_employee create _doc_folder_rec : ") + str(_doc_folder_rec))
+
+        if _doc_folder_rec:
+            _doc_folder_parent_create_rec = self.env['documents.folder'].create({
+                'name': vals['name'],
+                'parent_folder_id': _doc_folder_rec[0].id
+            })
+
+            vals['x_document_folder_id'] = int(_doc_folder_parent_create_rec)
+
+            _logger.info(str("hr_employee create _doc_folder_create_rec : ") + str(_doc_folder_parent_create_rec))
+            
+            self.env.cr.commit()
+            
+            _doc_folder_leaves_create_rec = self.env['documents.folder'].create({
+                'name': 'أجازات',
+                'parent_folder_id': int(_doc_folder_parent_create_rec)
+            })
+
+            _doc_folder_general_create_rec = self.env['documents.folder'].create({
+                'name': 'مستندات عامة',
+                'parent_folder_id': int(_doc_folder_parent_create_rec)
+            })
+        
+
+        result = super(hrextend, self).create(vals)
+
+        _logger.info(str("hr_employee create result : ") + str(result))
+
+        return result
+
+
+    @api.model   
+    def unlink(self):
+        # "your code"
+
+        _doc_folder_rec= None
+
+        for _rec in self:
+            _doc_folder_rec = self.env['documents.folder'].browse(_rec.x_document_folder_id.id)
+
+        result = super(hrextend, self).unlink()
+
+        if _doc_folder_rec:
+            _doc_folder_rec.document_ids.unlink()
+            _doc_folder_rec.unlink()
+
+        return result
+
+
+    def _get_attachments(self):
+        
+        _objects = []
+
+        for _rec in self:
+            _doc_employee_list = self.env['documents.document'].search([('folder_id','=',_rec.x_document_folder_id.id)])
+            #_objects = _objects + _doc_employee_list
+            
+            _doc_employee_folders_list = self.env['documents.folder'].search([('parent_folder_id','=',_rec.x_document_folder_id.id)])
+            
+            _logger.info("hrextend _get_attachments _doc_employee_folders_list : " + str(_doc_employee_folders_list))
+            
+            for _l in  _doc_employee_folders_list:
+                _doc_parent_list = self.env['documents.document'].search([('folder_id','=',_l.id)])
+                _doc_employee_list = _doc_employee_list + _doc_parent_list
+
+        _logger.info("hrextend _get_attachments _objects : " + str(_doc_employee_list))
+            
+
+        _rec.x_attachments = _doc_employee_list

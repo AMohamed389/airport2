@@ -48,7 +48,92 @@ class hr_employee_report(models.TransientModel):
     is_phone = fields.Boolean(string="Phone")
     is_mobile_phone = fields.Boolean(string="Mobile Phone")
     is_work_phone = fields.Boolean(string="Work Phone")
+    is_all_selected = fields.Boolean(string="Select All")
 
+
+
+    @api.onchange('is_all_selected')
+    def _is_all_selected(self):
+        for _rec in self:
+            if _rec.is_all_selected:
+                _rec.is_full_department_name = True
+                _rec.is_sector = True
+                _rec.is_public_administartion = True
+                _rec.is_administration = True
+                _rec.is_section = True
+                _rec.is_manager = True
+                _rec.is_staff_id = True
+                _rec.is_insurance_number = True
+                _rec.is_qualitative_group = True
+                _rec.is_degree = True
+                _rec.is_job_position = True
+                _rec.is_employee_name = True
+                _rec.is_supervision_job = True
+                _rec.is_hiring_date = True
+                _rec.is_birth_date = True
+                _rec.is_gender = True
+                _rec.is_pension_date = True
+                _rec.is_marital_status = True
+                _rec.is_employee_address = True
+                _rec.is_national_id = True
+                _rec.is_id_issuer = True
+                _rec.is_military_status = True
+                _rec.is_place_of_birth = True
+                _rec.is_mother_name = True
+                _rec.is_receiving_Working_date = True
+                _rec.is_employee_pic = True
+                _rec.is_oldest_hiring_date = True
+                _rec.is_training = True
+                _rec.is_penalties = True
+                _rec.is_job_history = True
+                _rec.is_education_certificates = True
+                _rec.is_committee = True
+                _rec.is_education_certificate_level = True
+                _rec.is_age = True
+                _rec.is_email = True
+                _rec.is_phone = True
+                _rec.is_mobile_phone = True
+                _rec.is_work_phone = True
+                
+            elif not _rec.is_all_selected:
+                _rec.is_full_department_name = False
+                _rec.is_sector = False
+                _rec.is_public_administartion = False
+                _rec.is_administration = False
+                _rec.is_section = False
+                _rec.is_manager = False
+                _rec.is_staff_id = False
+                _rec.is_insurance_number = False
+                _rec.is_qualitative_group = False
+                _rec.is_degree = False
+                _rec.is_job_position = False
+                _rec.is_employee_name = False
+                _rec.is_supervision_job = False
+                _rec.is_hiring_date = False
+                _rec.is_birth_date = False
+                _rec.is_gender = False
+                _rec.is_pension_date = False
+                _rec.is_marital_status = False
+                _rec.is_employee_address = False
+                _rec.is_national_id = False
+                _rec.is_id_issuer = False
+                _rec.is_military_status = False
+                _rec.is_place_of_birth = False
+                _rec.is_mother_name = False
+                _rec.is_receiving_Working_date = False
+                _rec.is_employee_pic = False
+                _rec.is_oldest_hiring_date = False
+                _rec.is_training = False
+                _rec.is_penalties = False
+                _rec.is_job_history = False
+                _rec.is_education_certificates = False
+                _rec.is_committee = False
+                _rec.is_education_certificate_level = False
+                _rec.is_age = False
+                _rec.is_email = False
+                _rec.is_phone = False
+                _rec.is_mobile_phone = False
+                _rec.is_work_phone = False
 
 
 

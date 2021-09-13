@@ -15,6 +15,16 @@
                         <h2 class="text-center">بيان حالة</h2>
                         <div>
                             <br />
+                            
+                            <div class="row" t-if="o.is_employee_pic and o.x_employee_id.image_1920">
+                                <div class="col-6">
+
+                                </div>
+                                <div class="col-6">
+                                    <img class="w-50" t-attf-src="data:image/*;base64,{{o.x_employee_id.image_1920}}"/>
+                                </div>
+                            </div>
+                            
                             <br />
                             <div class="row">
                                 <div class="col-6">
@@ -112,6 +122,12 @@
                                         </div>
                                     </div>
 
+                                    <div class="row" t-if="o.is_full_department_name and o.x_employee_id.department_id">
+                                        <div class="col">
+                                            <br />
+                                            <span>التسلسل الكامل : </span><span  t-field="o.x_employee_id.department_id" />
+                                        </div>
+                                    </div>
                                     
                                     <div class="row" t-if="o.is_sector and o.x_employee_id.x_sector_name">
                                         <div class="col">
