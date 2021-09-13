@@ -35,6 +35,8 @@ class committee(models.Model):
     def unlink(self):
         # "your code"
 
+        self.x_committee_employee.unlink()
+
         _doc_folder_rec= None
 
         for _rec in self:
@@ -44,6 +46,8 @@ class committee(models.Model):
 
         _doc_folder_rec.document_ids.unlink()
         _doc_folder_rec.unlink()
+
+        
 
         return result
 

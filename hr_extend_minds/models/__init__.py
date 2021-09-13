@@ -15,3 +15,5 @@ from . import job_history
 from . import hr_attachment
 from . import committee
 from . import committee_employee
+
+from . import hr_report

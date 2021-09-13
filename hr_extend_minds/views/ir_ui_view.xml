@@ -1,5 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+
+    
+    
+    <!-- hr_report-->
+    <record id="action_hr_report" model="ir.actions.act_window">
+        <field name="name">HR Report</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hr_report</field>
+        <field name="view_mode">tree,form</field>
+
+
+    </record>
+
+    <record id="view_hr_report_list" model="ir.ui.view">
+        <field name="name">view_hr_report_list</field>
+        <field name="model">hr_report</field>
+        <field name="arch" type="xml">
+        <tree >
+            <field name="name"/>
+            <field name="x_employee_id"/>
+            <field name="state"/>
+            <field name="active"/>
+            
+        </tree>
+        </field>
+    </record>
+    
+    <record id="view_hr_report_form" model="ir.ui.view">
+        <field name="name">view_hr_report_form</field>
+        <field name="model">hr_report</field>
+
+        <field name="arch" type="xml">
+        <form  >
+            <header>
+            <button type="action" name="%(hr_extend_minds.action_hr_statement_document)d" context="{'default_x_employee_id': x_employee_id}" string="Print" class="oe_highlight" states="Submit" attrs="{}"/>
+            <button name="submit_report" type="object" string="Submit" class="oe_highlight" states="Draft" attrs="{}"/>
+                
+    
+                <field name="state" widget="statusbar" />
+            </header>
+
+            <sheet>
+
+            <div name="button_box" class="oe_button_box">
+            </div>
+
+
+
+            <group name="main_group">
+                <group name="group_left">
+                <field name="name"/>
+                <field name="x_employee_id"/>
+                <field name="active"/>
+                </group>
+                <group name="group_right">
+
+                </group>
+            </group>
+
+
+            <!-- <notebook name="main_notebook">
+                <page name="page1" string="page name">
+                    
+                </page>
+                </notebook> -->
+
+
+            </sheet>
+            <!-- <div class="oe_chatter" name="mainchatterview">
+            <field name="message_follower_ids"/>
+            <field name="activity_ids"/>
+            <field name="message_ids"/>
+            </div> -->
+        </form>
+        </field>
+    </record>
     
     <!-- <record id="hr_ir_attachment_extend_1" model="ir.ui.view">
         <field name="active" eval="True"/>
@@ -822,6 +898,11 @@
                             </group>
                         </group>
                     </page>
+                    
+                    <page string="Committee" name="Committee_employee_page">
+                        <field name="x_committee_employee" context="{'default_x_employee_id': id}"/>
+                    </page>
+
                     <page string="Notes" name="notes_page">
                         <field name="x_notes" placeholder="Type down your notes here..." />
                     </page>

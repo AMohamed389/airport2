@@ -124,6 +124,10 @@ class hrextend(models.Model):
     x_seniority_number = fields.Integer(string="Seniority Number", index=True, tracking=True)
 
 
+    x_committee_employee = fields.One2many('committee_employee', 'x_employee_id', string="Comittees", store=True,
+                                          index=True)
+
+
     def _get_section_name(self):
         for _rec in self:
 

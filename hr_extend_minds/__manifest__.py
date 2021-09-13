@@ -7,11 +7,12 @@
     'data': [
 
     'views/ir_actions_act_window.xml',
+    'report/report_hr_statement_document.xml',
+    'wizards/hr_statement_document_view.xml',
     'views/ir_ui_view.xml',
     'views/ir_ui_menu.xml',
     'security/hr_extend_access.xml',
     'security/ir.model.access.csv',
-    'report/report_employment_status.xml',
     'data/job_degree.xml',
     'data/document_folder.xml',
 

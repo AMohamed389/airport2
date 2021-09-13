@@ -43,8 +43,9 @@ class committee_employee(models.Model):
 
         result = super(committee_employee, self).unlink()
 
-        _doc_folder_rec.document_ids.unlink()
-        _doc_folder_rec.unlink()
+        if _doc_folder_rec:
+            _doc_folder_rec.document_ids.unlink()
+            _doc_folder_rec.unlink()
 
         return result
 
