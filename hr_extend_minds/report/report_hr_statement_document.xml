@@ -8,7 +8,8 @@
                     <div>
                         <span>التاريخ : </span><span t-field="o.create_date"></span>
                     </div>
-                    <div class="page" dir="rtl">
+                    <!-- dir="rtl" -->
+                    <div class="page" >
                         <br />
 
                         <h2 class="text-center">بيان حالة</h2>
@@ -17,7 +18,7 @@
                             <br />
                             <br />
 
-                            <div class="row text-right">
+                            <div class="row">
                                 <div class="col-6" t-if="o.is_employee_name">
                                     <span>اسم الموظف : </span><span t-field="o.x_employee_id.name" />
                                 </div>
@@ -26,7 +27,7 @@
                                 </div>
                             </div>
                             <br />
-                            <div class="row text-right">
+                            <div class="row ">
                                 <div class="col-6" t-if="o.is_birth_date">
                                     <span>تاريخ الميلاد : </span><span t-field="o.x_employee_id.birthday" />
                                 </div>
@@ -35,7 +36,7 @@
                                 </div>
                             </div>
                             <br />
-                            <div class="row text-right" >
+                            <div class="row " >
                                 <div class="col-6" t-if="o.is_national_id">
                                     <span>الرقم القومي : </span><span t-field="o.x_employee_id.identification_id" />
                                 </div>
@@ -44,7 +45,7 @@
                                 </div>
                             </div>
                             <br />
-                            <div class="row text-right" t-if="o.is_gender">
+                            <div class="row " t-if="o.is_gender">
                                 <div class="col-6">
                                     <span>النوع : </span><span  t-field="o.x_employee_id.gender" />
                                 </div>
@@ -53,7 +54,7 @@
                                 </div>
                             </div>
                             <br />
-                            <div class="row text-right">
+                            <div class="row ">
                                 <div class="col-6" t-if="o.is_qualitative_group">
                                     <span>المجموعة النوعية : </span><span  t-field="o.x_employee_id.x_qualitative_group_id.name" />
                                 </div>
@@ -62,7 +63,7 @@
                                 </div>
                             </div>
                             <br />
-                            <div class="row text-right">
+                            <div class="row ">
                                 <div class="col-6" t-if="o.is_job_position">
                                     <span>الوظيفة : </span><span  t-field="o.x_employee_id.job_id.name" />
                                 </div>
@@ -71,7 +72,7 @@
                                 </div>
                             </div>
                             <br />
-                            <div class="row text-right">
+                            <div class="row ">
                                 <div class="col-6" t-if="o.is_receiving_Working_date">
                                     <span>تاريخ استلام العمل : </span><span  t-field="o.x_employee_id.x_receiving_work_date" />
                                 </div>
@@ -80,7 +81,7 @@
                                 </div>
                             </div>
                             <br />
-                            <div class="row text-right" t-if="o.is_mother_name">
+                            <div class="row " t-if="o.is_mother_name">
                                 <div class="col-6">
                                     <span>اسم الأم : </span><span  t-field="o.x_employee_id.x_mother_name" />
                                 </div>
