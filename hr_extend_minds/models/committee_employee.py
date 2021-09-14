@@ -98,3 +98,6 @@ class committee_employee(models.Model):
         for _rec in self:
             _doc_list = self.env['documents.document'].search([('folder_id','=',_rec.x_document_folder_id.id)])
             _rec.x_attachments = _doc_list
+
+
+    _sql_constraints = [('constrainname', 'UNIQUE (x_employee_id, x_committee_id)', 'Employee must be unique under the committee !.')]
