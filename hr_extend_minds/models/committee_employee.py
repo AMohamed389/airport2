@@ -45,7 +45,7 @@ class committee_employee(models.Model):
 
         if _doc_folder_rec:
             _doc_folder_rec.document_ids.unlink()
-            _doc_folder_rec.unlink()
+            #_doc_folder_rec.unlink()
 
         return result
 
