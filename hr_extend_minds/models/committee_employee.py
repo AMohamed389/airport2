@@ -36,7 +36,7 @@ class committee_employee(models.Model):
     def unlink(self):
         # "your code"
 
-        _doc_folder_rec= None
+        _doc_folder_rec= False
 
         for _rec in self:
             _doc_folder_rec = self.env['documents.folder'].browse(_rec.x_document_folder_id.id)
@@ -44,9 +44,9 @@ class committee_employee(models.Model):
         result = super(committee_employee, self).unlink()
 
         if _doc_folder_rec:
-            _doc_folder_rec.sudo().document_ids.unlink()
-            _doc_folder_rec.sudo().unlink()
-
+            _logger.info("committee_employee unlink _doc_folder_rec : " + str(_doc_folder_rec))
+            #_doc_folder_rec.sudo().document_ids.unlink()
+            #_doc_folder_rec.sudo().unlink()
         return result
 
 
