@@ -32,7 +32,7 @@
                 <group></group>
                 <group><field name="is_all_selected"/></group>
             </group>
-            
+
             <group name="main_group">
                 <group name="group_left">
                 <field name="is_employee_name"/>
@@ -85,7 +85,8 @@
                 </notebook> -->
             </sheet>
             <footer>
-                <button type="action" name="%(hr_extend_minds.action_report_hr_statement_document)d" context="{'default_doc_ids': x_employee_id}" class="btn-primary" string="Print"/>
+                <!-- <button type="action" name="%(hr_extend_minds.action_report_hr_statement_document)d" context="{'default_doc_ids': x_employee_id}" class="btn-primary" string="Print"/> -->
+                <button type="object" name="print_hr_statement_document" context="{'default_doc_ids': x_employee_id}" class="btn-primary" string="Print"/>
             </footer>
         </form>
         </field>
