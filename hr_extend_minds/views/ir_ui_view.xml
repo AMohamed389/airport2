@@ -251,7 +251,7 @@
         <field name="arch" type="xml">
         <tree editable="bottom" >
             <field name="currency_id" optional="hide" invisible="1" />
-            <field name="x_committee_id" readonly="1"/>
+            <field name="x_committee_id" />
             <field name="x_employee_id" />
             <field name="x_amount" widget="monetary" options="{'currency_field': 'currency_id'}"/>
             <field name="x_document_folder_id"/>
@@ -883,7 +883,7 @@
                     </page>
 
                     <page string="Education Certificates" name="hr_education_certificates_page">
-                        <field name="x_hr_education_certificate_id" context="{'default_x_employee_id': id}"/>
+                        <field name="x_hr_education_certificate" context="{'default_x_employee_id': id}"/>
                     </page>
                     
 

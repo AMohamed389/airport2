@@ -114,7 +114,7 @@ class hrextend(models.Model):
 
     x_supervision_job = fields.Many2one('hr.job',string="Supervision Job", index=True, tracking=True)
 
-    x_hr_education_certificate_id = fields.One2many('hr_education_certificate', 'x_employee_id', string="Education Certificates", store=True,
+    x_hr_education_certificate = fields.One2many('hr_education_certificate', 'x_employee_id', string="Education Certificates", store=True,
                                           index=True)
 
     x_job_history = fields.One2many('job_history', 'x_employee_id', string="Job History", store=True,
