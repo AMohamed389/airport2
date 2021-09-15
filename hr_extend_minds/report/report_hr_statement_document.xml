@@ -270,19 +270,19 @@
                                         <t t-foreach="o.x_employee_id.x_committee_employee" t-as="committee_employee">
                                             <tr>
                                                 <td class="">
-                                                    <span class="text-nowrap" t-field="committee_employee.x_committee_id.name"/>
+                                                    <span class="" t-field="committee_employee.x_committee_id.name"/>
                                                 </td>
                                                 <td class="">
-                                                    <span class="text-nowrap" t-field="committee_employee.x_amount"/>
+                                                    <span class="" t-field="committee_employee.x_amount"/>
                                                 </td>
                                                 <td class="">
-                                                    <span class="text-nowrap" t-field="committee_employee.x_committee_id.x_date_from"/>
+                                                    <span class="" t-field="committee_employee.x_committee_id.x_date_from"/>
                                                 </td>
                                                 <td class="">
-                                                    <span class="text-nowrap" t-field="committee_employee.x_committee_id.x_date_to"/>
+                                                    <span class="" t-field="committee_employee.x_committee_id.x_date_to"/>
                                                 </td>
                                                 <td class="">
-                                                    <span class="text-nowrap" t-field="committee_employee.x_notes"/>
+                                                    <span class="" t-field="committee_employee.x_notes"/>
                                                 </td>
                                             </tr>
                                         </t>
@@ -315,34 +315,34 @@
                                 
                                         <t t-foreach="o.x_employee_id.x_job_history" t-as="job_history">
                                             <tr>
-                                                <td class="text-nowrap">
+                                                <td class="">
                                                     <span t-field="job_history.x_type"/>
                                                 </td>
-                                                <td class="text-nowrap">
+                                                <td class="">
                                                     <span t-field="job_history.x_source_company"/>
                                                 </td>
-                                                <td class="text-nowrap">
+                                                <td class="">
                                                     <span t-field="job_history.x_sector"/>
                                                 </td>
-                                                <td class="text-nowrap">
+                                                <td class="">
                                                     <span t-field="job_history.x_public_administration"/>
                                                 </td>
-                                                <td class="text-nowrap">
+                                                <td class="">
                                                     <span t-field="job_history.x_administration"/>
                                                 </td>
-                                                <td class="text-nowrap">
+                                                <td class="">
                                                     <span t-field="job_history.x_department"/>
                                                 </td>
-                                                <td class="text-nowrap">
+                                                <td class="">
                                                     <span t-field="job_history.x_qualitative_group"/>
                                                 </td>
-                                                <td class="text-nowrap">
+                                                <td class="">
                                                     <span t-field="job_history.x_degree"/>
                                                 </td>
-                                                <td class="text-nowrap">
+                                                <td class="">
                                                     <span t-field="job_history.x_date_from"/>
                                                 </td>
-                                                <td class="text-nowrap">
+                                                <td class="">
                                                     <span t-field="job_history.x_date_to"/>
                                                 </td>
                                             </tr>
