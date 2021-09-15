@@ -260,11 +260,11 @@
                                 <table class="table table-sm o_main_table">
                                     <thead style="display: table-row-group">
                                         <tr>
-                                            <th class="text-right">اللجنة</th>
-                                            <th class="text-right">بدل اللجنة</th>
-                                            <th class="text-right">من تاريخ</th>
-                                            <th class="text-right">الى تاريخ</th>
-                                            <th class="text-right">ملاحظات</th>
+                                            <th class="text-right text-nowrap">اللجنة</th>
+                                            <th class="text-right text-nowrap">بدل اللجنة</th>
+                                            <th class="text-right text-nowrap">من تاريخ</th>
+                                            <th class="text-right text-nowrap">الى تاريخ</th>
+                                            <th class="text-right text-nowrap">ملاحظات</th>
                                         </tr>
                                     </thead>
                                     <tbody class="">
@@ -273,19 +273,19 @@
                                         <t t-foreach="o.x_employee_id.x_committee_employee" t-as="committee_employee">
                                             <tr>
                                                 <td class="text-right">
-                                                    <span t-field="committee_employee.x_committee_id.name"/>
+                                                    <span class="text-nowrap" t-field="committee_employee.x_committee_id.name"/>
                                                 </td>
                                                 <td class="text-right">
-                                                    <span t-field="committee_employee.x_amount"/>
+                                                    <span class="text-nowrap" t-field="committee_employee.x_amount"/>
                                                 </td>
                                                 <td class="text-right">
-                                                    <span t-field="committee_employee.x_committee_id.x_date_from"/>
+                                                    <span class="text-nowrap" t-field="committee_employee.x_committee_id.x_date_from"/>
                                                 </td>
                                                 <td class="text-right">
-                                                    <span t-field="committee_employee.x_committee_id.x_date_to"/>
+                                                    <span class="text-nowrap" t-field="committee_employee.x_committee_id.x_date_to"/>
                                                 </td>
                                                 <td class="text-right">
-                                                    <span t-field="committee_employee.x_notes"/>
+                                                    <span class="text-nowrap" t-field="committee_employee.x_notes"/>
                                                 </td>
                                             </tr>
                                         </t>
@@ -300,16 +300,16 @@
                                 <table class="table table-sm o_main_table">
                                     <thead style="display: table-row-group">
                                         <tr>
-                                            <th class="text-right">النوع</th>
-                                            <th class="text-right">الجهة</th>
-                                            <th class="text-right">القطاع</th>
-                                            <th class="text-right">الادارة العامة</th>
-                                            <th class="text-right">الادارة</th>
-                                            <th class="text-right">القسم</th>
-                                            <th class="text-right">المجموعة النوعية</th>
-                                            <th class="text-right">الدرجة</th>
-                                            <th class="text-right">من تاريخ</th>
-                                            <th class="text-right">الى تاريخ</th>
+                                            <th class="text-right text-nowrap">النوع</th>
+                                            <th class="text-right text-nowrap">الجهة</th>
+                                            <th class="text-right text-nowrap">القطاع</th>
+                                            <th class="text-right text-nowrap">الادارة العامة</th>
+                                            <th class="text-right text-nowrap">الادارة</th>
+                                            <th class="text-right text-nowrap">القسم</th>
+                                            <th class="text-right text-nowrap">المجموعة النوعية</th>
+                                            <th class="text-right text-nowrap">الدرجة</th>
+                                            <th class="text-right text-nowrap">من تاريخ</th>
+                                            <th class="text-right text-nowrap">الى تاريخ</th>
                                         </tr>
                                     </thead>
                                     <tbody class="">
@@ -318,22 +318,22 @@
                                         <t t-foreach="o.x_employee_id.x_hr_education_certificate" t-as="education_certificate">
                                             <tr>
                                                 <td class="text-right">
-                                                    <span t-field="education_certificate.name"/>
+                                                    <span class="text-nowrap" t-field="education_certificate.name"/>
                                                 </td>
                                                 <td class="text-right">
-                                                    <span t-field="education_certificate.x_university_name"/>
+                                                    <span class="text-nowrap" t-field="education_certificate.x_university_name"/>
                                                 </td>
                                                 <td class="text-right">
-                                                    <span t-field="education_certificate.x_specialization"/>
+                                                    <span class="text-nowrap" t-field="education_certificate.x_specialization"/>
                                                 </td>
                                                 <td class="text-right">
-                                                    <span t-field="education_certificate.x_certificate_date"/>
+                                                    <span class="text-nowrap" t-field="education_certificate.x_certificate_date"/>
                                                 </td>
                                                 <td class="text-right">
-                                                    <span t-field="education_certificate.x_decision_number"/>
+                                                    <span class="text-nowrap" t-field="education_certificate.x_decision_number"/>
                                                 </td>
                                                 <td class="text-right">
-                                                    <span t-field="education_certificate.x_decision_date"/>
+                                                    <span class="text-nowrap" t-field="education_certificate.x_decision_date"/>
                                                 </td>
                                             </tr>
                                         </t>
