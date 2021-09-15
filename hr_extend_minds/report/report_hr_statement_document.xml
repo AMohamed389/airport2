@@ -251,7 +251,50 @@
 
                                 </div>
                             </div>
+
                             
+                            <div t-if="o.is_committee and o.x_employee_id.x_committee_employee">
+                                <br/>
+                                <br/>
+                                <h3 class="text-right">اللجان</h3>
+                                <table class="table table-sm o_main_table">
+                                    <thead style="display: table-row-group">
+                                        <tr>
+                                            <th class="text-right">اللجنة</th>
+                                            <th class="text-right">بدل اللجنة</th>
+                                            <th class="text-right">من تاريخ</th>
+                                            <th class="text-right">الى تاريخ</th>
+                                            <th class="text-right">ملاحظات</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="">
+                                
+                                
+                                        <t t-foreach="o.x_employee_id.x_committee_employee" t-as="committee_employee">
+                                            <tr>
+                                                <td class="text-right">
+                                                    <span t-field="committee_employee.x_committee_id.name"/>
+                                                </td>
+                                                <td class="text-right">
+                                                    <span t-field="committee_employee.x_amount"/>
+                                                </td>
+                                                <td class="text-right">
+                                                    <span t-field="committee_employee.x_committee_id.x_date_from"/>
+                                                </td>
+                                                <td class="text-right">
+                                                    <span t-field="committee_employee.x_committee_id.x_date_to"/>
+                                                </td>
+                                                <td class="text-right">
+                                                    <span t-field="committee_employee.x_notes"/>
+                                                </td>
+                                            </tr>
+                                        </t>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <br/>
+                            <br/>
+                            <br/>
                         </div>
                         
                     </div>
