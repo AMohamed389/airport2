@@ -110,7 +110,7 @@ class hrextend(models.Model):
 
     x_oldest_hiring_date = fields.Date(string='Oldest Hiring Date', index=True, tracking=True)
 
-    x_disability_id = fields.Char(string="Disability Id Number", index=True, tracking=True)
+    x_disability = fields.Char(string="Disability Id Number", index=True, tracking=True)
 
     x_supervision_job = fields.Many2one('hr.job',string="Supervision Job", index=True, tracking=True)
 
@@ -131,6 +131,10 @@ class hrextend(models.Model):
     x_document_folder_id = fields.Many2one('documents.folder', string="Document Folder", readonly=True, index=True, tracking=True, ondelete="cascade")
 
     x_attachments = fields.One2many('documents.document', 'folder_id', string="Attachments", compute="_get_attachments", ondelete="cascade")
+
+    x_current_illegal_earning_date = fields.Char(string="Current Illegal Earning Date", index=True, tracking=True)
+    
+    x_next_illegal_earning_date = fields.Char(string="Next Illegal Earning Date", index=True, tracking=True)
 
     def _get_section_name(self):
         for _rec in self:

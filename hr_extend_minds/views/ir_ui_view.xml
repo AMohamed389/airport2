@@ -872,7 +872,7 @@
                 <xpath expr="//group[@name='work_permit']" position="after">
                     <group name="disability_group" string="Disability">
                         <field name="x_has_disability_condition"/>
-                        <field name="x_disability_id" string="Disability Id Number"/>
+                        <field name="x_disability" string="Disability Id Number"/>
                     </group>
                 </xpath>
 
@@ -952,6 +952,16 @@
                             </group>
                             <group name="loan_page_group_parent_right">
                             </group>
+                        </group>
+                    </page>
+
+                    <page string="Illegal Earning" name="illegal_earning_page">
+                        <group name="illegal_earning_page_group_parent">
+                            <group name="illegal_earning_page_group_parent_left">
+                                <field name="x_current_illegal_earning_date" string="Current Illegal Earning Date"/>
+                                <field name="x_next_illegal_earning_date" string="Next Illegal Earning Date"/>
+                            </group>
+                            <group name="illegal_earning_page_group_parent_right"/>
                         </group>
                     </page>
                     
