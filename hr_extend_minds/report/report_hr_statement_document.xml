@@ -215,7 +215,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="row" t-if="o.is_supervision_job">
+                                    <div class="row" t-if="o.is_supervision_job and o.x_employee_id.x_supervision_job.name">
                                         <div class="col">
                                             <br />
                                             <span>الوظيفة الاشرافية : </span><span  t-field="o.x_employee_id.x_supervision_job.name" />
@@ -253,7 +253,7 @@
                                 <br/>
                                 <br/>
                                 <br/>
-                                <h3 class="">اللجان</h3>
+                                <h5 class="">اللجان</h5>
                                 <table class="table table-striped">
                                     <thead style="display: table-row-group">
                                         <tr>
@@ -294,7 +294,7 @@
                                 <br/>
                                 <br/>
                                 <br/>
-                                <h3 class="">التدرج الوظيفي</h3>
+                                <h5 class="">التدرج الوظيفي</h5>
                                 <table class="table table-striped">
                                     <thead style="display: table-row-group">
                                         <tr>
