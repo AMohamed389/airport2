@@ -292,6 +292,54 @@
                                     </tbody>
                                 </table>
                             </div>
+
+                            <div t-if="o.is_education_certificates and o.x_employee_id.x_hr_education_certificate">
+                                <br/>
+                                <br/>
+                                <h3 class="text-right">التدرج الوظيفي</h3>
+                                <table class="table table-sm o_main_table">
+                                    <thead style="display: table-row-group">
+                                        <tr>
+                                            <th class="text-right">النوع</th>
+                                            <th class="text-right">الجهة</th>
+                                            <th class="text-right">القطاع</th>
+                                            <th class="text-right">الادارة العامة</th>
+                                            <th class="text-right">الادارة</th>
+                                            <th class="text-right">القسم</th>
+                                            <th class="text-right">المجموعة النوعية</th>
+                                            <th class="text-right">الدرجة</th>
+                                            <th class="text-right">من تاريخ</th>
+                                            <th class="text-right">الى تاريخ</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="">
+                                
+                                
+                                        <t t-foreach="o.x_employee_id.x_hr_education_certificate" t-as="education_certificate">
+                                            <tr>
+                                                <td class="text-right">
+                                                    <span t-field="education_certificate.name"/>
+                                                </td>
+                                                <td class="text-right">
+                                                    <span t-field="education_certificate.x_university_name"/>
+                                                </td>
+                                                <td class="text-right">
+                                                    <span t-field="education_certificate.x_specialization"/>
+                                                </td>
+                                                <td class="text-right">
+                                                    <span t-field="education_certificate.x_certificate_date"/>
+                                                </td>
+                                                <td class="text-right">
+                                                    <span t-field="education_certificate.x_decision_number"/>
+                                                </td>
+                                                <td class="text-right">
+                                                    <span t-field="education_certificate.x_decision_date"/>
+                                                </td>
+                                            </tr>
+                                        </t>
+                                    </tbody>
+                                </table>
+                            </div>
                             <br/>
                             <br/>
                             <br/>
