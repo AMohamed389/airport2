@@ -251,8 +251,6 @@
                             
                             <div t-if="o.is_committee and o.x_employee_id.x_committee_employee">
                                 <br/>
-                                <br/>
-                                <br/>
                                 <h5 class="">اللجان</h5>
                                 <table class="table table-striped">
                                     <thead style="display: table-row-group">
@@ -291,8 +289,6 @@
                             </div>
 
                             <div t-if="o.is_job_history and o.x_employee_id.x_job_history">
-                                <br/>
-                                <br/>
                                 <br/>
                                 <h5 class="">التدرج الوظيفي</h5>
                                 <table class="table table-striped">
