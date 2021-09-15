@@ -513,8 +513,9 @@
         <field name="model">job_degree</field>
         <field name="arch" type="xml">
         <tree editable="bottom" >
-            <field name="name"/>
             <field name="x_qualitative_group_id"/>
+            <field name="name"/>
+            <!-- <field name="x_job_id"/> -->
             <field name="active"/>
 
         </tree>
@@ -655,7 +656,8 @@
         <field name="arch" type="xml">
             <data>
                 <xpath expr="//field[@name='name']" position="after">
-                    <field name="x_job_degree_id"/>
+                    <field name="x_qualitative_group_id"/>
+                    <field name="x_job_degree_id" domain="[('x_qualitative_group_id','=',x_qualitative_group_id)]"/>
                     <field name="x_is_limited"/>
                 </xpath>
             </data>
@@ -679,7 +681,8 @@
                     <page string="Degree" name="degree_page">
                         <group name="job_page_group_parent">
                             <group name="degree_page_group_parent_right">
-                                <field name="x_job_degree_id" />
+                                <field name="x_qualitative_group_id"/>
+                                <field name="x_job_degree_id" domain="[('x_qualitative_group_id','=',x_qualitative_group_id)]"/>
                                 <field name="x_is_limited"/>
                             </group>
                             <group name="degree_page_group_parent_left"/>
@@ -855,7 +858,7 @@
                 <xpath expr="//group[@name='job_page_group_parent_left']" position="inside">
                     <field name="x_qualitative_group_id" />
                     <field name="x_job_degree_id" domain="[('x_qualitative_group_id','=',x_qualitative_group_id)]" string="Degree"/>
-                    <xpath expr="//field[@name='job_id']" domain="[('x_job_degree_id','=',x_job_degree_id)]"  position="move"/>
+                    <xpath expr="//field[@name='job_id']" domain="[('x_job_degree_id','=',x_job_degree_id),('x_qualitative_group_id','=',x_qualitative_group_id)]"  position="move"/>
                     <field name="x_job_degree_date" string="Degree Date"/>
                     <field name="x_supervision_job" string="Supervision Job"/>
                 </xpath>

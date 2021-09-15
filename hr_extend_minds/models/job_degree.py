@@ -23,4 +23,6 @@ class job_degree(models.Model):
     ,string="Degree", index=True, required=True, tracking=True)
     x_qualitative_group_id = fields.Many2one('qualitative_group', string="Qualitative Group", index=True, tracking=True)
 
+    #x_job_id = fields.Many2one('hr.job', string="Job Position", index=True, tracking=True)
+
     active = fields.Boolean(string='Active',index=True,default=True,tracking=True)
