@@ -98,29 +98,6 @@
                                         </div>
                                     </div>
 
-                                    
-                                    <div class="row" t-if="o.is_supervision_job">
-                                        <div class="col">
-                                            <br />
-                                            <span>الوظيفة الاشرافية : </span><span  t-field="o.x_employee_id.x_supervision_job.name" />
-                                        </div>
-                                    </div>
-
-                                    
-                                    <div class="row" t-if="o.is_hiring_date and o.x_employee_id.x_hiring_date">
-                                        <div class="col">
-                                            <br />
-                                            <span>تاريخ التعيين : </span><span  t-field="o.x_employee_id.x_hiring_date" />
-                                        </div>
-                                    </div>
-
-                                    
-                                    <div class="row" t-if="o.is_oldest_hiring_date and o.x_employee_id.x_oldest_hiring_date">
-                                        <div class="col">
-                                            <br />
-                                            <span>تاريخ الأقدمية : </span><span  t-field="o.x_employee_id.x_oldest_hiring_date" />
-                                        </div>
-                                    </div>
 
                                     <div class="row" t-if="o.is_full_department_name and o.x_employee_id.department_id">
                                         <div class="col">
@@ -135,12 +112,25 @@
                                             <span>القطاع : </span><span  t-field="o.x_employee_id.x_sector_name" />
                                         </div>
                                     </div>
-
+                                    
+                                    <div class="row" t-if="o.is_public_administartion and o.x_employee_id.x_public_administration_name">
+                                        <div class="col">
+                                            <br />
+                                            <span>ادارة العامة : </span><span  t-field="o.x_employee_id.x_public_administration_name" />
+                                        </div>
+                                    </div>
                                     
                                     <div class="row" t-if="o.is_administration and o.x_employee_id.x_administration_name">
                                         <div class="col">
                                             <br />
                                             <span>ادارة : </span><span  t-field="o.x_employee_id.x_administration_name" />
+                                        </div>
+                                    </div>
+
+                                    <div class="row" t-if="o.is_section and o.x_employee_id.x_section_name">
+                                        <div class="col">
+                                            <br />
+                                            <span>قسم : </span><span  t-field="o.x_employee_id.x_section_name" />
                                         </div>
                                     </div>
 
@@ -225,27 +215,33 @@
                                         </div>
                                     </div>
 
+                                    <div class="row" t-if="o.is_supervision_job">
+                                        <div class="col">
+                                            <br />
+                                            <span>الوظيفة الاشرافية : </span><span  t-field="o.x_employee_id.x_supervision_job.name" />
+                                        </div>
+                                    </div>
+
+                                    
+                                    <div class="row" t-if="o.is_hiring_date and o.x_employee_id.x_hiring_date">
+                                        <div class="col">
+                                            <br />
+                                            <span>تاريخ التعيين : </span><span  t-field="o.x_employee_id.x_hiring_date" />
+                                        </div>
+                                    </div>
+
+                                    
+                                    <div class="row" t-if="o.is_oldest_hiring_date and o.x_employee_id.x_oldest_hiring_date">
+                                        <div class="col">
+                                            <br />
+                                            <span>تاريخ الأقدمية : </span><span  t-field="o.x_employee_id.x_oldest_hiring_date" />
+                                        </div>
+                                    </div>
                                     
                                     <div class="row" t-if="o.is_receiving_Working_date and o.x_employee_id.x_receiving_work_date">
                                         <div class="col">
                                             <br />
                                             <span>تاريخ استلام العمل : </span><span  t-field="o.x_employee_id.x_receiving_work_date" />
-                                        </div>
-                                    </div>
-
-                                    
-                                    <div class="row" t-if="o.is_public_administartion and o.x_employee_id.x_public_administration_name">
-                                        <div class="col">
-                                            <br />
-                                            <span>ادارة العامة : </span><span  t-field="o.x_employee_id.x_public_administration_name" />
-                                        </div>
-                                    </div>
-
-                                    
-                                    <div class="row" t-if="o.is_section and o.x_employee_id.x_section_name">
-                                        <div class="col">
-                                            <br />
-                                            <span>قسم : </span><span  t-field="o.x_employee_id.x_section_name" />
                                         </div>
                                     </div>
 
@@ -299,7 +295,7 @@
                                 <br/>
                                 <br/>
                                 <h3 class="">التدرج الوظيفي</h3>
-                                <table class="table table-sm o_main_table">
+                                <table class="table table-striped">
                                     <thead style="display: table-row-group">
                                         <tr>
                                             <th class="text-nowrap">النوع</th>
