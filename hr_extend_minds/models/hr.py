@@ -311,10 +311,17 @@ class hrextend(models.Model):
 
         _doc_folder_rec= None
 
-        # for _rec in self:
-        #     _doc_folder_rec = self.env['documents.folder'].browse(_rec.x_document_folder_id.id)
-        #     _logger.info("hrextend unlink _rec : " + str(_rec))
-        #     _doc_folder_rec.unlink()
+        for _rec in self:
+            _doc_folder_rec = self.env['documents.folder'].browse(_rec.x_document_folder_id.id)
+            _logger.info("hrextend unlink _rec : " + str(_rec))
+
+            _doc_parent_folder_rec = self.env['documents.folder'].search([('parent_folder_id','=',_doc_folder_rec.id)])
+            for __rec in _doc_parent_folder_rec:
+                __rec.document_ids.unlink()
+                __rec.unlink()
+                
+            _doc_folder_rec.document_ids.unlink()
+            _doc_folder_rec.unlink()
         
         
         result = super(hrextend, self).unlink()
