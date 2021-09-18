@@ -23,7 +23,7 @@ class committee_employee(models.Model):
     x_amount = fields.Monetary(string='Amount',index=True, required=True,tracking=True)
     currency_id = fields.Many2one('res.currency', string="Currency", store=True, tracking=True, index=True, default=lambda self: self.env.user.company_id.currency_id.id)
     # x_datas = fields.Binary(related="x_attachment.x_datas", string="File")
-    x_attachments = fields.One2many('documents.document', 'folder_id', compute="_get_attachments", string="Attachments", ondelete="cascade")
+    x_attachments = fields.One2many('documents.document', 'attachment_id', compute="_get_attachments", string="Attachments", ondelete="cascade")
     # x_datas = fields.Binary(string="File")
     x_notes = fields.Text(string="Notes", tracking=True, store=True)
     x_committee_id = fields.Many2one('committee', string="Committee", index=True, tracking=True)

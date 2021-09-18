@@ -25,7 +25,7 @@ class committee(models.Model):
     # x_attachments = fields.One2many('hr_attachment', 'x_res_id', string="Attachments", store=True, index=True)
     # x_attachments = fields.One2many('ir.attachment', 'res_id', domain=[('res_model', '=', 'committee')], string="Attachments", store=True, index=True)
     # x_attachments = fields.One2many('documents.document', 'attachment_id', domain=[('res_model', '=', 'committee')], string="Attachments", store=True, index=True)
-    x_attachments = fields.One2many('documents.document', 'folder_id', string="Attachments", compute="_get_attachments", ondelete="cascade")
+    x_attachments = fields.One2many('documents.document', 'attachment_id', string="Attachments", compute="_get_attachments", ondelete="cascade")
     x_notes = fields.Text(string="Notes", tracking=True, store=True)
     x_committee_employee = fields.One2many('committee_employee', 'x_committee_id', index=True, store=True)
     x_document_folder_id = fields.Many2one('documents.folder', string="Document Folder", readonly=True, index=True, tracking=True, ondelete="cascade")

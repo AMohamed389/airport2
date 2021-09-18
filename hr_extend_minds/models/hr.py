@@ -130,7 +130,7 @@ class hrextend(models.Model):
 
     x_document_folder_id = fields.Many2one('documents.folder', string="Document Folder", readonly=True, index=True, tracking=True, ondelete="cascade")
 
-    x_attachments = fields.One2many('documents.document', 'folder_id', string="Attachments", compute="_get_attachments", ondelete="cascade")
+    x_attachments = fields.One2many('documents.document', 'attachment_id', string="Attachments", compute="_get_attachments", ondelete="cascade")
 
     x_current_illegal_earning_date = fields.Char(string="Current Illegal Earning Date", index=True, tracking=True)
     
