@@ -130,7 +130,7 @@ class hrextend(models.Model):
 
     x_document_folder_id = fields.Many2one('documents.folder', string="Document Folder", readonly=True, index=True, tracking=True, ondelete="cascade")
 
-    x_attachments = fields.One2many('documents.document', 'attachment_id', string="Attachments", compute="_get_attachments", ondelete="cascade")
+    x_attachments = fields.One2many('documents.document', 'res_id', string="Attachments", compute="_get_attachments", ondelete="cascade")
 
     x_current_illegal_earning_date = fields.Char(string="Current Illegal Earning Date", index=True, tracking=True)
     
@@ -309,19 +309,21 @@ class hrextend(models.Model):
     def unlink(self):
         # "your code"
 
-        _doc_folder_rec= None
+        #_doc_folder_rec= None
 
-        for _rec in self:
-            _doc_folder_rec = self.env['documents.folder'].browse(_rec.x_document_folder_id.id)
-            _logger.info("hrextend unlink _rec : " + str(_rec))
+        # for _rec in self:
+        #     if _doc_folder_rec :
+        #         _doc_folder_rec = self.env['documents.folder'].browse(_rec.x_document_folder_id.id)
+        #         _logger.info("hrextend unlink _rec : " + str(_rec))
 
-            _doc_parent_folder_rec = self.env['documents.folder'].search([('parent_folder_id','=',_doc_folder_rec.id)])
-            for __rec in _doc_parent_folder_rec:
-                __rec.document_ids.unlink()
-                __rec.unlink()
+        #         _doc_parent_folder_rec = self.env['documents.folder'].search([('parent_folder_id','=',_doc_folder_rec.id)])
+        #         for __rec in _doc_parent_folder_rec:
+        #             _logger.info("hrextend unlink __rec : " + str(__rec))
+        #             __rec.document_ids.unlink()
+        #             __rec.unlink()
                 
-            _doc_folder_rec.document_ids.unlink()
-            _doc_folder_rec.unlink()
+        #         _doc_folder_rec.document_ids.unlink()
+        #         _doc_folder_rec.unlink()
         
         
         result = super(hrextend, self).unlink()
