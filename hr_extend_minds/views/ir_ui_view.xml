@@ -255,7 +255,7 @@
             <field name="x_employee_id" />
             <field name="x_amount" widget="monetary" options="{'currency_field': 'currency_id'}"/>
             <field name="x_document_folder_id"/>
-            <field name="x_attachments" />
+            <!-- <field name="x_attachments" /> -->
             <!-- <field name="x_datas" widget="binary"/> -->
             <field name="x_notes"/>
             <field name="active"/>
@@ -300,11 +300,11 @@
             </group>
 
 
-            <notebook name="main_notebook">
+            <!-- <notebook name="main_notebook">
                 <page name="attachments" string="Attachments">
                     <field name="x_attachments"/>
                 </page>
-                </notebook>
+                </notebook> -->
 
 
             </sheet>
@@ -383,8 +383,8 @@
                     <field name="x_committee_employee" context="{'default_x_committee_id':id}"/>
                 </page>
                 <page name="page2" string="Attachments">
-                    <field name="x_attachments" force_save="1" widget="one2many_list" 
-                    context="{'default_res_id':id, 'default_res_model':'committee','folder_id': x_document_folder_id}" />
+                    <!-- <field name="x_attachments" force_save="1" widget="one2many_list" 
+                    context="{'default_res_id':id, 'default_res_model':'committee','folder_id': x_document_folder_id}" /> -->
                     <!-- <field name="x_attachments" force_save="1" widget="one2many_list" 
                     context="{'default_x_res_id':id, 'default_x_res_model':'committee'}" /> -->
                     <!-- <field name="x_attachments" force_save="1" widget="one2many_list" 
@@ -858,7 +858,10 @@
                 <xpath expr="//group[@name='job_page_group_parent_left']" position="inside">
                     <field name="x_qualitative_group_id" />
                     <field name="x_job_degree_id" domain="[('x_qualitative_group_id','=',x_qualitative_group_id)]" string="Degree"/>
-                    <xpath expr="//field[@name='job_id']" domain="[('x_job_degree_id','=',x_job_degree_id),('x_qualitative_group_id','=',x_qualitative_group_id)]"  position="move"/>
+                    <xpath expr="//field[@name='job_id']"  position="move"/>
+                    <xpath expr="//field[@name='job_id']" position="attributes">
+                        <attribute name="domain">[('x_job_degree_id','=',x_job_degree_id),('x_qualitative_group_id','=',x_qualitative_group_id)]</attribute>
+                    </xpath>
                     <field name="x_job_degree_date" string="Degree Date"/>
                     <field name="x_supervision_job" string="Supervision Job"/>
                 </xpath>
@@ -972,9 +975,9 @@
                         <field name="x_committee_employee" context="{'default_x_employee_id': id}"/>
                     </page>
 
-                    <page string="Attachments" name="attachment_employee_page">
+                    <!-- <page string="Attachments" name="attachment_employee_page">
                         <field name="x_attachments" context="{'default_x_employee_id': id}"/>
-                    </page>
+                    </page> -->
 
                     <page string="Notes" name="notes_page">
                         <field name="x_notes" placeholder="Type down your notes here..." />
