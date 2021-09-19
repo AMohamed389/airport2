@@ -130,11 +130,14 @@ class hrextend(models.Model):
 
     x_document_folder_id = fields.Many2one('documents.folder', string="Document Folder", readonly=True, index=True, tracking=True, ondelete="cascade")
 
-    #x_attachments = fields.One2many('documents.document', 'attachment_id', string="Attachments", compute="_get_attachments", ondelete="cascade")
+    # x_attachments = fields.One2many('documents.document', 'attachment_id', string="Attachments", compute="_get_attachments", ondelete="cascade")
+    x_attachments = fields.One2many('documents.document', string="Attachments", compute="_get_attachments")
 
     x_current_illegal_earning_date = fields.Char(string="Current Illegal Earning Date", index=True, tracking=True)
     
     x_next_illegal_earning_date = fields.Char(string="Next Illegal Earning Date", index=True, tracking=True)
+
+    job_id = fields.Many2one('hr.job', 'Job Position', domain=lambda self: "[['x_job_degree_id','=', x_job_degree_id],['x_qualitative_group_id','=', x_qualitative_group_id]]", index=True, tracking=True) # vanilla domain removed from job_id ['|', ('company_id', '=', False), ('company_id', '=', company_id)] under hr.employee.base
 
 
     def _get_section_name(self):
@@ -276,8 +279,16 @@ class hrextend(models.Model):
             _logger.info(str("hr_employee create _doc_folder_rec : ") + str(_doc_folder_rec))
 
         if _doc_folder_rec:
+            
+            _folder_name = ""
+            if vals.get("name") is not None and vals.get("name"):
+                _folder_name = vals.get("name")
+                
+            if vals['x_staff_id'] is not None and vals['x_staff_id']:
+                _folder_name = _folder_name + " " + vals['x_staff_id']
+
             _doc_folder_parent_create_rec = self.env['documents.folder'].create({
-                'name': vals['name'],
+                'name': _folder_name,
                 'parent_folder_id': _doc_folder_rec[0].id
             })
 
@@ -306,28 +317,28 @@ class hrextend(models.Model):
 
 
    
-    # def unlink(self):
-    #     # "your code"
+    def unlink(self):
+        # "your code"
 
-    #     _doc_folder_rec= None
+        _doc_folder_rec= None
 
-    #     for _rec in self:
-    #         if _doc_folder_rec :
-    #             _doc_folder_rec = self.env['documents.folder'].browse(_rec.x_document_folder_id.id)
-    #             _logger.info("hrextend unlink _rec : " + str(_rec))
+        for _rec in self:
+            if _doc_folder_rec :
+                _doc_folder_rec = self.env['documents.folder'].browse(_rec.x_document_folder_id.id)
+                _logger.info("hrextend unlink _rec : " + str(_rec))
 
-    #             _doc_parent_folder_rec = self.env['documents.folder'].search([('parent_folder_id','=',_doc_folder_rec.id)])
-    #             for __rec in _doc_parent_folder_rec:
-    #                 _logger.info("hrextend unlink __rec : " + str(__rec))
-    #                 __rec.document_ids.unlink()
-    #                 __rec.unlink()
+                _doc_parent_folder_rec = self.env['documents.folder'].search([('parent_folder_id','=',_doc_folder_rec.id)])
+                for __rec in _doc_parent_folder_rec:
+                    _logger.info("hrextend unlink __rec : " + str(__rec))
+                    __rec.document_ids.unlink()
+                    __rec.unlink()
                 
-    #             _doc_folder_rec.document_ids.unlink()
-    #             _doc_folder_rec.unlink()
+                _doc_folder_rec.document_ids.unlink()
+                _doc_folder_rec.unlink()
         
         
-    #     result = super(hrextend, self).unlink()
-    #     return result
+        result = super(hrextend, self).unlink()
+        return result
 
 
     def _get_attachments(self):
@@ -353,3 +364,11 @@ class hrextend(models.Model):
             
 
         _rec.x_attachments = _doc_employee_list
+
+
+
+
+
+
+    _sql_constraints = [('constrainname', 'UNIQUE (x_staff_id)', 'This staff id is already exists'),
+                        ('constrainname', 'UNIQUE (identification_id)', 'This identification id is already exists')]

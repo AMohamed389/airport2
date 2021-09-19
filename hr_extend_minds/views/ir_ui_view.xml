@@ -300,11 +300,11 @@
             </group>
 
 
-            <!-- <notebook name="main_notebook">
+            <notebook name="main_notebook">
                 <page name="attachments" string="Attachments">
                     <field name="x_attachments"/>
                 </page>
-                </notebook> -->
+                </notebook>
 
 
             </sheet>
@@ -400,6 +400,7 @@
                             <field name="datas" widget="binary" filename="name" force_save="1" string="File"/>                                
                         </tree>
                     </field> -->
+                    <field name="x_attachments"/>
                 </page>
                 </notebook>
 
@@ -859,9 +860,9 @@
                     <field name="x_qualitative_group_id" />
                     <field name="x_job_degree_id" domain="[('x_qualitative_group_id','=',x_qualitative_group_id)]" string="Degree"/>
                     <xpath expr="//field[@name='job_id']"  position="move"/>
-                    <xpath expr="//field[@name='job_id']" position="attributes">
-                        <attribute name="domain">[('x_job_degree_id','=',x_job_degree_id),('x_qualitative_group_id','=',x_qualitative_group_id)]</attribute>
-                    </xpath>
+                    <!-- <xpath name="job_id" position="attributes">
+                        <attribute name="domain">[['x_job_degree_id','=',x_job_degree_id],['x_qualitative_group_id','=',x_qualitative_group_id]]</attribute>
+                    </xpath> -->
                     <field name="x_job_degree_date" string="Degree Date"/>
                     <field name="x_supervision_job" string="Supervision Job"/>
                 </xpath>
@@ -975,9 +976,9 @@
                         <field name="x_committee_employee" context="{'default_x_employee_id': id}"/>
                     </page>
 
-                    <!-- <page string="Attachments" name="attachment_employee_page">
+                    <page string="Attachments" name="attachment_employee_page">
                         <field name="x_attachments" context="{'default_x_employee_id': id}"/>
-                    </page> -->
+                    </page>
 
                     <page string="Notes" name="notes_page">
                         <field name="x_notes" placeholder="Type down your notes here..." />

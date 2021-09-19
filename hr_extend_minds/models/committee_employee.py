@@ -25,6 +25,7 @@ class committee_employee(models.Model):
     # x_datas = fields.Binary(related="x_attachment.x_datas", string="File")
     #x_attachments = fields.One2many('documents.document', 'attachment_id', compute="_get_attachments", string="Attachments", ondelete="cascade")
     # x_datas = fields.Binary(string="File")
+    x_attachments = fields.One2many('documents.document', string="Attachments", compute="_get_attachments")
     x_notes = fields.Text(string="Notes", tracking=True, store=True)
     x_committee_id = fields.Many2one('committee', string="Committee", index=True, tracking=True)
     
@@ -36,17 +37,17 @@ class committee_employee(models.Model):
     def unlink(self):
         # "your code"
 
-        #_doc_folder_rec= False
+        _doc_folder_rec= False
 
-        #for _rec in self:
-            #_doc_folder_rec = self.env['documents.folder'].browse(_rec.x_document_folder_id.id)
+        for _rec in self:
+            _doc_folder_rec = self.env['documents.folder'].browse(_rec.x_document_folder_id.id)
 
         result = super(committee_employee, self).unlink()
 
-        #if _doc_folder_rec:
-            #_logger.info("committee_employee unlink _doc_folder_rec : " + str(_doc_folder_rec))
-            #_doc_folder_rec.sudo().document_ids.unlink()
-            #_doc_folder_rec.sudo().unlink()
+        if _doc_folder_rec:
+            _logger.info("committee_employee unlink _doc_folder_rec : " + str(_doc_folder_rec))
+            _doc_folder_rec.sudo().document_ids.unlink()
+            _doc_folder_rec.sudo().unlink()
         return result
 
 
