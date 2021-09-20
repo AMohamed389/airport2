@@ -1,0 +1,1954 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_extend_minds
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-18 01:01+0000\n"
+"PO-Revision-Date: 2021-09-18 22:54+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: ar\n"
+"X-Generator: Poedit 3.0\n"
+
+#. module: hr_extend_minds
+#: model:ir.actions.report,print_report_name:hr_extend_minds.action_report_hr_statement_document
+msgid ""
+"'HR Statement Document - %s - %s' % (object.x_employee_id.name, object."
+"x_employee_id.x_staff_id)"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.report_hr_statement_document
+msgid ""
+"<br/>\n"
+"                                            <span>ادارة : </span>"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.report_hr_statement_document
+msgid ""
+"<br/>\n"
+"                                            <span>ادارة العامة : </span>"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.report_hr_statement_document
+msgid ""
+"<br/>\n"
+"                                            <span>اسم الأم : </span>"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.report_hr_statement_document
+msgid ""
+"<br/>\n"
+"                                            <span>البريد الالكتروني : </span>"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.report_hr_statement_document
+msgid ""
+"<br/>\n"
+"                                            <span>التسلسل الكامل : </span>"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.report_hr_statement_document
+msgid ""
+"<br/>\n"
+"                                            <span>الحالة الاجتماعية : </span>"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.report_hr_statement_document
+msgid ""
+"<br/>\n"
+"                                            <span>الدرجة : </span>"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.report_hr_statement_document
+msgid ""
+"<br/>\n"
+"                                            <span>الرقم القومي : </span>"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.report_hr_statement_document
+msgid ""
+"<br/>\n"
+"                                            <span>العمر : </span>"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.report_hr_statement_document
+msgid ""
+"<br/>\n"
+"                                            <span>العنوان : </span>"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.report_hr_statement_document
+msgid ""
+"<br/>\n"
+"                                            <span>القطاع : </span>"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.report_hr_statement_document
+msgid ""
+"<br/>\n"
+"                                            <span>المؤهل : </span>"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.report_hr_statement_document
+msgid ""
+"<br/>\n"
+"                                            <span>المجموعة النوعية : </span>"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.report_hr_statement_document
+msgid ""
+"<br/>\n"
+"                                            <span>النوع : </span>"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.report_hr_statement_document
+msgid ""
+"<br/>\n"
+"                                            <span>الوظيفة : </span>"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.report_hr_statement_document
+msgid ""
+"<br/>\n"
+"                                            <span>الوظيفة الاشرافية : </span>"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.report_hr_statement_document
+msgid ""
+"<br/>\n"
+"                                            <span>تاريخ استلام العمل : </span>"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.report_hr_statement_document
+msgid ""
+"<br/>\n"
+"                                            <span>تاريخ الأقدمية : </span>"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.report_hr_statement_document
+msgid ""
+"<br/>\n"
+"                                            <span>تاريخ التعيين : </span>"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.report_hr_statement_document
+msgid ""
+"<br/>\n"
+"                                            <span>تاريخ الميلاد : </span>"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.report_hr_statement_document
+msgid ""
+"<br/>\n"
+"                                            <span>جهة الاصدار : </span>"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.report_hr_statement_document
+msgid ""
+"<br/>\n"
+"                                            <span>رقم المحمول : </span>"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.report_hr_statement_document
+msgid ""
+"<br/>\n"
+"                                            <span>رقم الهاتف : </span>"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.report_hr_statement_document
+msgid ""
+"<br/>\n"
+"                                            <span>رقم هاتف العمل : </span>"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.report_hr_statement_document
+msgid ""
+"<br/>\n"
+"                                            <span>قسم : </span>"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.report_hr_statement_document
+msgid ""
+"<br/>\n"
+"                                            <span>محل الميلاد : </span>"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.employee_training_form_1
+msgid "<span>to</span>"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.report_hr_statement_document
+msgid "<span>اسم الموظف : </span>"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.report_hr_statement_document
+msgid "<span>التاريخ : </span>"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.report_hr_statement_document
+msgid "<span>كود الموظف : </span>"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_committee__message_needaction
+#: model:ir.model.fields,field_description:hr_extend_minds.field_employee_penalty__message_needaction
+#: model:ir.model.fields,field_description:hr_extend_minds.field_employee_training__message_needaction
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_report__message_needaction
+#: model:ir.model.fields,field_description:hr_extend_minds.field_penalty_type__message_needaction
+#: model:ir.model.fields,field_description:hr_extend_minds.field_training_catalogue__message_needaction
+msgid "Action Needed"
+msgstr "الإجراء مطلوب"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_committee__active
+#: model:ir.model.fields,field_description:hr_extend_minds.field_committee_employee__active
+#: model:ir.model.fields,field_description:hr_extend_minds.field_employee_penalty__active
+#: model:ir.model.fields,field_description:hr_extend_minds.field_employee_training__active
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_attachment__active
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_department__active
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_education_certificate__active
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_report__active
+#: model:ir.model.fields,field_description:hr_extend_minds.field_job_degree__active
+#: model:ir.model.fields,field_description:hr_extend_minds.field_job_history__active
+#: model:ir.model.fields,field_description:hr_extend_minds.field_penalty_type__active
+#: model:ir.model.fields,field_description:hr_extend_minds.field_qualitative_group__active
+#: model:ir.model.fields,field_description:hr_extend_minds.field_training_catalogue__active
+msgid "Active"
+msgstr "نشط"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_committee__activity_ids
+#: model:ir.model.fields,field_description:hr_extend_minds.field_employee_penalty__activity_ids
+#: model:ir.model.fields,field_description:hr_extend_minds.field_employee_training__activity_ids
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_report__activity_ids
+#: model:ir.model.fields,field_description:hr_extend_minds.field_penalty_type__activity_ids
+#: model:ir.model.fields,field_description:hr_extend_minds.field_training_catalogue__activity_ids
+msgid "Activities"
+msgstr "الأنشطة"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_committee__activity_exception_decoration
+#: model:ir.model.fields,field_description:hr_extend_minds.field_employee_penalty__activity_exception_decoration
+#: model:ir.model.fields,field_description:hr_extend_minds.field_employee_training__activity_exception_decoration
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_report__activity_exception_decoration
+#: model:ir.model.fields,field_description:hr_extend_minds.field_penalty_type__activity_exception_decoration
+#: model:ir.model.fields,field_description:hr_extend_minds.field_training_catalogue__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_committee__activity_state
+#: model:ir.model.fields,field_description:hr_extend_minds.field_employee_penalty__activity_state
+#: model:ir.model.fields,field_description:hr_extend_minds.field_employee_training__activity_state
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_report__activity_state
+#: model:ir.model.fields,field_description:hr_extend_minds.field_penalty_type__activity_state
+#: model:ir.model.fields,field_description:hr_extend_minds.field_training_catalogue__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_committee__activity_type_icon
+#: model:ir.model.fields,field_description:hr_extend_minds.field_employee_penalty__activity_type_icon
+#: model:ir.model.fields,field_description:hr_extend_minds.field_employee_training__activity_type_icon
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_report__activity_type_icon
+#: model:ir.model.fields,field_description:hr_extend_minds.field_penalty_type__activity_type_icon
+#: model:ir.model.fields,field_description:hr_extend_minds.field_training_catalogue__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:res.groups,name:hr_extend_minds.hr_extend_minds_group_admin
+msgid "Admin"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_employee__x_administration_name
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_leave__x_administration_name
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_statement_document__is_administration
+#: model:ir.model.fields,field_description:hr_extend_minds.field_job_history__x_administration
+#: model:ir.model.fields.selection,name:hr_extend_minds.selection__hr_department__x_type__administration
+msgid "Administration"
+msgstr "الإدارة"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields.selection,name:hr_extend_minds.selection__training_catalogue__x_training_level__advanced
+msgid "Advanced"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_employee__x_age
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_statement_document__is_age
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.hr_employee_extend_2
+msgid "Age"
+msgstr "العمر"
+
+#. module: hr_extend_minds
+#: model:ir.module.category,name:hr_extend_minds.module_hr_extend_minds_category
+msgid "Airport"
+msgstr "‎‫ المطار"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_committee_employee__x_amount
+msgid "Amount"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields.selection,name:hr_extend_minds.selection__employee_penalty__state__approved
+#: model:ir.model.fields.selection,name:hr_extend_minds.selection__employee_training__state__approved
+msgid "Approved"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_employee_training__x_assign_date
+msgid "Assign Date"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_committee__message_attachment_count
+#: model:ir.model.fields,field_description:hr_extend_minds.field_employee_penalty__message_attachment_count
+#: model:ir.model.fields,field_description:hr_extend_minds.field_employee_training__message_attachment_count
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_report__message_attachment_count
+#: model:ir.model.fields,field_description:hr_extend_minds.field_penalty_type__message_attachment_count
+#: model:ir.model.fields,field_description:hr_extend_minds.field_training_catalogue__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: hr_extend_minds
+#: model:ir.actions.act_window,name:hr_extend_minds.action_hr_attachment
+#: model:ir.model.fields,field_description:hr_extend_minds.field_committee__x_attachments
+#: model:ir.model.fields,field_description:hr_extend_minds.field_committee_employee__x_attachments
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_employee__x_attachments
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.hr_employee_extend_2
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.view_committee_employee_form
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.view_committee_form
+msgid "Attachments"
+msgstr "المرفقات"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_employee__x_bank_account
+msgid "Bank Account"
+msgstr "رقم حساب البنك"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields.selection,name:hr_extend_minds.selection__training_catalogue__x_training_level__basic
+msgid "Basic"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_statement_document__is_birth_date
+msgid "Birth Date"
+msgstr "تاريخ الميلاد"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields.selection,name:hr_extend_minds.selection__employee_penalty__state__cancelled
+#: model:ir.model.fields.selection,name:hr_extend_minds.selection__employee_training__state__cancelled
+msgid "Cancelled"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_education_certificate__x_certificate_date
+msgid "Certificate Date"
+msgstr "تاريخ المؤهل"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields.selection,name:hr_extend_minds.selection__hr_employee__x_religion__christian
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.hr_employee_search_inherit
+msgid "Christian"
+msgstr "مسيحي"
+
+#. module: hr_extend_minds
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.view_hr_statement_document_form
+msgid "Clean"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.ui.menu,name:hr_extend_minds.parent_menu_committee
+msgid "Comittee"
+msgstr "اللجنة"
+
+#. module: hr_extend_minds
+#: model:ir.ui.menu,name:hr_extend_minds.parent_menu_committee_employee_1
+msgid "Comittee Employee"
+msgstr "موظفين  اللجنة"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_employee__x_committee_employee
+#: model:ir.ui.menu,name:hr_extend_minds.parent_menu_committee_1
+msgid "Comittees"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model_terms:documents.folder,description:hr_extend_minds.documents_folder_1
+msgid "Commitee Attachments"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:documents.folder,name:hr_extend_minds.documents_folder_1
+#: model:ir.actions.act_window,name:hr_extend_minds.action_committee
+#: model:ir.model.fields,field_description:hr_extend_minds.field_committee_employee__x_committee_id
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.hr_employee_extend_2
+msgid "Committee"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.actions.act_window,name:hr_extend_minds.action_committee_employee
+msgid "Committee Employee"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_statement_document__is_committee
+msgid "Committees"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields.selection,name:hr_extend_minds.selection__hr_employee__x_military_status__completed
+#: model:ir.model.fields.selection,name:hr_extend_minds.selection__hr_report__state__completed
+msgid "Completed"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_committee__create_uid
+#: model:ir.model.fields,field_description:hr_extend_minds.field_committee_employee__create_uid
+#: model:ir.model.fields,field_description:hr_extend_minds.field_employee_penalty__create_uid
+#: model:ir.model.fields,field_description:hr_extend_minds.field_employee_training__create_uid
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_attachment__create_uid
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_education_certificate__create_uid
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_report__create_uid
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_statement_document__create_uid
+#: model:ir.model.fields,field_description:hr_extend_minds.field_job_degree__create_uid
+#: model:ir.model.fields,field_description:hr_extend_minds.field_job_history__create_uid
+#: model:ir.model.fields,field_description:hr_extend_minds.field_penalty_type__create_uid
+#: model:ir.model.fields,field_description:hr_extend_minds.field_qualitative_group__create_uid
+#: model:ir.model.fields,field_description:hr_extend_minds.field_training_catalogue__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_committee__create_date
+#: model:ir.model.fields,field_description:hr_extend_minds.field_committee_employee__create_date
+#: model:ir.model.fields,field_description:hr_extend_minds.field_employee_penalty__create_date
+#: model:ir.model.fields,field_description:hr_extend_minds.field_employee_training__create_date
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_attachment__create_date
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_education_certificate__create_date
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_report__create_date
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_statement_document__create_date
+#: model:ir.model.fields,field_description:hr_extend_minds.field_job_degree__create_date
+#: model:ir.model.fields,field_description:hr_extend_minds.field_job_history__create_date
+#: model:ir.model.fields,field_description:hr_extend_minds.field_penalty_type__create_date
+#: model:ir.model.fields,field_description:hr_extend_minds.field_qualitative_group__create_date
+#: model:ir.model.fields,field_description:hr_extend_minds.field_training_catalogue__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_committee_employee__currency_id
+#: model:ir.model.fields,field_description:hr_extend_minds.field_training_catalogue__x_currency_id
+msgid "Currency"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_employee__x_current_illegal_earning_date
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.hr_employee_extend_2
+msgid "Current Illegal Earning Date"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_committee__x_date_from
+#: model:ir.model.fields,field_description:hr_extend_minds.field_job_history__x_date_from
+msgid "Date From"
+msgstr "من تاريخ"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_committee__x_date_to
+#: model:ir.model.fields,field_description:hr_extend_minds.field_job_history__x_date_to
+msgid "Date To"
+msgstr "الي تاريخ"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_education_certificate__x_decision_date
+msgid "Decision Date"
+msgstr "تاريخ القرار"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_committee__name
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_education_certificate__x_decision_number
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.view_committee_form
+msgid "Decision Number"
+msgstr "رقم القرار"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_employee__x_job_degree_id
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_job__x_job_degree_id
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_statement_document__is_degree
+#: model:ir.model.fields,field_description:hr_extend_minds.field_job_degree__name
+#: model:ir.model.fields,field_description:hr_extend_minds.field_job_history__x_degree
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.hr_employee_extend_2
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.hr_job_extend_2
+msgid "Degree"
+msgstr "الدرجة"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_employee__x_job_degree_date
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.hr_employee_extend_2
+msgid "Degree Date"
+msgstr "تاريخ الدرجة"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_employee__x_delegated_from
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.hr_employee_extend_2
+msgid "Delegated From"
+msgstr "منتدب من"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_employee__x_delegated_to
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.hr_employee_extend_2
+msgid "Delegated To"
+msgstr "منتدب الي"
+
+#. module: hr_extend_minds
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.hr_employee_extend_2
+msgid "Delegation"
+msgstr "انتداب"
+
+#. module: hr_extend_minds
+#: model:ir.model,name:hr_extend_minds.model_hr_department
+#: model:ir.model.fields,field_description:hr_extend_minds.field_job_history__x_department
+#: model:ir.model.fields.selection,name:hr_extend_minds.selection__hr_department__x_type__department
+msgid "Department"
+msgstr "القسم"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields.selection,name:hr_extend_minds.selection__training_catalogue__x_training_type__diploma
+msgid "Diploma"
+msgstr "دبلومة"
+
+#. module: hr_extend_minds
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.hr_employee_extend_2
+msgid "Disability"
+msgstr "اعاقة"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_employee__x_disability
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.hr_employee_extend_2
+msgid "Disability Id Number"
+msgstr "رقم شهادة الاعاقة"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_committee__display_name
+#: model:ir.model.fields,field_description:hr_extend_minds.field_committee_employee__display_name
+#: model:ir.model.fields,field_description:hr_extend_minds.field_employee_penalty__display_name
+#: model:ir.model.fields,field_description:hr_extend_minds.field_employee_training__display_name
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_attachment__display_name
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_department__display_name
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_education_certificate__display_name
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_employee__display_name
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_job__display_name
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_leave__display_name
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_report__display_name
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_statement_document__display_name
+#: model:ir.model.fields,field_description:hr_extend_minds.field_job_degree__display_name
+#: model:ir.model.fields,field_description:hr_extend_minds.field_job_history__display_name
+#: model:ir.model.fields,field_description:hr_extend_minds.field_penalty_type__display_name
+#: model:ir.model.fields,field_description:hr_extend_minds.field_qualitative_group__display_name
+#: model:ir.model.fields,field_description:hr_extend_minds.field_training_catalogue__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_committee__x_document_folder_id
+#: model:ir.model.fields,field_description:hr_extend_minds.field_committee_employee__x_document_folder_id
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_employee__x_document_folder_id
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.hr_employee_extend_2
+msgid "Document Folder"
+msgstr "ملف المرفقات"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields.selection,name:hr_extend_minds.selection__hr_employee__x_social_insurance_status__done
+msgid "Done"
+msgstr "تم"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields.selection,name:hr_extend_minds.selection__hr_report__state__draft
+msgid "Draft"
+msgstr "تحت الانشاء"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_employee__x_education_certificate_level
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.hr_employee_extend_2
+msgid "Education Certificate Date"
+msgstr "تاريخ شهادة المؤهل"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_statement_document__is_education_certificate_level
+msgid "Education Certificate Level"
+msgstr "مستوي المؤهل الدراسي"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_employee__x_hr_education_certificate
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_statement_document__is_education_certificates
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.hr_employee_extend_2
+msgid "Education Certificates"
+msgstr "المؤهلات الدراسية"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_statement_document__is_email
+msgid "Email"
+msgstr "بريد الكتروني"
+
+#. module: hr_extend_minds
+#: model:ir.model,name:hr_extend_minds.model_hr_employee
+#: model:ir.model.fields,field_description:hr_extend_minds.field_committee_employee__x_employee_id
+#: model:ir.model.fields,field_description:hr_extend_minds.field_employee_penalty__x_employee_id
+#: model:ir.model.fields,field_description:hr_extend_minds.field_employee_training__x_employee_id
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_education_certificate__x_employee_id
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_report__x_employee_id
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_statement_document__x_employee_id
+#: model:ir.model.fields,field_description:hr_extend_minds.field_job_history__x_employee_id
+#: model:res.groups,name:hr_extend_minds.hr_extend_minds_group_employee
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.employee_penalty_form_1
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_statement_document__is_employee_address
+msgid "Employee Address"
+msgstr "عنوان الموظف"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_statement_document__is_employee_name
+msgid "Employee Name"
+msgstr "اسم الموظف"
+
+#. module: hr_extend_minds
+#: model:ir.ui.menu,name:hr_extend_minds.penalty_employee_penalty_menu_1
+msgid "Employee Penalties"
+msgstr "جزاءات الموظف"
+
+#. module: hr_extend_minds
+#: model_terms:ir.actions.act_window,help:hr_extend_minds.employee_penalty_action_1
+msgid "Employee Penalties !."
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.actions.act_window,name:hr_extend_minds.employee_penalty_action_1
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_employee__x_employee_penalty
+#: model:ir.ui.menu,name:hr_extend_minds.employee_penalty_menu_1
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.employee_penalty_form_1
+msgid "Employee Penalty"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_statement_document__is_employee_pic
+msgid "Employee Pic"
+msgstr "صورة الموظف"
+
+#. module: hr_extend_minds
+#: model:ir.actions.act_window,name:hr_extend_minds.employee_training_action_1
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_employee__x_employee_training
+#: model:ir.ui.menu,name:hr_extend_minds.training_employee_training_menu_1
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.employee_training_calendar_1
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.employee_training_form_1
+msgid "Employee Training"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.constraint,message:hr_extend_minds.constraint_committee_employee_constrainname
+msgid "Employee must be unique under the committee !."
+msgstr ""
+
+#. module: hr_extend_minds
+#: model_terms:ir.actions.act_window,help:hr_extend_minds.employee_training_action_1
+msgid "Employee training !."
+msgstr ""
+
+#. module: hr_extend_minds
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.view_committee_form
+msgid "Employees"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_employee_training__x_end_date
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.employee_training_search_1
+msgid "End Date"
+msgstr "تاريخ الانتهاء"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_employee__x_end_of_service_date
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.hr_employee_extend_2
+msgid "End Of Service Date"
+msgstr "تاريخ انهاء الخدمة"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields.selection,name:hr_extend_minds.selection__employee_training__x_training_grade__excellent
+msgid "Excellent"
+msgstr "ممتاز"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields.selection,name:hr_extend_minds.selection__hr_employee__x_military_status__exempted
+msgid "Exempted"
+msgstr "معفي"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields.selection,name:hr_extend_minds.selection__employee_training__x_training_grade__fair
+msgid "Fair"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_attachment__x_datas
+msgid "File"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_attachment__name
+msgid "File Name"
+msgstr "اسم الملف"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_committee__message_follower_ids
+#: model:ir.model.fields,field_description:hr_extend_minds.field_employee_penalty__message_follower_ids
+#: model:ir.model.fields,field_description:hr_extend_minds.field_employee_training__message_follower_ids
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_report__message_follower_ids
+#: model:ir.model.fields,field_description:hr_extend_minds.field_penalty_type__message_follower_ids
+#: model:ir.model.fields,field_description:hr_extend_minds.field_training_catalogue__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_committee__message_channel_ids
+#: model:ir.model.fields,field_description:hr_extend_minds.field_employee_penalty__message_channel_ids
+#: model:ir.model.fields,field_description:hr_extend_minds.field_employee_training__message_channel_ids
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_report__message_channel_ids
+#: model:ir.model.fields,field_description:hr_extend_minds.field_penalty_type__message_channel_ids
+#: model:ir.model.fields,field_description:hr_extend_minds.field_training_catalogue__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_committee__message_partner_ids
+#: model:ir.model.fields,field_description:hr_extend_minds.field_employee_penalty__message_partner_ids
+#: model:ir.model.fields,field_description:hr_extend_minds.field_employee_training__message_partner_ids
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_report__message_partner_ids
+#: model:ir.model.fields,field_description:hr_extend_minds.field_penalty_type__message_partner_ids
+#: model:ir.model.fields,field_description:hr_extend_minds.field_training_catalogue__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,help:hr_extend_minds.field_committee__activity_type_icon
+#: model:ir.model.fields,help:hr_extend_minds.field_employee_penalty__activity_type_icon
+#: model:ir.model.fields,help:hr_extend_minds.field_employee_training__activity_type_icon
+#: model:ir.model.fields,help:hr_extend_minds.field_hr_report__activity_type_icon
+#: model:ir.model.fields,help:hr_extend_minds.field_penalty_type__activity_type_icon
+#: model:ir.model.fields,help:hr_extend_minds.field_training_catalogue__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_statement_document__is_full_department_name
+msgid "Full Department Name"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_statement_document__is_gender
+msgid "Gender"
+msgstr "النوع"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields.selection,name:hr_extend_minds.selection__employee_training__x_training_grade__good
+msgid "Good"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.actions.act_window,name:hr_extend_minds.action_hr_report
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_statement_document__x_hr_report_id
+#: model:ir.ui.menu,name:hr_extend_minds.parent_menu_hr_report_1
+msgid "HR Report"
+msgstr "تقرير"
+
+#. module: hr_extend_minds
+#: model:ir.actions.act_window,name:hr_extend_minds.action_hr_statement_document
+#: model:ir.actions.report,name:hr_extend_minds.action_report_hr_statement_document
+msgid "HR Statement Document"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_employee__x_has_disability_condition
+msgid "Has Disability Condition"
+msgstr "معاق"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_employee__x_hiring_date
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_statement_document__is_hiring_date
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.hr_employee_extend_2
+msgid "Hiring Date"
+msgstr "تاريخ التعيين"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_committee__id
+#: model:ir.model.fields,field_description:hr_extend_minds.field_committee_employee__id
+#: model:ir.model.fields,field_description:hr_extend_minds.field_employee_penalty__id
+#: model:ir.model.fields,field_description:hr_extend_minds.field_employee_training__id
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_attachment__id
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_department__id
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_education_certificate__id
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_employee__id
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_job__id
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_leave__id
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_report__id
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_statement_document__id
+#: model:ir.model.fields,field_description:hr_extend_minds.field_job_degree__id
+#: model:ir.model.fields,field_description:hr_extend_minds.field_job_history__id
+#: model:ir.model.fields,field_description:hr_extend_minds.field_penalty_type__id
+#: model:ir.model.fields,field_description:hr_extend_minds.field_qualitative_group__id
+#: model:ir.model.fields,field_description:hr_extend_minds.field_training_catalogue__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields.selection,name:hr_extend_minds.selection__training_catalogue__x_training_type__it
+msgid "IT"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_committee__activity_exception_icon
+#: model:ir.model.fields,field_description:hr_extend_minds.field_employee_penalty__activity_exception_icon
+#: model:ir.model.fields,field_description:hr_extend_minds.field_employee_training__activity_exception_icon
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_report__activity_exception_icon
+#: model:ir.model.fields,field_description:hr_extend_minds.field_penalty_type__activity_exception_icon
+#: model:ir.model.fields,field_description:hr_extend_minds.field_training_catalogue__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,help:hr_extend_minds.field_committee__activity_exception_icon
+#: model:ir.model.fields,help:hr_extend_minds.field_employee_penalty__activity_exception_icon
+#: model:ir.model.fields,help:hr_extend_minds.field_employee_training__activity_exception_icon
+#: model:ir.model.fields,help:hr_extend_minds.field_hr_report__activity_exception_icon
+#: model:ir.model.fields,help:hr_extend_minds.field_penalty_type__activity_exception_icon
+#: model:ir.model.fields,help:hr_extend_minds.field_training_catalogue__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: hr_extend_minds
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.hr_employee_extend_2
+msgid "Identification Issuer"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_employee__x_identity_issuer
+msgid "Identity Issuer"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,help:hr_extend_minds.field_committee__message_needaction
+#: model:ir.model.fields,help:hr_extend_minds.field_committee__message_unread
+#: model:ir.model.fields,help:hr_extend_minds.field_employee_penalty__message_needaction
+#: model:ir.model.fields,help:hr_extend_minds.field_employee_penalty__message_unread
+#: model:ir.model.fields,help:hr_extend_minds.field_employee_training__message_needaction
+#: model:ir.model.fields,help:hr_extend_minds.field_employee_training__message_unread
+#: model:ir.model.fields,help:hr_extend_minds.field_hr_report__message_needaction
+#: model:ir.model.fields,help:hr_extend_minds.field_hr_report__message_unread
+#: model:ir.model.fields,help:hr_extend_minds.field_penalty_type__message_needaction
+#: model:ir.model.fields,help:hr_extend_minds.field_penalty_type__message_unread
+#: model:ir.model.fields,help:hr_extend_minds.field_training_catalogue__message_needaction
+#: model:ir.model.fields,help:hr_extend_minds.field_training_catalogue__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,help:hr_extend_minds.field_committee__message_has_error
+#: model:ir.model.fields,help:hr_extend_minds.field_committee__message_has_sms_error
+#: model:ir.model.fields,help:hr_extend_minds.field_employee_penalty__message_has_error
+#: model:ir.model.fields,help:hr_extend_minds.field_employee_penalty__message_has_sms_error
+#: model:ir.model.fields,help:hr_extend_minds.field_employee_training__message_has_error
+#: model:ir.model.fields,help:hr_extend_minds.field_employee_training__message_has_sms_error
+#: model:ir.model.fields,help:hr_extend_minds.field_hr_report__message_has_error
+#: model:ir.model.fields,help:hr_extend_minds.field_hr_report__message_has_sms_error
+#: model:ir.model.fields,help:hr_extend_minds.field_penalty_type__message_has_error
+#: model:ir.model.fields,help:hr_extend_minds.field_penalty_type__message_has_sms_error
+#: model:ir.model.fields,help:hr_extend_minds.field_training_catalogue__message_has_error
+#: model:ir.model.fields,help:hr_extend_minds.field_training_catalogue__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: hr_extend_minds
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.hr_employee_extend_2
+msgid "Illegal Earning"
+msgstr "الكسب غير المشروع"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_training_catalogue__x_image
+msgid "Image"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.hr_employee_extend_2
+msgid "Insurance"
+msgstr "تأمين"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_statement_document__is_insurance_number
+msgid "Insurance Number"
+msgstr "الرقم التأميني"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_employee__x_is_delegated
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.hr_employee_extend_2
+msgid "Is Delegated"
+msgstr "منتدب"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_committee__message_is_follower
+#: model:ir.model.fields,field_description:hr_extend_minds.field_employee_penalty__message_is_follower
+#: model:ir.model.fields,field_description:hr_extend_minds.field_employee_training__message_is_follower
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_report__message_is_follower
+#: model:ir.model.fields,field_description:hr_extend_minds.field_penalty_type__message_is_follower
+#: model:ir.model.fields,field_description:hr_extend_minds.field_training_catalogue__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_job__x_is_limited
+msgid "Is Limited ?"
+msgstr "محدود"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_employee__x_is_loaned
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.hr_employee_extend_2
+msgid "Is Loaned"
+msgstr "معار"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_job_history__name
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.hr_employee_extend_2
+msgid "Job"
+msgstr "وظيفة"
+
+#. module: hr_extend_minds
+#: model:ir.actions.act_window,name:hr_extend_minds.action_job_degree
+#: model:ir.ui.menu,name:hr_extend_minds.parent_menu_job_degree
+#: model:ir.ui.menu,name:hr_extend_minds.parent_menu_job_degree_1
+msgid "Job Degree"
+msgstr "الدرجة"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_employee__x_job_history
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_statement_document__is_job_history
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.hr_employee_extend_2
+msgid "Job History"
+msgstr "فترات سابقة ومدد خبرة"
+
+#. module: hr_extend_minds
+#: model:ir.model,name:hr_extend_minds.model_hr_job
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_statement_document__is_job_position
+msgid "Job Position"
+msgstr "المنصب الوظيفي"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields.selection,name:hr_extend_minds.selection__training_catalogue__x_training_type__languages
+msgid "Languages"
+msgstr "اللغات"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_committee____last_update
+#: model:ir.model.fields,field_description:hr_extend_minds.field_committee_employee____last_update
+#: model:ir.model.fields,field_description:hr_extend_minds.field_employee_penalty____last_update
+#: model:ir.model.fields,field_description:hr_extend_minds.field_employee_training____last_update
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_attachment____last_update
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_department____last_update
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_education_certificate____last_update
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_employee____last_update
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_job____last_update
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_leave____last_update
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_report____last_update
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_statement_document____last_update
+#: model:ir.model.fields,field_description:hr_extend_minds.field_job_degree____last_update
+#: model:ir.model.fields,field_description:hr_extend_minds.field_job_history____last_update
+#: model:ir.model.fields,field_description:hr_extend_minds.field_penalty_type____last_update
+#: model:ir.model.fields,field_description:hr_extend_minds.field_qualitative_group____last_update
+#: model:ir.model.fields,field_description:hr_extend_minds.field_training_catalogue____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_committee__write_uid
+#: model:ir.model.fields,field_description:hr_extend_minds.field_committee_employee__write_uid
+#: model:ir.model.fields,field_description:hr_extend_minds.field_employee_penalty__write_uid
+#: model:ir.model.fields,field_description:hr_extend_minds.field_employee_training__write_uid
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_attachment__write_uid
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_education_certificate__write_uid
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_report__write_uid
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_statement_document__write_uid
+#: model:ir.model.fields,field_description:hr_extend_minds.field_job_degree__write_uid
+#: model:ir.model.fields,field_description:hr_extend_minds.field_job_history__write_uid
+#: model:ir.model.fields,field_description:hr_extend_minds.field_penalty_type__write_uid
+#: model:ir.model.fields,field_description:hr_extend_minds.field_qualitative_group__write_uid
+#: model:ir.model.fields,field_description:hr_extend_minds.field_training_catalogue__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_committee__write_date
+#: model:ir.model.fields,field_description:hr_extend_minds.field_committee_employee__write_date
+#: model:ir.model.fields,field_description:hr_extend_minds.field_employee_penalty__write_date
+#: model:ir.model.fields,field_description:hr_extend_minds.field_employee_training__write_date
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_attachment__write_date
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_education_certificate__write_date
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_report__write_date
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_statement_document__write_date
+#: model:ir.model.fields,field_description:hr_extend_minds.field_job_degree__write_date
+#: model:ir.model.fields,field_description:hr_extend_minds.field_job_history__write_date
+#: model:ir.model.fields,field_description:hr_extend_minds.field_penalty_type__write_date
+#: model:ir.model.fields,field_description:hr_extend_minds.field_qualitative_group__write_date
+#: model:ir.model.fields,field_description:hr_extend_minds.field_training_catalogue__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.hr_employee_extend_2
+msgid "Loan"
+msgstr "اعارة"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_employee__x_loaned_from
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.hr_employee_extend_2
+msgid "Loaned From"
+msgstr "معار من"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_employee__x_loaned_to
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.hr_employee_extend_2
+msgid "Loaned To"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_committee__message_main_attachment_id
+#: model:ir.model.fields,field_description:hr_extend_minds.field_employee_penalty__message_main_attachment_id
+#: model:ir.model.fields,field_description:hr_extend_minds.field_employee_training__message_main_attachment_id
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_report__message_main_attachment_id
+#: model:ir.model.fields,field_description:hr_extend_minds.field_penalty_type__message_main_attachment_id
+#: model:ir.model.fields,field_description:hr_extend_minds.field_training_catalogue__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_statement_document__is_manager
+msgid "Manager"
+msgstr "المدير"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields.selection,name:hr_extend_minds.selection__training_catalogue__x_training_type__managerial
+msgid "Managerial"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_statement_document__is_marital_status
+msgid "Marital Status"
+msgstr "الحالة الاجتماعية"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_committee__message_has_error
+#: model:ir.model.fields,field_description:hr_extend_minds.field_employee_penalty__message_has_error
+#: model:ir.model.fields,field_description:hr_extend_minds.field_employee_training__message_has_error
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_report__message_has_error
+#: model:ir.model.fields,field_description:hr_extend_minds.field_penalty_type__message_has_error
+#: model:ir.model.fields,field_description:hr_extend_minds.field_training_catalogue__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_committee__message_ids
+#: model:ir.model.fields,field_description:hr_extend_minds.field_employee_penalty__message_ids
+#: model:ir.model.fields,field_description:hr_extend_minds.field_employee_training__message_ids
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_report__message_ids
+#: model:ir.model.fields,field_description:hr_extend_minds.field_penalty_type__message_ids
+#: model:ir.model.fields,field_description:hr_extend_minds.field_training_catalogue__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.hr_employee_extend_2
+msgid "Military"
+msgstr "الخدمة العسكرية"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_employee__x_military_end_date
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.hr_employee_extend_2
+msgid "Military End Date"
+msgstr "تاريخ انتهاء الخدمة العسكرية"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_employee__x_military_start_date
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.hr_employee_extend_2
+msgid "Military Start Date"
+msgstr "تاريخ بداية الخدمة العسكرية"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_employee__x_military_status
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.hr_employee_extend_2
+msgid "Military Status"
+msgstr "حالة الخدمة العسكرية"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_statement_document__is_military_status
+msgid "Military Statys"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_statement_document__is_mobile_phone
+msgid "Mobile Phone"
+msgstr "رقم الجوال"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_employee__x_mother_name
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_statement_document__is_mother_name
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.hr_employee_extend_2
+msgid "Mother Name"
+msgstr "اسم الام"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields.selection,name:hr_extend_minds.selection__hr_employee__x_religion__muslim
+msgid "Muslim"
+msgstr "مسلم"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_committee__my_activity_date_deadline
+#: model:ir.model.fields,field_description:hr_extend_minds.field_employee_penalty__my_activity_date_deadline
+#: model:ir.model.fields,field_description:hr_extend_minds.field_employee_training__my_activity_date_deadline
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_report__my_activity_date_deadline
+#: model:ir.model.fields,field_description:hr_extend_minds.field_penalty_type__my_activity_date_deadline
+#: model:ir.model.fields,field_description:hr_extend_minds.field_training_catalogue__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_education_certificate__name
+#: model:ir.model.fields,field_description:hr_extend_minds.field_penalty_type__x_name
+#: model:ir.model.fields,field_description:hr_extend_minds.field_training_catalogue__x_name
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.view_hr_attachment_form
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.view_hr_education_certificate_form
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.view_job_degree_form
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.view_job_history_form
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.view_qualitative_group_form
+msgid "Name"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.penalty_types_form_1
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.training_catalogue_form_1
+msgid "Name..."
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_statement_document__is_national_id
+msgid "National Id"
+msgstr "الرقم القومي"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_statement_document__is_id_issuer
+msgid "National Id Issuer"
+msgstr "جهة الصدور"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields.selection,name:hr_extend_minds.selection__employee_penalty__state__new
+#: model:ir.model.fields.selection,name:hr_extend_minds.selection__employee_training__state__new
+#: model:ir.model.fields.selection,name:hr_extend_minds.selection__hr_employee__x_social_insurance_status__new
+msgid "New"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_committee__activity_date_deadline
+#: model:ir.model.fields,field_description:hr_extend_minds.field_employee_penalty__activity_date_deadline
+#: model:ir.model.fields,field_description:hr_extend_minds.field_employee_training__activity_date_deadline
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_report__activity_date_deadline
+#: model:ir.model.fields,field_description:hr_extend_minds.field_penalty_type__activity_date_deadline
+#: model:ir.model.fields,field_description:hr_extend_minds.field_training_catalogue__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_committee__activity_summary
+#: model:ir.model.fields,field_description:hr_extend_minds.field_employee_penalty__activity_summary
+#: model:ir.model.fields,field_description:hr_extend_minds.field_employee_training__activity_summary
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_report__activity_summary
+#: model:ir.model.fields,field_description:hr_extend_minds.field_penalty_type__activity_summary
+#: model:ir.model.fields,field_description:hr_extend_minds.field_training_catalogue__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_committee__activity_type_id
+#: model:ir.model.fields,field_description:hr_extend_minds.field_employee_penalty__activity_type_id
+#: model:ir.model.fields,field_description:hr_extend_minds.field_employee_training__activity_type_id
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_report__activity_type_id
+#: model:ir.model.fields,field_description:hr_extend_minds.field_penalty_type__activity_type_id
+#: model:ir.model.fields,field_description:hr_extend_minds.field_training_catalogue__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_employee__x_next_illegal_earning_date
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.hr_employee_extend_2
+msgid "Next Illegal Earning Date"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields.selection,name:hr_extend_minds.selection__hr_employee__x_social_insurance_status__no
+msgid "No"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_committee__x_notes
+#: model:ir.model.fields,field_description:hr_extend_minds.field_committee_employee__x_notes
+#: model:ir.model.fields,field_description:hr_extend_minds.field_employee_penalty__x_notes
+#: model:ir.model.fields,field_description:hr_extend_minds.field_employee_training__x_notes
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_attachment__x_notes
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_employee__x_notes
+#: model:ir.model.fields,field_description:hr_extend_minds.field_penalty_type__x_notes
+#: model:ir.model.fields,field_description:hr_extend_minds.field_training_catalogue__x_notes
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.hr_employee_extend_2
+msgid "Notes"
+msgstr "ملاحظات"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_employee__x_number_of_years
+msgid "Number Of Years"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_committee__message_needaction_counter
+#: model:ir.model.fields,field_description:hr_extend_minds.field_employee_penalty__message_needaction_counter
+#: model:ir.model.fields,field_description:hr_extend_minds.field_employee_training__message_needaction_counter
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_report__message_needaction_counter
+#: model:ir.model.fields,field_description:hr_extend_minds.field_penalty_type__message_needaction_counter
+#: model:ir.model.fields,field_description:hr_extend_minds.field_training_catalogue__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_committee__message_has_error_counter
+#: model:ir.model.fields,field_description:hr_extend_minds.field_employee_penalty__message_has_error_counter
+#: model:ir.model.fields,field_description:hr_extend_minds.field_employee_training__message_has_error_counter
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_report__message_has_error_counter
+#: model:ir.model.fields,field_description:hr_extend_minds.field_penalty_type__message_has_error_counter
+#: model:ir.model.fields,field_description:hr_extend_minds.field_training_catalogue__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,help:hr_extend_minds.field_committee__message_needaction_counter
+#: model:ir.model.fields,help:hr_extend_minds.field_employee_penalty__message_needaction_counter
+#: model:ir.model.fields,help:hr_extend_minds.field_employee_training__message_needaction_counter
+#: model:ir.model.fields,help:hr_extend_minds.field_hr_report__message_needaction_counter
+#: model:ir.model.fields,help:hr_extend_minds.field_penalty_type__message_needaction_counter
+#: model:ir.model.fields,help:hr_extend_minds.field_training_catalogue__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,help:hr_extend_minds.field_committee__message_has_error_counter
+#: model:ir.model.fields,help:hr_extend_minds.field_employee_penalty__message_has_error_counter
+#: model:ir.model.fields,help:hr_extend_minds.field_employee_training__message_has_error_counter
+#: model:ir.model.fields,help:hr_extend_minds.field_hr_report__message_has_error_counter
+#: model:ir.model.fields,help:hr_extend_minds.field_penalty_type__message_has_error_counter
+#: model:ir.model.fields,help:hr_extend_minds.field_training_catalogue__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,help:hr_extend_minds.field_committee__message_unread_counter
+#: model:ir.model.fields,help:hr_extend_minds.field_employee_penalty__message_unread_counter
+#: model:ir.model.fields,help:hr_extend_minds.field_employee_training__message_unread_counter
+#: model:ir.model.fields,help:hr_extend_minds.field_hr_report__message_unread_counter
+#: model:ir.model.fields,help:hr_extend_minds.field_penalty_type__message_unread_counter
+#: model:ir.model.fields,help:hr_extend_minds.field_training_catalogue__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_employee__x_oldest_hiring_date
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_statement_document__is_oldest_hiring_date
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.hr_employee_extend_2
+msgid "Oldest Hiring Date"
+msgstr "تاريخ الاقدمية"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_statement_document__is_penalties
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.hr_employee_extend_2
+msgid "Penalties"
+msgstr "الجزاءات"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_employee_penalty__x_penalty_id
+#: model:ir.ui.menu,name:hr_extend_minds.penalty_app_1
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.employee_penalty_form_1
+msgid "Penalty"
+msgstr "جزاء"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_penalty_type__x_code
+msgid "Penalty Code"
+msgstr "رقم الجزاء"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_employee_penalty__x_penalty_date
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.employee_penalty_form_1
+msgid "Penalty Date"
+msgstr "تاريخ الجزاء"
+
+#. module: hr_extend_minds
+#: model:ir.actions.act_window,name:hr_extend_minds.penalty_types_action_1
+#: model:ir.ui.menu,name:hr_extend_minds.penalty_penalty_types_menu_1
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.penalty_types_form_1
+msgid "Penalty Types"
+msgstr "نوع الجزاء"
+
+#. module: hr_extend_minds
+#: model_terms:ir.actions.act_window,help:hr_extend_minds.penalty_types_action_1
+msgid "Penalty Types !."
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields.selection,name:hr_extend_minds.selection__hr_employee__x_social_insurance_status__pending
+msgid "Pending"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.hr_employee_extend_2
+msgid "Pension"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_employee__x_pension_date
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_statement_document__is_pension_date
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.hr_employee_extend_2
+msgid "Pension Date"
+msgstr "تاريخ الإحالة للمعاش"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_statement_document__is_phone
+msgid "Phone"
+msgstr "رقم تليفون"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_statement_document__is_place_of_birth
+msgid "Place Of Birth"
+msgstr "مكان الميلاد"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields.selection,name:hr_extend_minds.selection__hr_employee__x_military_status__postponed
+msgid "Postponed"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.view_hr_report_form
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.view_hr_statement_document_form
+msgid "Print"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_employee__x_public_administration_name
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_leave__x_public_administration_name
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_statement_document__is_public_administartion
+#: model:ir.model.fields,field_description:hr_extend_minds.field_job_history__x_public_administration
+#: model:ir.model.fields.selection,name:hr_extend_minds.selection__hr_department__x_type__public_administration
+msgid "Public Administration"
+msgstr "الإدارة العامة"
+
+#. module: hr_extend_minds
+#: model:ir.actions.act_window,name:hr_extend_minds.action_qualitative_group
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_employee__x_qualitative_group_id
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_job__x_qualitative_group_id
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_statement_document__is_qualitative_group
+#: model:ir.model.fields,field_description:hr_extend_minds.field_job_degree__x_qualitative_group_id
+#: model:ir.model.fields,field_description:hr_extend_minds.field_job_history__x_qualitative_group
+#: model:ir.model.fields,field_description:hr_extend_minds.field_qualitative_group__name
+#: model:ir.ui.menu,name:hr_extend_minds.parent_menu_qualitative_group
+#: model:ir.ui.menu,name:hr_extend_minds.parent_menu_qualitative_group_1
+msgid "Qualitative Group"
+msgstr "المجموعة النوعية"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_employee__x_receiving_work_date
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.hr_employee_extend_2
+msgid "Receiving Work Date"
+msgstr "تاريخ استلام العمل"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_statement_document__is_receiving_Working_date
+msgid "Receiving Working Date"
+msgstr "تاريخ استلام العمل"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_employee__x_religion
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.hr_employee_extend_2
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.hr_employee_search_inherit
+msgid "Religion"
+msgstr "الديانة"
+
+#. module: hr_extend_minds
+#: model:ir.ui.menu,name:hr_extend_minds.parent_menu_hr_report
+msgid "Report"
+msgstr "تقرير"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_report__state
+msgid "Report State"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_attachment__x_res_id
+msgid "Resource ID"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_attachment__x_res_model
+msgid "Resource Model"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_training_catalogue__x_responsible_id
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.training_catalogue_search_1
+msgid "Responsible"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_committee__activity_user_id
+#: model:ir.model.fields,field_description:hr_extend_minds.field_employee_penalty__activity_user_id
+#: model:ir.model.fields,field_description:hr_extend_minds.field_employee_training__activity_user_id
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_report__activity_user_id
+#: model:ir.model.fields,field_description:hr_extend_minds.field_penalty_type__activity_user_id
+#: model:ir.model.fields,field_description:hr_extend_minds.field_training_catalogue__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_committee__message_has_sms_error
+#: model:ir.model.fields,field_description:hr_extend_minds.field_employee_penalty__message_has_sms_error
+#: model:ir.model.fields,field_description:hr_extend_minds.field_employee_training__message_has_sms_error
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_report__message_has_sms_error
+#: model:ir.model.fields,field_description:hr_extend_minds.field_penalty_type__message_has_sms_error
+#: model:ir.model.fields,field_description:hr_extend_minds.field_training_catalogue__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_employee__x_section_name
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_leave__x_section_name
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_statement_document__is_section
+msgid "Section"
+msgstr "القسم"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_employee__x_sector_name
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_leave__x_sector_name
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_statement_document__is_sector
+#: model:ir.model.fields,field_description:hr_extend_minds.field_job_history__x_sector
+#: model:ir.model.fields.selection,name:hr_extend_minds.selection__hr_department__x_type__sector
+msgid "Sector"
+msgstr "القطاع"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_statement_document__is_all_selected
+msgid "Select All"
+msgstr "اختيار الكل"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields.selection,name:hr_extend_minds.selection__training_catalogue__x_training_type__seminars_and_conferences
+msgid "Seminars And Conferences"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_employee__x_seniority_number
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.hr_employee_extend_2
+msgid "Seniority Number"
+msgstr "درجة الاقدمية"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_employee__x_social_insurance_number
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.hr_employee_extend_2
+msgid "Social Insurance Number"
+msgstr "رقم التأمين الاجتماعي"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_employee__x_social_insurance_status
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.hr_employee_extend_2
+msgid "Social Insurance Status"
+msgstr "حالة التأمين الاجتماعي"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_leave__x_issuer
+msgid "Source"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_job_history__x_source_company
+msgid "Source Company"
+msgstr "الشركة / الجهة"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields.selection,name:hr_extend_minds.selection__training_catalogue__x_training_level__specialist
+msgid "Specialist"
+msgstr "متخصص"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_education_certificate__x_specialization
+msgid "Specialization"
+msgstr "التخصص"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_employee__x_staff_id
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_leave__x_staff_id
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_statement_document__is_staff_id
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.hr_employee_extend_2
+msgid "Staff Id"
+msgstr "كود الموظف"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_employee_training__x_start_date
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.employee_training_search_1
+msgid "Start Date"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_report__name
+msgid "Statement Document"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_employee_penalty__state
+#: model:ir.model.fields,field_description:hr_extend_minds.field_employee_training__state
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.employee_penalty_form_1
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.employee_training_form_1
+msgid "Status"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,help:hr_extend_minds.field_committee__activity_state
+#: model:ir.model.fields,help:hr_extend_minds.field_employee_penalty__activity_state
+#: model:ir.model.fields,help:hr_extend_minds.field_employee_training__activity_state
+#: model:ir.model.fields,help:hr_extend_minds.field_hr_report__activity_state
+#: model:ir.model.fields,help:hr_extend_minds.field_penalty_type__activity_state
+#: model:ir.model.fields,help:hr_extend_minds.field_training_catalogue__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields.selection,name:hr_extend_minds.selection__employee_penalty__state__submit
+#: model:ir.model.fields.selection,name:hr_extend_minds.selection__employee_training__state__submit
+#: model:ir.model.fields.selection,name:hr_extend_minds.selection__hr_report__state__submit
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.view_hr_report_form
+msgid "Submit"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_employee__x_supervision_job
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.hr_employee_extend_2
+msgid "Supervision Job"
+msgstr "الوظيفة الاشرافية او القيادية / المكلف بها"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_statement_document__is_supervision_job
+msgid "Supervision job"
+msgstr "الوظيفة الاشرافية او القيادية / المكلف بها"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields.selection,name:hr_extend_minds.selection__training_catalogue__x_training_type__technical
+msgid "Technical"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model,name:hr_extend_minds.model_hr_leave
+msgid "Time Off"
+msgstr "الاجازات"
+
+#. module: hr_extend_minds
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.training_catalogue_tree_1
+msgid "Total"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_employee_training__x_training
+#: model:ir.ui.menu,name:hr_extend_minds.training_app_1
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.hr_employee_extend_2
+msgid "Training"
+msgstr "تدريبات"
+
+#. module: hr_extend_minds
+#: model:ir.actions.act_window,name:hr_extend_minds.training_catalogue_action_1
+#: model:ir.ui.menu,name:hr_extend_minds.training_training_catalogue_menu_1
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.training_catalogue_form_1
+msgid "Training Catalogue"
+msgstr "البرامج التدريبية"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_employee_training__x_training_code
+#: model:ir.model.fields,field_description:hr_extend_minds.field_training_catalogue__x_training_code
+msgid "Training Code"
+msgstr "كود برنامج التدريب"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_training_catalogue__x_training_cost
+msgid "Training Cost"
+msgstr "تكلفة التدريب"
+
+#. module: hr_extend_minds
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.employee_training_form_1
+msgid "Training Date"
+msgstr "تاريخ التدريب"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_employee_training__x_training_grade
+msgid "Training Grade"
+msgstr "درجة التدريب"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_training_catalogue__x_training_level
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.training_catalogue_search_1
+msgid "Training Level"
+msgstr "مستوي الدورة التدريبية"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_employee_training__x_training_type
+#: model:ir.model.fields,field_description:hr_extend_minds.field_training_catalogue__x_training_type
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.training_catalogue_search_1
+msgid "Training Type"
+msgstr "نوع الدورة"
+
+#. module: hr_extend_minds
+#: model_terms:ir.actions.act_window,help:hr_extend_minds.training_catalogue_action_1
+msgid "Training catalogue !."
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_statement_document__is_training
+msgid "Trainings"
+msgstr "التدريبات"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_department__x_type
+#: model:ir.model.fields,field_description:hr_extend_minds.field_job_history__x_type
+msgid "Type"
+msgstr "النوع"
+
+#. module: hr_extend_minds
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.employee_penalty_form_1
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.employee_training_form_1
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.hr_employee_extend_2
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.penalty_types_form_1
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.training_catalogue_form_1
+msgid "Type down your notes here..."
+msgstr "اكتب ملاحظاتك هنا"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,help:hr_extend_minds.field_committee__activity_exception_decoration
+#: model:ir.model.fields,help:hr_extend_minds.field_employee_penalty__activity_exception_decoration
+#: model:ir.model.fields,help:hr_extend_minds.field_employee_training__activity_exception_decoration
+#: model:ir.model.fields,help:hr_extend_minds.field_hr_report__activity_exception_decoration
+#: model:ir.model.fields,help:hr_extend_minds.field_penalty_type__activity_exception_decoration
+#: model:ir.model.fields,help:hr_extend_minds.field_training_catalogue__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_education_certificate__x_university_name
+msgid "University Name"
+msgstr "اسم الجامعة"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_committee__message_unread
+#: model:ir.model.fields,field_description:hr_extend_minds.field_employee_penalty__message_unread
+#: model:ir.model.fields,field_description:hr_extend_minds.field_employee_training__message_unread
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_report__message_unread
+#: model:ir.model.fields,field_description:hr_extend_minds.field_penalty_type__message_unread
+#: model:ir.model.fields,field_description:hr_extend_minds.field_training_catalogue__message_unread
+msgid "Unread Messages"
+msgstr "رسالة غير مقروأة"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_committee__message_unread_counter
+#: model:ir.model.fields,field_description:hr_extend_minds.field_employee_penalty__message_unread_counter
+#: model:ir.model.fields,field_description:hr_extend_minds.field_employee_training__message_unread_counter
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_report__message_unread_counter
+#: model:ir.model.fields,field_description:hr_extend_minds.field_penalty_type__message_unread_counter
+#: model:ir.model.fields,field_description:hr_extend_minds.field_training_catalogue__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields.selection,name:hr_extend_minds.selection__employee_training__x_training_grade__very_good
+msgid "Very Good"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_committee__website_message_ids
+#: model:ir.model.fields,field_description:hr_extend_minds.field_employee_penalty__website_message_ids
+#: model:ir.model.fields,field_description:hr_extend_minds.field_employee_training__website_message_ids
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_report__website_message_ids
+#: model:ir.model.fields,field_description:hr_extend_minds.field_penalty_type__website_message_ids
+#: model:ir.model.fields,field_description:hr_extend_minds.field_training_catalogue__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,help:hr_extend_minds.field_committee__website_message_ids
+#: model:ir.model.fields,help:hr_extend_minds.field_employee_penalty__website_message_ids
+#: model:ir.model.fields,help:hr_extend_minds.field_employee_training__website_message_ids
+#: model:ir.model.fields,help:hr_extend_minds.field_hr_report__website_message_ids
+#: model:ir.model.fields,help:hr_extend_minds.field_penalty_type__website_message_ids
+#: model:ir.model.fields,help:hr_extend_minds.field_training_catalogue__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_statement_document__is_work_phone
+msgid "Work Phone"
+msgstr "رقم هاتف العمل"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_committee__x_committee_employee
+msgid "X Committee Employee"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_employee__x_graduation_year
+msgid "Year Of Graduation"
+msgstr "سنة التخرج"
+
+#. module: hr_extend_minds
+#: model:ir.model,name:hr_extend_minds.model_committee
+msgid "committee"
+msgstr "اللجان"
+
+#. module: hr_extend_minds
+#: model:ir.model,name:hr_extend_minds.model_committee_employee
+msgid "committee_employee"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model,name:hr_extend_minds.model_employee_penalty
+msgid "employee.penalty"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model,name:hr_extend_minds.model_employee_training
+msgid "employee.training"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.actions.act_window,name:hr_extend_minds.action_hr_education_certificate
+msgid "hr Education Certificate"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model,name:hr_extend_minds.model_hr_attachment
+msgid "hr_attachment"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model,name:hr_extend_minds.model_hr_education_certificate
+msgid "hr_education_certificate"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model,name:hr_extend_minds.model_hr_report
+msgid "hr_report"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model,name:hr_extend_minds.model_hr_statement_document
+msgid "hr_statement_document"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model,name:hr_extend_minds.model_job_degree
+msgid "job_degree"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.actions.act_window,name:hr_extend_minds.action_job_history
+#: model:ir.model,name:hr_extend_minds.model_job_history
+msgid "job_history"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model,name:hr_extend_minds.model_penalty_type
+msgid "penalty.type"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model,name:hr_extend_minds.model_qualitative_group
+msgid "qualitative_group"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model,name:hr_extend_minds.model_training_catalogue
+msgid "training.catalogue"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields.selection,name:hr_extend_minds.selection__job_degree__name__الأولى
+msgid "الأولى"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.report_hr_statement_document
+msgid "الادارة"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.report_hr_statement_document
+msgid "الادارة العامة"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.report_hr_statement_document
+msgid "التدرج الوظيفي"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields.selection,name:hr_extend_minds.selection__job_degree__name__الثالثة
+msgid "الثالثة"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields.selection,name:hr_extend_minds.selection__job_degree__name__الثانية
+msgid "الثانية"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.report_hr_statement_document
+msgid "الجهة"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields.selection,name:hr_extend_minds.selection__job_degree__name__الخامسة
+msgid "الخامسة"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.report_hr_statement_document
+msgid "الدرجة"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields.selection,name:hr_extend_minds.selection__job_degree__name__الرابعة
+msgid "الرابعة"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields.selection,name:hr_extend_minds.selection__job_degree__name__السادسة
+msgid "السادسة"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.report_hr_statement_document
+msgid "القسم"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.report_hr_statement_document
+msgid "القطاع"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.report_hr_statement_document
+msgid "اللجان"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.report_hr_statement_document
+msgid "اللجنة"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.report_hr_statement_document
+msgid "المجموعة النوعية"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.report_hr_statement_document
+msgid "النوع"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.report_hr_statement_document
+msgid "الى تاريخ"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.report_hr_statement_document
+msgid "بدل اللجنة"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields.selection,name:hr_extend_minds.selection__hr_report__name__بيان_حالة
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.report_hr_statement_document
+msgid "بيان حالة"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields.selection,name:hr_extend_minds.selection__job_degree__name__عالية
+msgid "عالية"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields.selection,name:hr_extend_minds.selection__job_degree__name__مدير_عام
+msgid "مدير عام"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.report_hr_statement_document
+msgid "ملاحظات"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.model.fields.selection,name:hr_extend_minds.selection__job_degree__name__ممتازة
+msgid "ممتازة"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.report_hr_statement_document
+msgid "من تاريخ"
+msgstr ""
