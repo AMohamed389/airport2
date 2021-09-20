@@ -139,6 +139,28 @@ class hrextend(models.Model):
 
     job_id = fields.Many2one('hr.job', 'Job Position', domain=lambda self: "[['x_job_degree_id','=', x_job_degree_id],['x_qualitative_group_id','=', x_qualitative_group_id]]", index=True, tracking=True) # vanilla domain removed from job_id ['|', ('company_id', '=', False), ('company_id', '=', company_id)] under hr.employee.base
 
+    certificate = fields.Selection([
+        ('graduate', 'Graduate'),
+        ('bachelor', 'Bachelor'),
+        ('master', 'Master'),
+        ('doctor', 'Doctor'),
+        ('other', 'Other'),
+        ('read and write', 'Read And Write'),
+        ('below average qualification', 'Below Average Qualification'),
+        ('above average qualification', 'Above Average Qualification'),
+        ('postgraduate diploma', 'Postgraduate Diploma'),
+    ], 'Certificate Level', default='other', groups="hr.group_hr_user", tracking=True, index=True)
+
+    x_company_leaving_reason = fields.Selection([
+        ('Reaching The Retirement Age', 'Reaching The Retirement Age'),
+        ('Resignation', 'Resignation'),
+        ('Death', 'Death'),
+        ('Early Pension', 'Early Pension'),
+        ('Dismissal Due To A Criminal Sentence', 'Dismissal Due To A Criminal Sentence'),
+        ('Dismissal Due To A Court Ruling', 'Dismissal Due To A Court Ruling'),
+        ('Transfer', 'Transfer'),
+    ], 'Company Leaving Reason', tracking=True, index=True)
+    
 
     def _get_section_name(self):
         for _rec in self:

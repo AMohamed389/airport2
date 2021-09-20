@@ -29,7 +29,7 @@
             </div>
 
             <group>
-                <group><button name="clean_flags" type="object" string="Clean" class="oe_highlight" attrs="{}"/></group>
+                <!-- <group><button name="clean_flags" type="object" string="Clean" class="oe_highlight" attrs="{}"/></group> -->
                 <group><field name="is_all_selected"/></group>
             </group>
 

@@ -8,7 +8,9 @@
 
     'views/ir_actions_act_window.xml',
     'report/report_hr_statement_document.xml',
+    'report/report_hr_letter_document.xml',
     'wizards/hr_statement_document_view.xml',
+    'wizards/hr_letter_document_view.xml',
     'views/ir_ui_view.xml',
     'views/ir_ui_menu.xml',
     'security/hr_extend_access.xml',

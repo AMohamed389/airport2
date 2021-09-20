@@ -88,8 +88,9 @@
         <field name="arch" type="xml">
         <form  delete="false">
             <header>
-            <button type="action" name="%(hr_extend_minds.action_hr_statement_document)d" context="{'default_x_employee_id': x_employee_id, 'default_x_hr_report_id':id}" string="Print" class="oe_highlight" states="Submit" attrs="{}"/>
+            <!-- <button type="action" name="%(hr_extend_minds.action_hr_statement_document)d" context="{'default_x_employee_id': x_employee_id, 'default_x_hr_report_id':id}" string="Print" class="oe_highlight" states="Submit" attrs="{}"/> -->
             <button name="submit_report" type="object" string="Submit" class="oe_highlight" states="Draft" attrs="{}"/>
+            <button name="print_document" type="object" string="Print" class="oe_highlight" states="Submit" attrs="{}"/>
                 
     
                 <field name="state" widget="statusbar" />
@@ -776,6 +777,7 @@
                     <field name="x_job_degree_id" optional="show"/>
                     <field name="x_qualitative_group_id" optional="show"/>
                     <field name="x_seniority_number" optional="hide"/>
+                    <field name="x_company_leaving_reason" optional="hide"/>
 
                 </xpath>
                 <xpath expr="//field[@name='work_phone']" position="attributes">
@@ -829,6 +831,7 @@
                     <field name="id" invisible="1"/>
                     <field name="x_staff_id" string="Staff Id"/>
                     <field name="x_document_folder_id" string="Document Folder"/>
+                    <field name="x_company_leaving_reason" string="Company Leaving Reason"/>
                 </xpath>
                 <xpath expr="//field[@name='address_home_id']" position="before">
                     <field name="mobile_phone" position="move"/>
