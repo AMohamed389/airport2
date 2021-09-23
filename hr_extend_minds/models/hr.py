@@ -60,7 +60,7 @@ class hrextend(models.Model):
 
     x_number_of_years = fields.Float(compute="get_number_of_years", string="Number Of Years", store=True)
 
-    x_age = fields.Char(string="Age", compute="get_age_calc")
+    x_age = fields.Char(string="Age", compute="get_age_calc", store=True)
 
     x_employee_training = fields.One2many('employee.training', 'x_employee_id', string="Employee Training", store=True,
                                           index=True)
