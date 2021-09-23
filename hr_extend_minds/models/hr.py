@@ -96,13 +96,13 @@ class hrextend(models.Model):
 
     x_loaned_to = fields.Char(string='Loaned To', index=True, tracking=True)
 
-    x_section_name = fields.Char(index=True, string="Section", compute="_get_section_name")
+    x_section_name = fields.Char(index=True, string="Section", compute="_get_section_name", store=True)
 
-    x_administration_name = fields.Char(compute="_get_administration_name", index=True, string="Administration")
+    x_administration_name = fields.Char(compute="_get_administration_name", index=True, string="Administration", store=True)
 
-    x_public_administration_name = fields.Char(compute="_get_public_administration_name", index=True, string="Public Administration")
+    x_public_administration_name = fields.Char(compute="_get_public_administration_name", index=True, string="Public Administration", store=True)
 
-    x_sector_name = fields.Char(compute="_get_sector_name", index=True, string="Sector")
+    x_sector_name = fields.Char(compute="_get_sector_name", index=True, string="Sector", store=True)
 
     # x_qualitative_group_name = fields.Char(related="job_id.x_qualitative_group_id.name", index=True)
 
