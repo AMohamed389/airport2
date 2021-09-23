@@ -25,7 +25,7 @@
             <field name="code">AL2021</field>
             <field name="request_unit">day</field>
             <field name="validity_start">01/01/2021</field>
-            <field name="validity_end">12/31/2021</field>
+            <field name="validity_stop">12/31/2021</field>
             <field name="allocation_type">fixed</field>
             <field name="color_name">blue</field>
             <field name="leave_validation_type">hr</field>
@@ -36,7 +36,7 @@
             <field name="code">AL2022</field>
             <field name="request_unit">day</field>
             <field name="validity_start">01/01/2022</field>
-            <field name="validity_end">12/31/2023</field>
+            <field name="validity_stop">12/31/2023</field>
             <field name="allocation_type">fixed</field>
             <field name="color_name">blue</field>
             <field name="leave_validation_type">hr</field>
@@ -118,7 +118,7 @@
             <field name="name">عارضة - 2021</field>
             <field name="code">CL2021</field>
             <field name="validity_start">01/01/2021</field>
-            <field name="validity_end">12/31/2021</field>
+            <field name="validity_stop">12/31/2021</field>
             <field name="request_unit">day</field>
             <field name="allocation_type">fixed</field>
             <field name="color_name">red</field>
@@ -129,7 +129,7 @@
             <field name="name">عارضة - 2022</field>
             <field name="code">CL2022</field>
             <field name="validity_start">01/01/2022</field>
-            <field name="validity_end">12/31/2022</field>
+            <field name="validity_stop">12/31/2022</field>
             <field name="request_unit">day</field>
             <field name="allocation_type">fixed</field>
             <field name="color_name">red</field>
