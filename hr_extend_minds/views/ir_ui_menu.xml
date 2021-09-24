@@ -172,7 +172,7 @@
     <field name="action" eval="False" />
     <field name="active" eval="True" />
     <field name="groups_id" eval="[(6, 0, [])]" />
-    <field name="name">Comittee</field>
+    <field name="name">Comittees</field>
     <field name="parent_id" eval="False" />
     <field name="sequence">102</field>
     <field name="web_icon">fa fa-users,#FFFFFF,#487e65</field>
