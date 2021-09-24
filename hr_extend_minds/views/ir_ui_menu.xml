@@ -193,4 +193,6 @@
 
   <menuitem id="parent_menu_hr_report_1"  name="HR Report"  action="action_hr_report"  parent="parent_menu_hr_report" sequence="3000" />
 
+  <menuitem name="Sync Employees Folders" id="documents_sync_folder_menu_1" parent="documents.Config" action="action_sync_folder" groups="documents.group_documents_manager" sequence="10"/>
+  
 </odoo>

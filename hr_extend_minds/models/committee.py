@@ -43,12 +43,22 @@ class committee(models.Model):
         for _rec in self:
             _doc_folder_rec = self.env['documents.folder'].browse(_rec.x_document_folder_id.id)
 
+        if _doc_folder_rec:
+            _logger.info("committee_employee unlink _doc_folder_rec : " + str(_doc_folder_rec))
+
+            _documents_share_recs = self.env['documents.share'].search([('folder_id','=',_doc_folder_rec.id)])
+            _documents_document_recs = self.env['documents.document'].search([('folder_id','=',_doc_folder_rec.id)])
+
+            for ___rec in _documents_share_recs:
+                ___rec.sudo().unlink()
+                    
+            for ___rec in _documents_document_recs:
+                ___rec.sudo().unlink()
+
+            _doc_folder_rec.sudo().document_ids.unlink()
+            _doc_folder_rec.sudo().unlink()
+
         result = super(committee, self).unlink()
-
-        _doc_folder_rec.document_ids.unlink()
-        _doc_folder_rec.unlink()
-
-        
 
         return result
 
@@ -67,6 +77,15 @@ class committee(models.Model):
 
         _committee_doc_folder_rec = self.env['documents.folder'].search([('name','=','Committee')], limit=1)
 
+        if not _committee_doc_folder_rec:
+            _committee_doc_folder_rec = self.env['documents.folder'].search([('name','=','لجنة')], limit=1)
+
+        if not _committee_doc_folder_rec:
+            _committee_doc_folder_rec = self.env['documents.folder'].search([('name','=','اللجنة')], limit=1)
+        
+        if not _committee_doc_folder_rec:
+            _committee_doc_folder_rec = self.env['documents.folder'].search([('name','=','اللجان')], limit=1)
+
         _doc_folder_rec = self.env['documents.folder'].search([('name','=',vals['name'])], limit=1)
 
         if not _doc_folder_rec and _committee_doc_folder_rec:
@@ -80,10 +99,7 @@ class committee(models.Model):
         else:
             vals['x_document_folder_id'] = _doc_folder_rec[0].id
 
-        self.env.cr.commit()
-
         
-
         result = super(committee, self).create(vals)
 
         _logger.info(str("committee create result : ") + str(result))

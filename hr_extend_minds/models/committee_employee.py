@@ -42,12 +42,23 @@ class committee_employee(models.Model):
         for _rec in self:
             _doc_folder_rec = self.env['documents.folder'].browse(_rec.x_document_folder_id.id)
 
+            if _doc_folder_rec:
+                _logger.info("committee_employee unlink _doc_folder_rec : " + str(_doc_folder_rec))
+
+                _documents_share_recs = self.env['documents.share'].search([('folder_id','=',_doc_folder_rec.id)])
+                _documents_document_recs = self.env['documents.document'].search([('folder_id','=',_doc_folder_rec.id)])
+
+                for ___rec in _documents_share_recs:
+                    ___rec.sudo().unlink()
+                        
+                for ___rec in _documents_document_recs:
+                    ___rec.sudo().unlink()
+
+                _doc_folder_rec.sudo().document_ids.unlink()
+                _doc_folder_rec.sudo().unlink()
+
         result = super(committee_employee, self).unlink()
 
-        if _doc_folder_rec:
-            _logger.info("committee_employee unlink _doc_folder_rec : " + str(_doc_folder_rec))
-            _doc_folder_rec.sudo().document_ids.unlink()
-            _doc_folder_rec.sudo().unlink()
         return result
 
 
@@ -82,8 +93,6 @@ class committee_employee(models.Model):
                 
                 else:
                     vals['x_document_folder_id'] = _doc_folder_rec[0].id
-
-        self.env.cr.commit()
 
         
 

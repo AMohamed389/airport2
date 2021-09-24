@@ -16,7 +16,12 @@ from . import hr_attachment
 from . import committee
 from . import committee_employee
 
+from . import myfn
+
 from . import hr_report
 #from . import ir_actions_report
 from . import hr_leave
 from . import hr_employee_public
+
+from . import sync_folder
+

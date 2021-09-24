@@ -7,6 +7,7 @@ import datetime
 import string
 import requests
 from datetime import date
+from odoo.osv import expression
 
 import logging
 
@@ -22,7 +23,11 @@ class hrextend(models.Model):
 
     x_bank_account = fields.Char(string='Bank Account', index=True, tracking=True)
 
-    x_religion = fields.Selection([('Muslim', 'Muslim'), ('Christian', 'Christian')],
+    x_religion = fields.Selection([('Muslim', 'Muslim'), 
+                                   ('Christian', 'Christian'),
+                                   ('Muslim', 'Muslima'),
+                                   ('Christian', 'Christiana'),
+                                    ],
                                   string="Religion", store=True, index=True, tracking=True)
 
     x_social_insurance_number = fields.Char(string='Social Insurance Number', index=True, tracking=True)
@@ -72,7 +77,12 @@ class hrextend(models.Model):
 
     x_identity_issuer = fields.Char(string='Identity Issuer', index=True, tracking=True)
 
-    x_military_status = fields.Selection([('Postponed','Postponed'),('Completed','Completed'),('Exempted','Exempted')], string='Military Status', index=True, tracking=True)
+    x_military_status = fields.Selection([('Postponed','Postponed'),
+                                        ('Completed','Completed'),
+                                        ('Temporary Exempted','Temporary Exempted'),
+                                        ('Final Exempted','Final Exempted'),
+                                        ('Not Progressed Yet','Not Progressed Yet')
+                                        ], string='Military Status', index=True, tracking=True)
 
     x_mother_name = fields.Char(string='Mother Name', index=True, tracking=True)
 
@@ -104,7 +114,7 @@ class hrextend(models.Model):
 
     x_sector_name = fields.Char(compute="_get_sector_name", index=True, string="Sector", store=True)
 
-    # x_qualitative_group_name = fields.Char(related="job_id.x_qualitative_group_id.name", index=True)
+    #x_qualitative_group_name = fields.Char(related="job_id.x_qualitative_group_id.name", index=True)
 
     x_qualitative_group_id = fields.Many2one('qualitative_group',string="Qualitative Group", index=True, tracking=True)
 
@@ -120,9 +130,7 @@ class hrextend(models.Model):
     x_job_history = fields.One2many('job_history', 'x_employee_id', string="Job History", store=True,
                                           index=True)
     
-
     x_seniority_number = fields.Integer(string="Seniority Number", index=True, tracking=True)
-
 
     x_committee_employee = fields.One2many('committee_employee', 'x_employee_id', string="Comittees", store=True,
                                           index=True)
@@ -130,7 +138,7 @@ class hrextend(models.Model):
 
     x_document_folder_id = fields.Many2one('documents.folder', string="Document Folder", readonly=True, index=True, tracking=True, ondelete="cascade")
 
-    # x_attachments = fields.One2many('documents.document', 'attachment_id', string="Attachments", compute="_get_attachments", ondelete="cascade")
+    #x_attachments = fields.One2many('documents.document', 'attachment_id', string="Attachments", compute="_get_attachments", ondelete="cascade")
     x_attachments = fields.One2many('documents.document', string="Attachments", compute="_get_attachments")
 
     x_current_illegal_earning_date = fields.Char(string="Current Illegal Earning Date", index=True, tracking=True)
@@ -160,8 +168,21 @@ class hrextend(models.Model):
         ('Dismissal Due To A Court Ruling', 'Dismissal Due To A Court Ruling'),
         ('Transfer', 'Transfer'),
     ], 'Company Leaving Reason', tracking=True, index=True)
+
+
+    marital = fields.Selection([
+        ('single', 'Single'),
+        ('married', 'Married'),
+        # ('cohabitant', 'Legal Cohabitant'),
+        ('widower', 'Widower'),
+        ('divorced', 'Divorced'),
+        ('widow and dependent', 'Widow And Dependent'),
+        ('married and dependent', 'Married And Dependent'),
+        ('divorced and dependent', 'Divorced And Dependent')
+    ], string='Marital Status', groups="hr.group_hr_user", tracking=True, index=True)
     
 
+    @api.depends('department_id')
     def _get_section_name(self):
         for _rec in self:
 
@@ -180,6 +201,7 @@ class hrextend(models.Model):
             else:
                 _rec.x_section_name = None
     
+    @api.depends('department_id')
     def _get_administration_name(self):
         for _rec in self:
 
@@ -198,6 +220,7 @@ class hrextend(models.Model):
             else:
                 _rec.x_administration_name = None
     
+    @api.depends('department_id')
     def _get_public_administration_name(self):
         for _rec in self:
 
@@ -216,7 +239,7 @@ class hrextend(models.Model):
             else:
                 _rec.x_public_administration_name = None
 
-
+    @api.depends('department_id')
     def _get_sector_name(self):
         for _rec in self:
 
@@ -259,6 +282,7 @@ class hrextend(models.Model):
         # _logger.info("Maged pass !")
         self.x_number_of_years = 0.0
 
+    @api.depends('birthday')
     def get_age_calc(self):
 
         for record in self:
@@ -285,10 +309,13 @@ class hrextend(models.Model):
             if len(str(rec.identification_id)) != 14:
                 raise ValidationError("National Id number should be 14 digits !.")
 
-
-
     @api.model   
     def create(self, vals):
+
+        result = super(hrextend, self).create(vals)
+
+        _logger.info(str("hr_employee create result : ") + str(result))
+
         _logger.info(str("hr_employee create vals : ") + str(vals))
 
 
@@ -318,8 +345,6 @@ class hrextend(models.Model):
 
             _logger.info(str("hr_employee create _doc_folder_create_rec : ") + str(_doc_folder_parent_create_rec))
             
-            self.env.cr.commit()
-            
             _doc_folder_leaves_create_rec = self.env['documents.folder'].create({
                 'name': 'أجازات',
                 'parent_folder_id': int(_doc_folder_parent_create_rec)
@@ -329,14 +354,8 @@ class hrextend(models.Model):
                 'name': 'مستندات عامة',
                 'parent_folder_id': int(_doc_folder_parent_create_rec)
             })
-        
-
-        result = super(hrextend, self).create(vals)
-
-        _logger.info(str("hr_employee create result : ") + str(result))
 
         return result
-
 
    
     def unlink(self):
@@ -388,9 +407,21 @@ class hrextend(models.Model):
         _rec.x_attachments = _doc_employee_list
 
 
+    @api.model
+    def _name_search(self, name, args=None, operator='ilike', limit=100, name_get_uid=None):
 
+        _logger.info("hr_employee _name_search name : " + str(name))
+        _logger.info("hr_employee _name_search args : " + str(args))
+        _logger.info("hr_employee _name_search name_get_uid : " + str(name_get_uid))
 
+        args = args or []
+        domain = []
+        
+        if name:
+            domain = ['|','|', ('name', operator, name), ('identification_id', operator, name), ('x_staff_id', operator, name)]
+            _logger.info("hr_employee _name_search domain : " + str(domain))
 
+        return self._search(domain + args, limit=limit, access_rights_uid=name_get_uid)
 
-    _sql_constraints = [('constrainname', 'UNIQUE (x_staff_id)', 'This staff id is already exists'),
-                        ('constrainname', 'UNIQUE (identification_id)', 'This identification id is already exists')]
+    _sql_constraints = [('constrain_staff_id', 'UNIQUE (x_staff_id)', 'The staff id is already exists'),
+                        ('constrain_identification_id', 'UNIQUE (identification_id)', 'This identification id is already exists')]
