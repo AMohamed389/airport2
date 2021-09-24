@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 14.0+e-20210124\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-09-24 13:47+0000\n"
-"PO-Revision-Date: 2021-09-24 16:33+0200\n"
+"PO-Revision-Date: 2021-09-24 18:12+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -1737,7 +1737,7 @@ msgstr "خطأ في توصيل الرسالة"
 #: model:ir.model.fields,field_description:hr_extend_minds.field_hr_leave__x_section_name
 #: model:ir.model.fields,field_description:hr_extend_minds.field_hr_statement_document__is_section
 msgid "Section"
-msgstr "القسم"
+msgstr "قسم"
 
 #. module: hr_extend_minds
 #: model:ir.model.fields,field_description:hr_extend_minds.field_hr_employee__x_sector_name
