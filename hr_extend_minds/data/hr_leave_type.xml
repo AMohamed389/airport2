@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <data noupdate='0'>
+    <data noupdate='1'>
 
         <record id="hr_leave_type_1" model="hr.leave.type">
             <field name="name">رصيد متجمد حتى 2009</field>
