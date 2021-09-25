@@ -24,7 +24,9 @@ class hrextend(models.Model):
     x_bank_account = fields.Char(string='Bank Account', index=True, tracking=True)
 
     x_religion = fields.Selection([('Muslim', 'Muslim'), 
-                                   ('Christian', 'Christian')
+                                   ('Christian', 'Christian'),
+                                   ('Muslima', 'Muslima'),
+                                   ('Christian', 'Christiana')
                                     ],
                                   string="Religion", store=True, index=True, tracking=True)
 
