@@ -26,7 +26,7 @@ class hrextend(models.Model):
     x_religion = fields.Selection([('Muslim', 'Muslim'), 
                                    ('Christian', 'Christian'),
                                    ('Muslima', 'Muslima'),
-                                   ('Christian', 'Christiana')
+                                   ('Christiana', 'Christiana')
                                     ],
                                   string="Religion", store=True, index=True, tracking=True)
 
