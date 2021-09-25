@@ -14,7 +14,11 @@ class hr_employee_public(models.Model):
 
     x_bank_account = fields.Char(string='Bank Account', readonly=True)
 
-    x_religion = fields.Selection([('Muslim', 'Muslim'), ('Christian', 'Christian')],string="Religion", readonly=True)
+    x_religion = fields.Selection([('Muslim', 'Muslim'), 
+                                   ('Christian', 'Christian'),
+                                   ('Muslima', 'Muslima'),
+                                   ('Christiana', 'Christiana')
+                                    ],string="Religion", readonly=True)
 
     x_social_insurance_number = fields.Char(string='Social Insurance Number', readonly=True)
 
