@@ -71,7 +71,7 @@
         <field name="name">view_hr_report_list</field>
         <field name="model">hr_report</field>
         <field name="arch" type="xml">
-        <tree delete="false">
+        <tree delete="true">
             <field name="name"/>
             <field name="x_employee_id"/>
             <field name="state"/>
@@ -86,7 +86,7 @@
         <field name="model">hr_report</field>
 
         <field name="arch" type="xml">
-        <form  delete="false">
+        <form  delete="true">
             <header>
             <!-- <button type="action" name="%(hr_extend_minds.action_hr_statement_document)d" context="{'default_x_employee_id': x_employee_id, 'default_x_hr_report_id':id}" string="Print" class="oe_highlight" states="Submit" attrs="{}"/> -->
             <button name="submit_report" type="object" string="Submit" class="oe_highlight" states="Draft" attrs="{}"/>
