@@ -195,4 +195,6 @@
 
   <menuitem name="Sync Employees Folders" id="documents_sync_folder_menu_1" parent="documents.Config" action="action_sync_folder" groups="documents.group_documents_manager" sequence="10"/>
   
+  <menuitem name="Employees" id="employees_reporting_pivot_menu_1" parent="hr.hr_menu_hr_reports" action="action_employees_reporting" groups="hr.group_hr_manager,hr.group_hr_user" sequence="100"/>
+  
 </odoo>

@@ -15,7 +15,7 @@ _logger = logging.getLogger(__name__)
 
 class hr_education_cetificate(models.Model):
     _name = 'hr_education_certificate'
-    _order = 'create_date DESC'
+    _order = 'x_certificate_date DESC'
 
     name = fields.Char(string="Name", index=True, tracking=True)
     x_employee_id = fields.Many2one('hr.employee', string="Employee", store=True,

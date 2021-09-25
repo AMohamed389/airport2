@@ -15,7 +15,7 @@ _logger = logging.getLogger(__name__)
 
 class job_history(models.Model):
     _name = 'job_history'
-    _order = 'create_date DESC'
+    _order = 'x_date_from DESC'
 
     name = fields.Char(string="Job", index=True, tracking=True)
     x_employee_id = fields.Many2one('hr.employee', string="Employee", store=True,
