@@ -1463,10 +1463,30 @@
         <field name="model">hr.employee</field>
         <field name="inherit_id" ref="hr.view_employee_filter"/>
         <field name="arch" type="xml">
+            <xpath expr="//search" position="inside">
+                <field name="x_staff_id"/>
+                <field name="identification_id"/>
+                <field name="x_social_insurance_number"/>
+                <field name="x_sector_name"/>
+                <field name="x_public_administration_name"/>
+                <field name="x_administration_name"/>
+                <field name="x_section_name"/>
+                <field name="x_qualitative_group_id"/>
+                <field name="x_job_degree_id"/>
+                <field name="job_id"/>
+                <field name="x_age"/>
+            </xpath>
             <xpath expr="//search/group" position="inside">
-                <filter string="Christian" name="christian" domain="[('x_religion', '=', 'Christian')]"/>
+                <filter string="Christian" name="christian" domain="['|',('x_religion', '=', 'Christiana'),('x_religion', '=', 'Christian')]"/>
+                <filter string="Muslim" name="Muslim" domain="['|',('x_religion','=','Muslima'),('x_religion', '=', 'Muslim')]"/>
+                <filter string="Age >= 60" name="Age" domain="[('x_age', '>=', 60)]"/>
                 <!--<filter string="Age >= 60" name="age_gte_60" domain="[('x_age', '>=', 60)]"/>-->
                 <filter name="religion_group_by" string="Religion" context="{'group_by': 'x_religion'}" domain="[]"/>
+                <filter name="age_group_by" string="Age" context="{'group_by': 'x_age'}" domain="[]"/>
+                <filter name="sector_group_by" string="Sector" context="{'group_by': 'x_sector_name'}" domain="[]"/>
+                <filter name="public_administration_group_by" string="Public Administration" context="{'group_by': 'x_public_administration_name'}" domain="[]"/>
+                <filter name="administration_group_by" string="Administration" context="{'group_by': 'x_administration_name'}" domain="[]"/>
+                <filter name="section_group_by" string="Section" context="{'group_by': 'x_section_name'}" domain="[]"/>
             </xpath>
         </field>
     </record>

@@ -4,36 +4,34 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 14.0+e-20210124\n"
+"Project-Id-Version: Odoo Server 14.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-24 13:47+0000\n"
-"PO-Revision-Date: 2021-09-24 18:12+0200\n"
+"POT-Creation-Date: 2021-09-25 13:14+0000\n"
+"PO-Revision-Date: 2021-09-25 13:14+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
-"Language: ar\n"
-"X-Generator: Poedit 3.0\n"
 
 #. module: hr_extend_minds
 #: model:ir.actions.report,print_report_name:hr_extend_minds.action_report_hr_letter_document
 msgid ""
-"'HR Letter Document - %s - %s' % (object.x_employee_id.name, object."
-"x_employee_id.x_staff_id)"
+"'HR Letter Document - %s - %s' % (object.x_employee_id.name, "
+"object.x_employee_id.x_staff_id)"
 msgstr ""
-"'شهادة HR Letter - %s - %s' % (object.x_employee_id.name, object.x_employee_id."
-"x_staff_id)"
+"'شهادة HR Letter - %s - %s' % (object.x_employee_id.name, "
+"object.x_employee_id.x_staff_id)"
 
 #. module: hr_extend_minds
 #: model:ir.actions.report,print_report_name:hr_extend_minds.action_report_hr_statement_document
 msgid ""
-"'HR Statement Document - %s - %s' % (object.x_employee_id.name, object."
-"x_employee_id.x_staff_id)"
+"'HR Statement Document - %s - %s' % (object.x_employee_id.name, "
+"object.x_employee_id.x_staff_id)"
 msgstr ""
-"'حالة الموظف - %s - %s' % (object.x_employee_id.name, object.x_employee_id."
-"x_staff_id)"
+"'حالة الموظف - %s - %s' % (object.x_employee_id.name, "
+"object.x_employee_id.x_staff_id)"
 
 #. module: hr_extend_minds
 #: model_terms:ir.ui.view,arch_db:hr_extend_minds.report_hr_statement_document
@@ -275,8 +273,9 @@ msgstr ""
 #. module: hr_extend_minds
 #: model_terms:ir.ui.view,arch_db:hr_extend_minds.report_hr_letter_document
 msgid ""
-"<span>علما بأن السيد المذكور من ضمن العاملين بشركة ميناء القاهرة الجوي و مازال "
-"يعمل بها حتى الان و انه يخضع لقانون التأمين الاجتماعي رقم 79 لسنة 57</span>"
+"<span>علما بأن السيد المذكور من ضمن العاملين بشركة ميناء القاهرة الجوي و "
+"مازال يعمل بها حتى الان و انه يخضع لقانون التأمين الاجتماعي رقم 79 لسنة "
+"57</span>"
 msgstr ""
 
 #. module: hr_extend_minds
@@ -297,8 +296,8 @@ msgstr ""
 #. module: hr_extend_minds
 #: model_terms:ir.ui.view,arch_db:hr_extend_minds.report_hr_letter_document
 msgid ""
-"<span>و قد أعطيت لسيادته هذه الشهادة بناء على طلبه من واقع سجلات الشركة وذلك "
-"لتقديمها الى : </span>"
+"<span>و قد أعطيت لسيادته هذه الشهادة بناء على طلبه من واقع سجلات الشركة وذلك"
+" لتقديمها الى : </span>"
 msgstr ""
 
 #. module: hr_extend_minds
@@ -484,20 +483,17 @@ msgid "Certificate Level"
 msgstr "مستوى الشهادة"
 
 #. module: hr_extend_minds
+#: model:ir.model.fields.selection,name:hr_extend_minds.selection__hr_employee__x_religion__christian
 #: model:ir.model.fields.selection,name:hr_extend_minds.selection__hr_employee_public__x_religion__christian
 #: model_terms:ir.ui.view,arch_db:hr_extend_minds.hr_employee_search_inherit
 msgid "Christian"
 msgstr "مسيحي"
 
 #. module: hr_extend_minds
-#: model:ir.model.fields.selection,name:hr_extend_minds.selection__hr_employee__x_religion__christian
+#: model:ir.model.fields.selection,name:hr_extend_minds.selection__hr_employee__x_religion__christiana
+#: model:ir.model.fields.selection,name:hr_extend_minds.selection__hr_employee_public__x_religion__christiana
 msgid "Christiana"
 msgstr "مسيحية"
-
-#. module: hr_extend_minds
-#: model:ir.ui.menu,name:hr_extend_minds.parent_menu_committee
-msgid "Comittee"
-msgstr "اللجنة"
 
 #. module: hr_extend_minds
 #: model:ir.ui.menu,name:hr_extend_minds.parent_menu_committee_employee_1
@@ -506,6 +502,7 @@ msgstr "موظفين  اللجنة"
 
 #. module: hr_extend_minds
 #: model:ir.model.fields,field_description:hr_extend_minds.field_hr_employee__x_committee_employee
+#: model:ir.ui.menu,name:hr_extend_minds.parent_menu_committee
 #: model:ir.ui.menu,name:hr_extend_minds.parent_menu_committee_1
 msgid "Comittees"
 msgstr "اللجان"
@@ -543,6 +540,7 @@ msgstr "سبب ترك الخدمة"
 #: model:ir.model.fields.selection,name:hr_extend_minds.selection__hr_employee__x_military_status__completed
 #: model:ir.model.fields.selection,name:hr_extend_minds.selection__hr_employee_public__x_military_status__completed
 #: model:ir.model.fields.selection,name:hr_extend_minds.selection__hr_report__state__completed
+#: model:ir.model.fields.selection,name:hr_extend_minds.selection__sync_folder__state__completed
 msgid "Completed"
 msgstr "أدى الخدمة"
 
@@ -560,6 +558,7 @@ msgstr "أدى الخدمة"
 #: model:ir.model.fields,field_description:hr_extend_minds.field_job_history__create_uid
 #: model:ir.model.fields,field_description:hr_extend_minds.field_penalty_type__create_uid
 #: model:ir.model.fields,field_description:hr_extend_minds.field_qualitative_group__create_uid
+#: model:ir.model.fields,field_description:hr_extend_minds.field_sync_folder__create_uid
 #: model:ir.model.fields,field_description:hr_extend_minds.field_training_catalogue__create_uid
 msgid "Created by"
 msgstr "انشات عن طريق"
@@ -578,6 +577,7 @@ msgstr "انشات عن طريق"
 #: model:ir.model.fields,field_description:hr_extend_minds.field_job_history__create_date
 #: model:ir.model.fields,field_description:hr_extend_minds.field_penalty_type__create_date
 #: model:ir.model.fields,field_description:hr_extend_minds.field_qualitative_group__create_date
+#: model:ir.model.fields,field_description:hr_extend_minds.field_sync_folder__create_date
 #: model:ir.model.fields,field_description:hr_extend_minds.field_training_catalogue__create_date
 msgid "Created on"
 msgstr "تاريخ الانشاء"
@@ -666,7 +666,7 @@ msgstr "انتداب"
 #: model:ir.model.fields,field_description:hr_extend_minds.field_job_history__x_department
 #: model:ir.model.fields.selection,name:hr_extend_minds.selection__hr_department__x_type__department
 msgid "Department"
-msgstr "الهيكل"
+msgstr "القسم"
 
 #. module: hr_extend_minds
 #: model:ir.model.fields,field_description:hr_extend_minds.field_hr_letter_document__x_destination
@@ -720,6 +720,7 @@ msgstr "فصل بحكم عقوبة جنائية"
 #: model:ir.model.fields,field_description:hr_extend_minds.field_myfn__display_name
 #: model:ir.model.fields,field_description:hr_extend_minds.field_penalty_type__display_name
 #: model:ir.model.fields,field_description:hr_extend_minds.field_qualitative_group__display_name
+#: model:ir.model.fields,field_description:hr_extend_minds.field_sync_folder__display_name
 #: model:ir.model.fields,field_description:hr_extend_minds.field_training_catalogue__display_name
 msgid "Display Name"
 msgstr "الاسم المعروض"
@@ -761,6 +762,7 @@ msgstr "تم"
 
 #. module: hr_extend_minds
 #: model:ir.model.fields.selection,name:hr_extend_minds.selection__hr_report__state__draft
+#: model:ir.model.fields.selection,name:hr_extend_minds.selection__sync_folder__state__draft
 msgid "Draft"
 msgstr "تحت الانشاء"
 
@@ -861,9 +863,15 @@ msgid "Employee training !."
 msgstr "تدريب الموظفين"
 
 #. module: hr_extend_minds
+#: model:ir.ui.menu,name:hr_extend_minds.employees_reporting_pivot_menu_1
 #: model_terms:ir.ui.view,arch_db:hr_extend_minds.view_committee_form
 msgid "Employees"
 msgstr "الموظفين"
+
+#. module: hr_extend_minds
+#: model:ir.actions.act_window,name:hr_extend_minds.action_employees_reporting
+msgid "Employees Reporting"
+msgstr ""
 
 #. module: hr_extend_minds
 #: model:ir.model.fields,field_description:hr_extend_minds.field_employee_training__x_end_date
@@ -971,7 +979,7 @@ msgstr "خريج"
 #. module: hr_extend_minds
 #: model:ir.model.fields.selection,name:hr_extend_minds.selection__hr_report__name__hr_letter
 msgid "HR Letter"
-msgstr "HR Letter"
+msgstr ""
 
 #. module: hr_extend_minds
 #: model:ir.actions.act_window,name:hr_extend_minds.action_hr_letter_document
@@ -1027,6 +1035,7 @@ msgstr "تاريخ التعيين"
 #: model:ir.model.fields,field_description:hr_extend_minds.field_myfn__id
 #: model:ir.model.fields,field_description:hr_extend_minds.field_penalty_type__id
 #: model:ir.model.fields,field_description:hr_extend_minds.field_qualitative_group__id
+#: model:ir.model.fields,field_description:hr_extend_minds.field_sync_folder__id
 #: model:ir.model.fields,field_description:hr_extend_minds.field_training_catalogue__id
 msgid "ID"
 msgstr "المُعرف"
@@ -1201,6 +1210,7 @@ msgstr "اللغات"
 #: model:ir.model.fields,field_description:hr_extend_minds.field_myfn____last_update
 #: model:ir.model.fields,field_description:hr_extend_minds.field_penalty_type____last_update
 #: model:ir.model.fields,field_description:hr_extend_minds.field_qualitative_group____last_update
+#: model:ir.model.fields,field_description:hr_extend_minds.field_sync_folder____last_update
 #: model:ir.model.fields,field_description:hr_extend_minds.field_training_catalogue____last_update
 msgid "Last Modified on"
 msgstr "آخر تعديل في"
@@ -1219,6 +1229,7 @@ msgstr "آخر تعديل في"
 #: model:ir.model.fields,field_description:hr_extend_minds.field_job_history__write_uid
 #: model:ir.model.fields,field_description:hr_extend_minds.field_penalty_type__write_uid
 #: model:ir.model.fields,field_description:hr_extend_minds.field_qualitative_group__write_uid
+#: model:ir.model.fields,field_description:hr_extend_minds.field_sync_folder__write_uid
 #: model:ir.model.fields,field_description:hr_extend_minds.field_training_catalogue__write_uid
 msgid "Last Updated by"
 msgstr "اخر تعديل بواسطة"
@@ -1237,6 +1248,7 @@ msgstr "اخر تعديل بواسطة"
 #: model:ir.model.fields,field_description:hr_extend_minds.field_job_history__write_date
 #: model:ir.model.fields,field_description:hr_extend_minds.field_penalty_type__write_date
 #: model:ir.model.fields,field_description:hr_extend_minds.field_qualitative_group__write_date
+#: model:ir.model.fields,field_description:hr_extend_minds.field_sync_folder__write_date
 #: model:ir.model.fields,field_description:hr_extend_minds.field_training_catalogue__write_date
 msgid "Last Updated on"
 msgstr "اخر تعديل في"
@@ -1365,14 +1377,26 @@ msgid "Mother Name"
 msgstr "اسم الام"
 
 #. module: hr_extend_minds
+#: model:ir.model.fields.selection,name:hr_extend_minds.selection__hr_employee__x_religion__muslim
 #: model:ir.model.fields.selection,name:hr_extend_minds.selection__hr_employee_public__x_religion__muslim
 msgid "Muslim"
 msgstr "مسلم"
 
 #. module: hr_extend_minds
-#: model:ir.model.fields.selection,name:hr_extend_minds.selection__hr_employee__x_religion__muslim
+#: model:ir.model.fields.selection,name:hr_extend_minds.selection__hr_employee__x_religion__muslima
+#: model:ir.model.fields.selection,name:hr_extend_minds.selection__hr_employee_public__x_religion__muslima
 msgid "Muslima"
 msgstr "مسلمة"
+
+#. module: hr_extend_minds
+#: model:ir.model.fields,field_description:hr_extend_minds.field_committee__my_activity_date_deadline
+#: model:ir.model.fields,field_description:hr_extend_minds.field_employee_penalty__my_activity_date_deadline
+#: model:ir.model.fields,field_description:hr_extend_minds.field_employee_training__my_activity_date_deadline
+#: model:ir.model.fields,field_description:hr_extend_minds.field_hr_report__my_activity_date_deadline
+#: model:ir.model.fields,field_description:hr_extend_minds.field_penalty_type__my_activity_date_deadline
+#: model:ir.model.fields,field_description:hr_extend_minds.field_training_catalogue__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
 
 #. module: hr_extend_minds
 #: model:ir.model.fields,field_description:hr_extend_minds.field_hr_education_certificate__name
@@ -1688,6 +1712,7 @@ msgstr "تقرير"
 
 #. module: hr_extend_minds
 #: model:ir.model.fields,field_description:hr_extend_minds.field_hr_report__state
+#: model:ir.model.fields,field_description:hr_extend_minds.field_sync_folder__state
 msgid "Report State"
 msgstr "حالة التقرير"
 
@@ -1865,6 +1890,17 @@ msgstr "الوظيفة الاشرافية او القيادية / المكلف �
 #: model:ir.model.fields,field_description:hr_extend_minds.field_hr_statement_document__is_supervision_job
 msgid "Supervision job"
 msgstr "الوظيفة الاشرافية او القيادية / المكلف بها"
+
+#. module: hr_extend_minds
+#: model_terms:ir.ui.view,arch_db:hr_extend_minds.view_sync_folder_form
+msgid "Sync"
+msgstr ""
+
+#. module: hr_extend_minds
+#: model:ir.actions.act_window,name:hr_extend_minds.action_sync_folder
+#: model:ir.ui.menu,name:hr_extend_minds.documents_sync_folder_menu_1
+msgid "Sync Employees Folders"
+msgstr ""
 
 #. module: hr_extend_minds
 #: model:ir.model.fields.selection,name:hr_extend_minds.selection__training_catalogue__x_training_type__technical
@@ -2150,6 +2186,11 @@ msgstr ""
 #: model:ir.model,name:hr_extend_minds.model_qualitative_group
 msgid "qualitative_group"
 msgstr "المجموعة النوعية"
+
+#. module: hr_extend_minds
+#: model:ir.model,name:hr_extend_minds.model_sync_folder
+msgid "sync_folder"
+msgstr ""
 
 #. module: hr_extend_minds
 #: model:ir.model,name:hr_extend_minds.model_training_catalogue
