@@ -6,7 +6,9 @@ import json
 import datetime
 import string
 import requests
-from datetime import date
+from datetime import date, timedelta
+import calendar
+from calendar import monthrange
 
 import logging
 
@@ -27,11 +29,19 @@ class hrleaveextend(models.Model):
 
     def write(self, vals):
 
-        for _rec in self:
-            _rec.validate_fl()
-
         result = super(hrleaveextend, self).write(vals)
         _logger.info(str("hr_leave write result : ") + str(result))
+
+        for _rec in self:
+            _rec.validate_fl()
+            _rec.validate_first_six_months()
+            _rec.validate_cl(vals)
+            _rec.validate_dms_sl(vals)
+            _rec.validate_rrl()
+            _rec.validate_oocl()
+            _rec.validate_osl()
+            _rec.validate_mscl()
+
         return result
                 
 
@@ -46,24 +56,226 @@ class hrleaveextend(models.Model):
         if not _employee or not _leave_type_rec:
             return False
         
-        # _emp_rec = self.env['hr.employee'].browse(_employee)
-        # if not _emp_rec:
-        #     return False
+        if _leave_code == "FL01":
+            # _emp_rec = self.env['hr.employee'].browse(_employee)
+            # if not _emp_rec:
+            #     return False
 
-        #_logger.info("hrleaveextend validate_fl _emp_rec : " + str(_emp_rec))
-        
+            #_logger.info("hrleaveextend validate_fl _emp_rec : " + str(_emp_rec))
+            
+            _todays_date = date.today()
+            #_current_year = _todays_date.year
+
+            _employee_leaves = self.get_total_leaves_days(_leave_code=_leave_code)
+            _total_number_of_days = _employee_leaves['total_number_of_days']
+            
+            if _total_number_of_days > 60:
+                raise ValidationError("Year {0} consumed > 60 days for leave {1} !.".format(str(date.today().year), _leave_type_rec.name))
+
+    
+    def validate_first_six_months(self):
+
+        _leave_type_rec = self.env['hr.leave.type'].browse(self.holiday_status_id.id)
+        _leave_code = _leave_type_rec.code
+        _employee = self.employee_id
+        _number_of_days = self.number_of_days
+        _receiving_work_date = _employee.x_receiving_work_date
+        #_receiving_work_date_year = _receiving_work_date.year
         _todays_date = date.today()
         _current_year = _todays_date.year
+        _current_casual_leave_code = "CL" + str(_current_year)
+        _current_annual_leave_code = "AL" + str(_current_year)
+
+        if not _employee or not _leave_type_rec:
+            return False
+
+        _months_diff = self.diff_month(_todays_date, _receiving_work_date)
+
+        if _months_diff >= 6:
+            return True
+        
+        if _current_annual_leave_code == _leave_code and _months_diff < 6:
+            raise ValidationError("Year {0} cannot take {1} in first 6 months !.".format(str(date.today().year), _leave_type_rec.name))
+
+        if _current_casual_leave_code !=  _leave_code and _months_diff < 6:
+            raise ValidationError("Year {0} only casual and annual leaves are allowaed for receiving work date < 6 !.".format(str(date.today().year)))
+        
+        if _number_of_days > 3 and _current_casual_leave_code ==  _leave_code:
+            raise ValidationError("Year {0} consumed > 3 days for leave {1} !.".format(str(date.today().year), _leave_type_rec.name))
 
         _employee_leaves = self.get_total_leaves_days(_leave_code=_leave_code)
         _total_number_of_days = _employee_leaves['total_number_of_days']
         
-        if _total_number_of_days > 60:
-            raise ValidationError("Year {0} consumed > 60 days for leave {1} !.".format(str(date.today().year), _leave_type_rec.name))
+        if _total_number_of_days > 3 and _current_casual_leave_code ==  _leave_code :
+            raise ValidationError("Year {0} consumed > 3 days for leave {1} !.".format(str(date.today().year), _leave_type_rec.name))
+        
+    
+    def validate_cl(self, vals):
 
-    # def validate_first_six_months(self):
+        _leave_type_rec = self.env['hr.leave.type'].browse(self.holiday_status_id.id)
+        _leave_code = _leave_type_rec.code
+        _employee = self.employee_id
+        _number_of_days = self.number_of_days
+        #_receiving_work_date_year = _receiving_work_date.year
+        _todays_date = date.today()
+        _current_year = _todays_date.year
+        _current_casual_leave_code = "CL" + str(_current_year)
+        _current_annual_leave_code = "AL" + str(_current_year)
+        _request_date_from = self.request_date_from
+        #_request_date_to = self.request_date_to
+
+        if not _employee or not _leave_type_rec:
+            return False
+
+        if _leave_code == _current_casual_leave_code:
+            
+            #_days_diff = (_request_date_to - _request_date_from).days + 1
+
+            if vals.get('number_of_days'):
+                _days_diff = vals.get('number_of_days')
+            else:
+                _days_diff = _number_of_days
+
+            _logger.info("hr_leave validate_cl _days_diff : " + str(_days_diff))
+
+            if _days_diff > 2:
+                _check_third_date = _request_date_from + timedelta(days=2)
+                _logger.info("hr_leave validate_cl _check_third_date : " + str(_check_third_date))
+
+                _calendar_day = calendar.day_name[_check_third_date.weekday()]
+                _logger.info("hr_leave validate_cl _calendar_day : " + str(_calendar_day))
+
+                if _calendar_day != "Friday" and _calendar_day != "Saturday" :
+                    raise ValidationError("Year {0} consumed > 2 consecutive days for leave {1} !.".format(str(date.today().year), _leave_type_rec.name))
+            
+            _day_before_cl = _request_date_from - timedelta(days=1)
+            _employee_leaves = self.get_total_leaves_days(_request_date_to = _day_before_cl, _leave_code=_current_annual_leave_code)
+            _total_number_of_days = _employee_leaves['total_number_of_days']
+            
+            if _total_number_of_days > 0:
+                raise ValidationError("Year {0} cannot take casual leave after annual leave for leave {1} !.".format(str(date.today().year), _leave_type_rec.name))
+        
+    
+    def validate_dms_sl(self, vals):
+
+        _leave_type_rec = self.env['hr.leave.type'].browse(self.holiday_status_id.id)
+        _leave_code = _leave_type_rec.code
+        _employee = self.employee_id
+        _number_of_days = self.number_of_days
+        _receiving_work_date = _employee.x_receiving_work_date
+        _receiving_work_date_year = _receiving_work_date.year
+        _todays_date = date.today()
+        _current_year = _todays_date.year
+        _sick_dms_leave_code = "SDMSL01"
+        _request_date_from = self.request_date_from
+        _request_date_to = self.request_date_to
+
+        if not _employee or not _leave_type_rec:
+            return False
+
+        if _leave_code == _sick_dms_leave_code:
+            
+            if vals.get('number_of_days'):
+                _days_diff = vals.get('number_of_days')
+            else:
+                _days_diff = _number_of_days
+
+            _logger.info("hr_leave validate_cl _days_diff : " + str(_days_diff))
+
+            if _days_diff > 3:
+                raise ValidationError("Year {0} consumed > 3 consecutive days for leave {1} !.".format(str(date.today().year), _leave_type_rec.name))
+            
+            _request_date_from_year = _request_date_from.year
+            _request_date_to_year = _request_date_to.year
+
+            _request_date_from_month = _request_date_from.month
+            _request_date_to_month = _request_date_to.month
+
+            _number_of_days_to_month = monthrange(_request_date_to_year, _request_date_to_month)[1]
+
+            _check_from_dt = str(_request_date_from_year) + "-" + str(_request_date_from_month) + "-01"
+            _check_to_dt = str(_request_date_to_year) + "-" + str(_request_date_to_month) + "-" + str(_number_of_days_to_month)
+
+            if _request_date_from_month == _request_date_to_month and _request_date_from_year == _request_date_to_year:
+                _employee_leaves = self.get_total_leaves_days(_request_date_from = _check_from_dt ,_request_date_to = _check_to_dt, _leave_code=_sick_dms_leave_code)
+                _total_number_of_days = _employee_leaves['total_number_of_days']
+
+                if _total_number_of_days > 15:
+                    raise ValidationError("Year {0} consumed > 15 DMS leaves for leave {1} !.".format(str(date.today().year), _leave_type_rec.name))
+        
+
+    def validate_rrl(self):
+        _leave_type_rec = self.env['hr.leave.type'].browse(self.holiday_status_id.id)
+        _leave_code = _leave_type_rec.code
+        _employee = self.employee_id
+
+        if not _employee or not _leave_type_rec:
+            return False
+        
+        if _leave_code == "RRL01":
+
+            _employee_leaves = self.get_total_leaves_days(_request_date_from="1970-01-01",_request_date_to="2050-12-31", _leave_code=_leave_code)
+            _total_number_of_days = _employee_leaves['total_number_of_days']
+            
+            if _total_number_of_days > 30:
+                raise ValidationError("Year {0} consumed > 60 days for leave {1} !.".format(str(date.today().year), _leave_type_rec.name))
+
+    
+    def validate_oocl(self):
+        _leave_type_rec = self.env['hr.leave.type'].browse(self.holiday_status_id.id)
+        _leave_code = _leave_type_rec.code
+        _employee = self.employee_id
+        _gender = _employee.gender
+
+        if not _employee or not _leave_type_rec:
+            return False
+        
+        if _leave_code == "OCCL01":
+            
+            if _gender != "female" or _gender != "أنثى":
+                 raise ValidationError("this leave is valid only for female for leave {0} !.".format(_leave_type_rec.name))
+            
+            _employee_leaves = self.get_total_leaves_days(_request_date_from="1970-01-01",_request_date_to="2050-12-31", _leave_code=_leave_code)
+            _total_number_of_days = _employee_leaves['total_number_of_days']
+            
+            if _total_number_of_days > 2190:
+                raise ValidationError("Year {0} consumed > 6 years for leave {1} !.".format(str(date.today().year), _leave_type_rec.name))
 
 
+    def validate_osl(self):
+        _leave_type_rec = self.env['hr.leave.type'].browse(self.holiday_status_id.id)
+        _leave_code = _leave_type_rec.code
+        _employee = self.employee_id
+
+        if not _employee or not _leave_type_rec:
+            return False
+        
+        if _leave_code == "OSL01":
+            
+            _employee_leaves = self.get_total_leaves_days(_request_date_from="1970-01-01",_request_date_to="2050-12-31", _leave_code=_leave_code)
+            _total_number_of_days = _employee_leaves['total_number_of_days']
+            
+            if _total_number_of_days > 1460:
+                raise ValidationError("Year {0} consumed > 4 years for leave {1} !.".format(str(date.today().year), _leave_type_rec.name))
+
+
+    def validate_mscl(self):
+        _leave_type_rec = self.env['hr.leave.type'].browse(self.holiday_status_id.id)
+        _leave_code = _leave_type_rec.code
+        _employee = self.employee_id
+
+        if not _employee or not _leave_type_rec:
+            return False
+        
+        if _leave_code == "MSCL01":
+            
+            _employee_leaves = self.get_total_leaves_days(_request_date_from="1970-01-01",_request_date_to="2050-12-31", _leave_code=_leave_code)
+            _total_number_of_days = _employee_leaves['total_number_of_days']
+            
+            if _total_number_of_days > 1460:
+                raise ValidationError("Year {0} consumed > 4 years for leave {1} !.".format(str(date.today().year), _leave_type_rec.name))
+
+        
     def get_total_leaves_days(self, _current_year=date.today().year, _request_date_from=str(date.today().year) + "-01-01", _request_date_to=str(date.today().year) + "-12-31", _leave_code=False):
         
         if not _leave_code:
@@ -97,4 +309,37 @@ class hrleaveextend(models.Model):
 
         _logger.info("hrleaveextend get_total_leaves_days _dict : " + str(_dict))
 
+        return _dict
+
+
+    def diff_month(self, d1, d2):
+        return (d1.year - d2.year) * 12 + d1.month - d2.month
+
+
+    def calc_90_sick_days_for_employee(self):
+
+        _employee = self.employee_id
+
+        if not _employee:
+            return False
+
+        _receiving_work_date = _employee.x_receiving_work_date
+        _receiving_work_date_year = _receiving_work_date.year
+        _todays_date = date.today()
+        # _current_year = _todays_date.year
+        # _current_month = _todays_date.month
+        # _current_day = _todays_date.day
+
+        _sick_years_date = _receiving_work_date_year + timedelta(years=3)
+
+        while _todays_date > _sick_years_date:
+            _sick_years_date = _sick_years_date + timedelta(years=3)
+
+        _sick_90days_start_dt = _sick_years_date - timedelta(years=3)
+        _sick_90days_end_dt = _sick_years_date
+        _dict = {
+            '_sick_90days_start_dt':_sick_90days_start_dt,
+            '_sick_90days_end_dt':_sick_90days_end_dt
+        }
+        
         return _dict
