@@ -15,9 +15,23 @@ _logger = logging.getLogger(__name__)
 
 class penaltytype(models.Model):
     _name = 'penalty.type'
+    _description = 'Penalty Type'
     _inherit = ['mail.thread', 'mail.activity.mixin']
     _rec_name = 'x_name'
-    _order = 'create_date DESC'
+    _order = 'id DESC'
+
+    # x_name = fields.Selection([('Warning','Warning'),
+    #                             ('Salary Deduction','Salary Deduction'),
+    #                             ('Postpone Entitlement Date Of Annual Allowance','Postpone Entitlement Date Of Annual Allowance'),
+    #                             ('Deprivation Of A portion of The Annual Allowance','Deprivation Of A portion of The Annual Allowance'),
+    #                             ('Postponse Promotion','Postponse Promotion'),
+    #                             ('Reduce Salary','Reduce Salary'),
+    #                             ('Reduce Position Or Reduce Degree','Reduce Position Or Reduce Degree'),
+    #                             ('Severance','Severance'),
+    #                             ('Absence Without Permission','Absence Without Permission'),
+    #                             ('Attention','Attention'),
+    #                             ('Deduction For Not Attending The Investigation','Deduction For Not Attending The Investigation'),
+    #                           ], string='Name', store=True, index=True, tracking=True)
 
     x_name = fields.Char(string='Name', store=True, index=True, tracking=True)
 

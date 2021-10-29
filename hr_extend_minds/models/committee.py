@@ -15,8 +15,9 @@ _logger = logging.getLogger(__name__)
 
 class committee(models.Model):
     _name = 'committee'
+    _description = 'Committeee'
     _inherit = ['mail.thread', 'mail.activity.mixin']
-    _order = 'create_date DESC'
+    _order = 'id DESC'
 
     name = fields.Char(string="Decision Number", index=True, required=True, tracking=True)
 
@@ -75,23 +76,25 @@ class committee(models.Model):
     def create(self, vals):
         _logger.info(str("committee create vals : ") + str(vals))
 
-        _committee_doc_folder_rec = self.env['documents.folder'].search([('name','=','Committee')], limit=1)
+        _committee_doc_folder_rec = self.env.ref("hr_extend_minds.documents_folder_1")
+        # _committee_doc_folder_rec = self.env['documents.folder'].search([('name','=','Committee')], limit=1)
 
-        if not _committee_doc_folder_rec:
-            _committee_doc_folder_rec = self.env['documents.folder'].search([('name','=','لجنة')], limit=1)
+        # if not _committee_doc_folder_rec:
+        #     _committee_doc_folder_rec = self.env['documents.folder'].search([('name','=','لجنة')], limit=1)
 
-        if not _committee_doc_folder_rec:
-            _committee_doc_folder_rec = self.env['documents.folder'].search([('name','=','اللجنة')], limit=1)
+        # if not _committee_doc_folder_rec:
+        #     _committee_doc_folder_rec = self.env['documents.folder'].search([('name','=','اللجنة')], limit=1)
         
-        if not _committee_doc_folder_rec:
-            _committee_doc_folder_rec = self.env['documents.folder'].search([('name','=','اللجان')], limit=1)
+        # if not _committee_doc_folder_rec:
+        #     _committee_doc_folder_rec = self.env['documents.folder'].search([('name','=','اللجان')], limit=1)
 
         _doc_folder_rec = self.env['documents.folder'].search([('name','=',vals['name'])], limit=1)
 
         if not _doc_folder_rec and _committee_doc_folder_rec:
             _doc_folder_create_rec = self.env['documents.folder'].create({
                 'name': vals['name'],
-                'parent_folder_id': _committee_doc_folder_rec[0].id
+                'parent_folder_id': _committee_doc_folder_rec.id,
+                # 'parent_folder_id': _committee_doc_folder_rec[0].id
             })
 
             vals['x_document_folder_id'] = int(_doc_folder_create_rec)

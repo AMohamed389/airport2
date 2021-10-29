@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from re import T
 from odoo import models, fields, api
 from odoo import exceptions
 from odoo.exceptions import ValidationError
@@ -122,7 +123,7 @@ class hrextend(models.Model):
 
     x_disability = fields.Char(string="Disability Id Number", index=True, tracking=True)
 
-    x_supervision_job = fields.Many2one('hr.job',string="Supervision Job", index=True, tracking=True)
+    x_supervision_job = fields.Many2one('hr.job',string="Supervision Job", domain="[['x_is_supervision_job','=','True']]", index=True, tracking=True)
 
     x_hr_education_certificate = fields.One2many('hr_education_certificate', 'x_employee_id', string="Education Certificates", store=True,
                                           index=True)
@@ -136,7 +137,7 @@ class hrextend(models.Model):
                                           index=True)
 
 
-    x_document_folder_id = fields.Many2one('documents.folder', string="Document Folder", readonly=True, index=True, tracking=True, ondelete="cascade")
+    x_document_folder_id = fields.Many2one('documents.folder', string="Document Folder", index=True, tracking=True, ondelete="cascade")
 
     #x_attachments = fields.One2many('documents.document', 'attachment_id', string="Attachments", compute="_get_attachments", ondelete="cascade")
     x_attachments = fields.One2many('documents.document', string="Attachments", compute="_get_attachments")
@@ -145,7 +146,12 @@ class hrextend(models.Model):
     
     x_next_illegal_earning_date = fields.Char(string="Next Illegal Earning Date", index=True, tracking=True)
 
-    job_id = fields.Many2one('hr.job', 'Job Position', domain=lambda self: "[['x_job_degree_id','=', x_job_degree_id],['x_qualitative_group_id','=', x_qualitative_group_id]]", index=True, tracking=True) # vanilla domain removed from job_id ['|', ('company_id', '=', False), ('company_id', '=', company_id)] under hr.employee.base
+    job_id = fields.Many2one('hr.job', 'Job Position', domain=lambda self: "[['x_job_degree_id','=', x_job_degree_id],['x_qualitative_group_id','=', x_qualitative_group_id]]", index=True, tracking=True) #TODO vanilla domain removed from job_id ['|', ('company_id', '=', False), ('company_id', '=', company_id)] under hr.employee.base
+
+    x_work_schedule_type = fields.Selection([('Morning','Morning'),
+                                        ('Shift','Shift')], string='Work Schedule Type', index=True, required=True, tracking=True)
+
+    resource_calendar_id = fields.Many2one('resource.calendar', domain=lambda self: "['&', ('x_work_schedule_type','=',x_work_schedule_type),'|', ('company_id', '=', False), ('company_id', '=', company_id)]", index=True, tracking=True) #TODO vanilla domain removed from resource_calendar_id ['|', ('company_id', '=', False), ('company_id', '=', company_id)],
 
     certificate = fields.Selection([
         ('graduate', 'Graduate'),
@@ -180,6 +186,7 @@ class hrextend(models.Model):
         ('married and dependent', 'Married And Dependent'),
         ('divorced and dependent', 'Divorced And Dependent')
     ], string='Marital Status', groups="hr.group_hr_user", tracking=True, index=True)
+    employee_training_ids = fields.One2many('employee.training', 'x_employee_id', string='Trainings')
     
 
     @api.depends('department_id')
@@ -312,20 +319,17 @@ class hrextend(models.Model):
     @api.model   
     def create(self, vals):
 
-        result = super(hrextend, self).create(vals)
-
-        _logger.info(str("hr_employee create result : ") + str(result))
-
-        _logger.info(str("hr_employee create vals : ") + str(vals))
-
-
+    
+        #_logger.info(str("hr_employee create vals : ") + str(vals))
         
-        _doc_folder_rec = self.env['documents.folder'].search([('name','=','الموارد البشرية')], limit=1)
-        _logger.info(str("hr_employee create _doc_folder_rec : ") + str(_doc_folder_rec))
+        # _doc_folder_rec = self.env['documents.folder'].search([('name','=','الموارد البشرية')], limit=1)
+        # _logger.info(str("hr_employee create _doc_folder_rec : ") + str(_doc_folder_rec))
 
-        if not _doc_folder_rec:
-            _doc_folder_rec = self.env['documents.folder'].search([('name','=','HR')], limit=1)
-            _logger.info(str("hr_employee create _doc_folder_rec : ") + str(_doc_folder_rec))
+        # if not _doc_folder_rec:
+        #     _doc_folder_rec = self.env['documents.folder'].search([('name','=','HR')], limit=1)
+        #     _logger.info(str("hr_employee create _doc_folder_rec : ") + str(_doc_folder_rec))
+
+        _doc_folder_rec = self.env.ref('documents_hr.documents_hr_folder')
 
         if _doc_folder_rec:
             
@@ -338,10 +342,11 @@ class hrextend(models.Model):
 
             _doc_folder_parent_create_rec = self.env['documents.folder'].create({
                 'name': _folder_name,
-                'parent_folder_id': _doc_folder_rec[0].id
+                'parent_folder_id': _doc_folder_rec.id,
+                # 'parent_folder_id': _doc_folder_rec[0].id
             })
 
-            vals['x_document_folder_id'] = int(_doc_folder_parent_create_rec)
+            vals['x_document_folder_id'] = _doc_folder_parent_create_rec.id
 
             _logger.info(str("hr_employee create _doc_folder_create_rec : ") + str(_doc_folder_parent_create_rec))
             
@@ -355,6 +360,18 @@ class hrextend(models.Model):
                 'parent_folder_id': int(_doc_folder_parent_create_rec)
             })
 
+            _doc_folder_penalty_create_rec = self.env['documents.folder'].create({
+                'name': 'جزاءات',
+                'parent_folder_id': int(_doc_folder_parent_create_rec)
+            })
+
+            _doc_folder_grievances_create_rec = self.env['documents.folder'].create({
+                'name': 'التظلمات',
+                'parent_folder_id': int(_doc_folder_parent_create_rec)
+            })
+
+        result = super(hrextend, self).create(vals)
+        #_logger.info(str("hr_employee create result : ") + str(result))
         return result
 
    

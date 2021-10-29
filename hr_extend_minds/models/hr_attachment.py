@@ -16,7 +16,8 @@ _logger = logging.getLogger(__name__)
 
 class hr_attachment(models.Model):
     _name = 'hr_attachment'
-    _order = 'create_date DESC'
+    _description = 'HR Attachments'
+    _order = 'id DESC'
 
     name = fields.Char(string="File Name", index=True, tracking=True)
     x_datas = fields.Binary(string="File", attachment=True)

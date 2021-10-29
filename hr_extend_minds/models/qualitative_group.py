@@ -15,7 +15,8 @@ _logger = logging.getLogger(__name__)
 
 class qualitative_group(models.Model):
     _name = 'qualitative_group'
-    _order = 'create_date DESC'
+    _description = 'Qualitative Group'
+    _order = 'id DESC'
 
     name = fields.Char(string="Qualitative Group", index=True, required=True, tracking=True)
     # x_job_position_id = fields.Many2one('hr.job', string="Job Position", index=True, tracking=True)

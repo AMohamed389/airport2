@@ -15,9 +15,10 @@ _logger = logging.getLogger(__name__)
 
 class employeepenalty(models.Model):
     _name = 'employee.penalty'
+    _description = 'Employee Penalties'
     _inherit = ['mail.thread', 'mail.activity.mixin']
     _rec_name = 'x_employee_id'
-    _order = 'create_date DESC'
+    _order = 'id DESC'
 
     x_employee_id = fields.Many2one('hr.employee', string="Employee", store=True,
                                      tracking=True, index=True)
@@ -33,5 +34,17 @@ class employeepenalty(models.Model):
         index=True, tracking=True, default='New')
 
     x_penalty_date = fields.Date(string='Penalty Date', index=True, tracking=True)
+
+    x_penalty_decision_date = fields.Date(string='Decision Date', index=True, tracking=True)
+
+    x_decision_number = fields.Integer(string='Decision Number', store=True, index=True, tracking=True)
+
+    x_penalty_effective_date = fields.Date(string='Effective Date', index=True, tracking=True)
+
+    x_investigation_date = fields.Date(string='Investigation Date', index=True, tracking=True)
+
+    x_investigation_number = fields.Integer(string='Investigation Number', store=True, index=True, tracking=True)
+
+    x_penalty_reason = fields.Text(string='Reason', tracking=True)
 
     active = fields.Boolean(string='Active',index=True,default=True,tracking=True)

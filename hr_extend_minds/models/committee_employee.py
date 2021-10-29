@@ -15,7 +15,8 @@ _logger = logging.getLogger(__name__)
 
 class committee_employee(models.Model):
     _name = 'committee_employee'
-    _order = 'create_date DESC'
+    _description = 'Committee Employees'
+    _order = 'id DESC'
 
     #name = fields.Char(string="Decision Number", index=True, required=True, tracking=True)
     x_employee_id = fields.Many2one('hr.employee', string="Employee", store=True,
